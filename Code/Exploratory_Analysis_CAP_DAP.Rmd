@@ -1,0 +1,39 @@
+---
+title: "Explorative Data Analysis Climate Perceptions in Countries"
+author: "Rae Dunbar"
+date: "11/7/2022"
+output: html_document
+---
+For this project theere are several csv's that came from three excel sheets. The first one is emissions per country from 1990-2019. The second is a survey about countries climate perceptions that Yale used for a research paper. And the third is from a Facebook survey of several countries perceptions of climate change. The facebook survey data put its data in wide format using several sheets, so I had to make each sheet into a separate csv. That dataset will be the most burdensome to clean up. 
+
+Lets start with thee emissions data.
+
+## Setting R up
+
+```{r}
+rm(list=ls())
+library(here)
+library(tidyverse)
+library(ggfortify)
+```
+
+## Starting with the Emissions Data
+
+### Pulling the Data in
+
+```{r}
+emissions<-read.csv(here("Data for the Code", "CAIT_percapita_allcountries.csv"), stringsAsFactors = TRUE)
+```
+
+### viewing the Data
+
+What are the headers?
+```{r}
+names(emissions)
+```
+I appears the first few columns after the country name and unit are the dates, starting with 1990 and going until 2019. There are alot of other columns after that however, that are unclear of what data they hold. 
+
+```{r}
+
+```
+
