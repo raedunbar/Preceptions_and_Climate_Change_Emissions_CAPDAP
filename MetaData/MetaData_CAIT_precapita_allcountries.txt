@@ -1,0 +1,22 @@
+This is Metadata for the CAIT_precapita_allcountries.csv file.
+
+Origins: 
+This data came from climate watch, an online data repository that you can access here: 
+
+https://www.climatewatchdata.org/ghg-emissions breakBy=countries&calculation=PER_CAPITA&chartType=line&end_year=2019&regions=DNK%2CUSA&source=UNFCCC_AI&start_year=1990 
+
+
+About: 
+
+The data is from CAIT, which stands for Climate Analysis Indicators Tool. It is an information and anwyslis tool that was developed by the World Resources Institute (WRI). The data includes emissions from all sectors of the country and includes all the greenhouse gases. The data has this emissions data for almost all the 197 countries from 1990 to 2019. The emissions are in tonnes per capita. 
+
+Columns:
+
+Country.Region: is the country where the emissions are from. 
+unit: the unit of the data, I this case it is all in tones per capita. 
+X1990: this is emissions from 1990, the following columns are all dates, just ignore the X at the beginning. 
+
+
+
+
+

@@ -6,7 +6,7 @@ output: html_document
 ---
 For this project theere are several csv's that came from three excel sheets. The first one is emissions per country from 1990-2019. The second is a survey about countries climate perceptions that Yale used for a research paper. And the third is from a Facebook survey of several countries perceptions of climate change. The facebook survey data put its data in wide format using several sheets, so I had to make each sheet into a separate csv. That dataset will be the most burdensome to clean up. 
 
-Lets start with thee emissions data.
+Lets start with the emissions data.
 
 ## Setting R up
 
@@ -33,7 +33,118 @@ names(emissions)
 ```
 I appears the first few columns after the country name and unit are the dates, starting with 1990 and going until 2019. There are alot of other columns after that however, that are unclear of what data they hold. 
 
-```{r}
+Lets learn more.
 
+```{r}
+str(emissions)
 ```
+Another issue I have noticed is all the data is coming in as factor data. We can check this with glimpse()
+
+```{r}
+glimpse(emissions)
+```
+Here we can see both the odd amount of empty data columns and that they are all listed as factor data, which we will need to change to numerical data. 
+
+When looking at the full data set, we can also see that there are two rows at the bottom that are unecessary.They appear to be metadata.
+
+##Fixing the Data
+
+First we only want columns with data, so we need to select the rows we desire.
+
+### Emitting the Empty Columns
+```{r}
+emissions<- emissions %>% select("Country.Region", "X1990":"X2019")
+emissions
+
+#The : actually worked inside select, which is neat.
+```
+Now we should rename the column names. 
+
+### Renaming the Column Names
+
+THIS DIDNT WORK WAAAAA?
+```{r}
+rename(emissions, country=Country.Region)  
+# rename allows one to rename individual column names and does not require the coder to type all of the columns.
+```
+In a perfect world I would rename all of the dates to 1990 and so forth, rather than X1990.The issue is, R thinks when I type 1990 I am referring to a number, so the current column names will have to stay. 
+
+When looking at the full data set, we can also see that there are two rows at the bottom that are unecessary.They appear to be metadata. We need to remove these from the dataframe. 
+
+## Emitting the Last Two Rows
+```{r}
+emissions <- emissions %>% slice(-194,-195)
+# Gets rid of the last two rows.
+```
+
+Lastly, we need to make all the date columns into
+
+### Changing Factors to Numeric
+
+This code below messes the number ups somehow.
+```{r}
+#emissions$X1990<- as.numeric(emissions$X1990)
+```
+NA's were introduced by corecion, because some of the data contains the word "FALSE" in it. Which, is just changed to an NA. I believe this is the best course of action anyway, since the metadata does not explain what FALSE means. 
+
+To not have to run the above code 30 times, we can try a loop, though it did not work. 
+```{r}
+#for(i in emissions$X1990:emissions$X2019){
+#i <- as.numeric(as.character(i))
+#}
+```
+
+Lets try lapply and slapply instead.
+If we are to use them, we need the first column to not be a factor temporarily, soo it does not get turned into numeric data, which woould be bad, given they are country names.
+
+This will work but I had to do a weird thing.
+```{r}
+#So, instead I separated the data frames into two, just changed the data types of the data frame with the dates in them, and the used cbind to glue them back together into one dataframe! 
+emissions1<- emissions %>% select(Country.Region)
+emissionsfix<- emissions %>% select(-Country.Region)
+
+indx <- sapply(emissionsfix, is.factor)
+emissionsfix[indx] <- lapply(emissionsfix[indx], function(x) as.numeric(as.character(x)))
+
+emissions<- cbind(emissions1, emissionsfix)
+```
+
+Now the data is all swell and we can go to checking for outliers and running tests. 
+
+## Graphing the Data
+We want to compare the emissions of Denmark to the United States from 1990 to 2019, so we are going to want a scatter plot. 
+
+Now we have the added issue that this is actually wide format not long.
+```{r}
+emissions_graph<- emissions %>% filter(Country.Region=="Denmark" | Country.Region=="United States")
+ggplot(emissions, aes(x=))
+```
+
+## Pivoting to long format
+
+This worked!
+```{r}
+emissions_graph<-emissions_graph %>% pivot_longer(cols=c('X1990':'X2019'),
+                    names_to='year',
+                    values_to='emissions')
+```
+
+### Graphing
+
+```{r}
+ggplot(emissions_graph, aes(x=year, y=emissions, colour=Country.Region)) + geom_point()+theme_bw()
+```
+
+It looks like Denmark has significantly less emissions than the U.S. There are some odd spikes in Denmarks emissions, but nothing that seems to be an outlier.
+
+## Running the Test
+
+We have our explanatory which is categorical, and our response of emissions, which is continuous. So, we want a two sample t test.
+```{r}
+t.test(emissions~Country.Region, data=emissions_graph)
+```
+The p value is very small, so the difference is significant. The United States released significantly more greenhouse gases than Denmark. 
+
+## Rate
+
 
