@@ -178,7 +178,6 @@ Now time for a Boxplot
 
 Lets see with a boxplot how the data looks
 
-
 ```{r}
 ggplot(emissions_US_Denmark, aes(x=country, y=emissions)) + geom_boxplot()+ theme_bw()
 ```
@@ -200,6 +199,136 @@ write.csv(emissions_long, here("Data for the Code", "Corrected_Data_sets", "emis
 
 
 ## Working with the Facebook Data
+
+Lets see one of the data sets. 
+```{r}
+DF<- read.csv(here("Data for the Code", "Facebook_data", "Facebook_2022_climate_awareness.csv"), stringsAsFactors = TRUE)
+```
+
+As of right now the Facebook data are in several different data csvs and all in wide format. 
+
+We'd like to reformat these data so that every country is a row, the question is a new column, and the number responding with each answer is a new column. 
+
+We'll use `pivot_longer` from `tidyr` package
+
+```{r}
+DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
+
+write.csv(DF_long, here("Data for the Code", "Facebook_data", "ccos_awareness.csv"), row.names = FALSE)
+#Now we have the csv for the climate change opinion survey about awareness. 
+```
+
+That works well, however I would have to do it 30 times. So, lets do a loop that repeats this for each of the cc_awareness data sets?
+
+Get the list of files. Two of the files contain information just about the US and should not be used, so let's also exclude them.
+```{r}
+myfiles<-list.files(here("Data for the Code", "Facebook_data"),pattern ="Facebook_2022")
+
+```
+
+Now build the loop. Include code to strip the suffix of each file and add it to the output file name. It should also add a column with the question that the data are for.
+```{r}
+for (i in 1:length(myfiles)){
+  DF <- read.csv(here("Data for the Code", "Facebook_data", myfiles[i]))
+  DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
+
+  
+mystring<-str_split(myfiles[i], "Facebook_2022")
+
+Qname<-str_remove(mystring[[1]][2], pattern = ".csv")
+
+DF_long <- DF_long %>% mutate(question = paste0("Ques_", Qname))
+
+colnames(DF_long)[1] <- "response"
+
+my_filename<-paste0("ccos",mystring[[1]][2])
+
+write.csv(DF_long, here("Data for the Code", "Corrected_Data_sets", my_filename), row.names = FALSE)               
+}
+```
+Looks like it worked!
+
+Now let's open a few
+```{r}
+awareness<-read.csv(here("Data for the Code", "Corrected_Data_sets", "ccos_climate_awareness.csv"))
+                    
+beliefs <-read.csv(here("Data for the Code", "Corrected_Data_sets",  "ccos_Climate_beliefs.csv"))
+```
+Ok - that's all working. So now I can pull them all together into one big data frame.
+
+```{r}
+myfiles<-list.files(here("Data for the Code", "Corrected_Data_sets"),pattern ="ccos")
+
+newDF<-read.csv(here("Data for the Code", "Corrected_Data_sets", myfiles[1]))
+
+for (i in 2:length(myfiles)){
+  tempDF <- read.csv(here("Data for the Code", "Corrected_Data_sets", myfiles[i]))
+  newDF<-rbind(newDF, tempDF)
+}
+
+my_filename<-"ccos_all.csv"
+
+write.csv(newDF, here("Data for the Code", "Corrected_Data_sets",my_filename), row.names = F)               
+
+```
+
+Now we can check for errors and outliers 
+
+## Checking the Data
+
+suck it in
+```{r}
+ccos<-read.csv(here("Data for the Code", "Corrected_Data_sets", "ccos_all.csv"))
+```
+
+column names
+```{r}
+names(ccos)
+```
+We have the column names we were expecting spelled just fine. Lets further examine the data. 
+```{r}
+glimpse(ccos)
+```
+So we have here the resposnes, questions, and answers for every country in this survey. We can see the columns that are percent of people who answered that way are correctly labeled as double and not character data. 
+We only want Denmark and the U.S. So, lets filter and see how the data looks. 
+
+```{r}
+ccos_US_Denmark<- ccos %>% filter(Country=="United.States" | Country=="Denmark")
+```
+
+## Checking for outliers
+
+```{r}
+summary(ccos_US_Denmark)
+```
+This tells me it is the number of individuals who responded a certain way. The question is, why is the max 3096 and the third quartile is only 44.612? This big difference may indicate an outlier. The large number is the unweighted base of the survey population. What the data collectors did was "To ensure that the survey sample more accurately reflects the characteristics of the population, we assign weights to survey responses, which doesn’t identify anyone but helps correct for sample bias." So, the unweighted data is without that. We do not want to include that in our data. 
+
+### Removing the unweighted base
+```{r}
+ccos_US_Denmark<- ccos_US_Denmark %>% filter(ccos_US_Denmark$ response!="(Unweighted Base)")
+```
+
+Lets run this again:
+
+```{r}
+summary(ccos_US_Denmark)
+```
+Now the 3rd quartile is 29.21 and the max is 88.19. this may be because the United States is larger than Denmark, skewing the means, so lets use graphs instead.
+
+```{r}
+ccos_US_Denmark_worry<- ccos_US_Denmark %>% filter(ccos_US_Denmark$question=="Ques__climate_worry")
+ggplot(ccos_US_Denmark, aes(x="response", y="Number")) + geom_bar(stat='identity', position='dodge', colour='Country')
+```
+
+
+
+
+To check for outliers I do not think we can graph all of them
+```{r}
+ggplot(ccos_US_Denmark, aes(x=Question))
+```
+
+
 
 
 ```{r}
