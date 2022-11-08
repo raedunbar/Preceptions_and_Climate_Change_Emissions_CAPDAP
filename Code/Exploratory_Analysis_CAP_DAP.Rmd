@@ -4,9 +4,10 @@ author: "Rae Dunbar"
 date: "11/7/2022"
 output: html_document
 ---
-For this project theere are several csv's that came from three excel sheets. The first one is emissions per country from 1990-2019. The second is a survey about countries climate perceptions that Yale used for a research paper. And the third is from a Facebook survey of several countries perceptions of climate change. The facebook survey data put its data in wide format using several sheets, so I had to make each sheet into a separate csv. That dataset will be the most burdensome to clean up. 
+For this project there are several csv's that came from three excel sheets. The first one is emissions per country from 1990-2019. The second is a survey about countries climate perceptions that Yale used for a research paper. And the third is from a Facebook survey of several countries perceptions of climate change. The facebook survey data put its data in wide format using several sheets, so there are several separate csvs. That data set will be the most burdensome to clean up. 
 
 Lets start with the emissions data.
+
 
 ## Setting R up
 
@@ -31,7 +32,7 @@ What are the headers?
 ```{r}
 names(emissions)
 ```
-I appears the first few columns after the country name and unit are the dates, starting with 1990 and going until 2019. There are alot of other columns after that however, that are unclear of what data they hold. 
+It appears the first few columns after the country name and unit are the dates, starting with 1990 and going until 2019. There are a lot of other columns after that however, that are unclear of what data they hold. I will have to delete those and I will also need to make this into long format.
 
 Lets learn more.
 
@@ -43,9 +44,16 @@ Another issue I have noticed is all the data is coming in as factor data. We can
 ```{r}
 glimpse(emissions)
 ```
-Here we can see both the odd amount of empty data columns and that they are all listed as factor data, which we will need to change to numerical data. 
+Here we can see both the odd amount of empty data columns and that they are all listed as factor data, which we will need to change to numerical data. If we change it to numerical data we will also need to get rid of the X in front of the dates. 
 
-When looking at the full data set, we can also see that there are two rows at the bottom that are unecessary.They appear to be metadata.
+When looking at the full data set, we can also see that there are two rows at the bottom that are unnecessary.They appear to be metadata.
+
+What need to be fixed:
+1. removing the blank columns
+2. renaming the column names
+3. removing the last two rows
+4. turning the data into long format
+5. getting rid of the X's at the beginning of the dates
 
 ##Fixing the Data
 
@@ -62,14 +70,14 @@ Now we should rename the column names.
 
 ### Renaming the Column Names
 
-THIS DIDNT WORK WAAAAA?
 ```{r}
-rename(emissions, country=Country.Region)  
+emissions<-rename(emissions, country=Country.Region)  
 # rename allows one to rename individual column names and does not require the coder to type all of the columns.
+#Make sure you assign it to your data frame!!!!!!
 ```
-In a perfect world I would rename all of the dates to 1990 and so forth, rather than X1990.The issue is, R thinks when I type 1990 I am referring to a number, so the current column names will have to stay. 
+In a perfect world I would rename all of the dates to 1990 and so forth, rather than X1990.The issue is, R thinks when I type 1990 I am referring to a number, so the current column names will have to stay. We also need it in long format anyway, so just fixing the Country.Region one is good.
 
-When looking at the full data set, we can also see that there are two rows at the bottom that are unecessary.They appear to be metadata. We need to remove these from the dataframe. 
+When looking at the full data set, we can also see that there are two rows at the bottom that are unnecessary.They appear to be metadata. We need to remove these from the dataframe. 
 
 ## Emitting the Last Two Rows
 ```{r}
@@ -77,7 +85,7 @@ emissions <- emissions %>% slice(-194,-195)
 # Gets rid of the last two rows.
 ```
 
-Lastly, we need to make all the date columns into
+Lastly, we need to make all the date columns into numeric rather than factor data, so when we put it in long format R knows they are numbers. 
 
 ### Changing Factors to Numeric
 
@@ -95,56 +103,114 @@ To not have to run the above code 30 times, we can try a loop, though it did not
 ```
 
 Lets try lapply and slapply instead.
-If we are to use them, we need the first column to not be a factor temporarily, soo it does not get turned into numeric data, which woould be bad, given they are country names.
+If we are to use them, we need the first column to not be a factor temporarily, soo it does not get turned into numeric data, which would be bad, given they are country names.
 
-This will work but I had to do a weird thing.
 ```{r}
-#So, instead I separated the data frames into two, just changed the data types of the data frame with the dates in them, and the used cbind to glue them back together into one dataframe! 
-emissions1<- emissions %>% select(Country.Region)
-emissionsfix<- emissions %>% select(-Country.Region)
-
+#So, instead I separated the data frames into two, just changed the data types of the data frame with the dates in them, and then used cbind to glue them back together into one dataframe! 
+emissions1<- emissions %>% select(country)
+emissionsfix<- emissions %>% select(-country)
 indx <- sapply(emissionsfix, is.factor)
 emissionsfix[indx] <- lapply(emissionsfix[indx], function(x) as.numeric(as.character(x)))
 
+#sapply (the data frame, what you want to do to it). So you assign indx to all the columns that are factors in emissionsfix. And then lapply does what you want it to do to every single column. So you say I want you to work with emissionsfix[at the index indx] and then do this function, which is to make all of it to character and then to a number. You cannot go from factor to number.
+
 emissions<- cbind(emissions1, emissionsfix)
 ```
+NA's were introduced by coercion into the countries that have FALSE listed as their emissions, because their emissions could not be recorded.
 
-Now the data is all swell and we can go to checking for outliers and running tests. 
-
-## Graphing the Data
-We want to compare the emissions of Denmark to the United States from 1990 to 2019, so we are going to want a scatter plot. 
-
-Now we have the added issue that this is actually wide format not long.
-```{r}
-emissions_graph<- emissions %>% filter(Country.Region=="Denmark" | Country.Region=="United States")
-ggplot(emissions, aes(x=))
-```
+Now we need to chagne the data from wide to long format.
 
 ## Pivoting to long format
 
 This worked!
 ```{r}
-emissions_graph<-emissions_graph %>% pivot_longer(cols=c('X1990':'X2019'),
+emissions_long<-emissions %>% pivot_longer(cols=c('X1990':'X2019'),
                     names_to='year',
                     values_to='emissions')
 ```
 
+Now we want to get rid of the X infront of the X1990 etc. 
+
+## Getting rid of the X
+
+For the technique that I came up with it is easier with fewer countries. So, we want to compare the emissions of Denmark to the United States from 1990 to 2019.
+
+First we need to filter the data so we can just look at the two states of interest. 
+```{r}
+emissions_US_Denmark<- emissions_long %>% filter(country=="Denmark" | country =="United States")
+```
+
+```{r}
+
+emissions_US_Denmark$year<- 'NA'
+emissions_US_Denmark$year<- as.numeric(emissions_US_Denmark$year)
+emissions_US_Denmark[1:30,2]<-1990:2019
+emissions_US_Denmark[31:60,2]<- 1990:2019
+```
+ str_replace
+ str_detect
+ str_split 
+ Feel free showing me the other way
+ 
+NA's were introduced by coercion if there was something other than a number entered in. 
+
+## Checking Data for Outliers
+
+Lets check for outliers.
+```{r}
+summary(emissions_US_Denmark)
+```
+Even with both countries together the max is not far from the third quartile, so there appears to be no outliers. Lets check this with graphs.
+
 ### Graphing
+Lets graph the two to see if there are any outliers.
+Lets use a scatterplot first, since we have emissions and year. 
+```{r}
+ggplot(emissions_US_Denmark, aes(x=year, y=emissions, colour=country)) + geom_point()+ theme_bw()
+```
+Eventually I would like to graph this with a line of best fit. How would you do that? Is it geom_smooth(method=lm), because it is not working. 
+
+
+It looks like Denmark has significantly less emissions than the U.S. There are some odd spikes in Denmark's emissions, but nothing that seems to be an outlier. The data trends slowly downward which makes sense, given both countries are trying to reduce their emissions.
+
+
+Now time for a Boxplot
+
+Lets see with a boxplot how the data looks
+
 
 ```{r}
-ggplot(emissions_graph, aes(x=year, y=emissions, colour=Country.Region)) + geom_point()+theme_bw()
+ggplot(emissions_US_Denmark, aes(x=country, y=emissions)) + geom_boxplot()+ theme_bw()
 ```
+There standard deviation bars are not that big, espeically with the United States. The emissions look very reasonable for both. 
 
-It looks like Denmark has significantly less emissions than the U.S. There are some odd spikes in Denmarks emissions, but nothing that seems to be an outlier.
+the next step will be to calculate rate and to do a test, but we will save that for after we clean up the other data sets. For tests we will do either a repeated measures analysis or a time series analysis.
 
-## Running the Test
 
-We have our explanatory which is categorical, and our response of emissions, which is continuous. So, we want a two sample t test.
+## Save the Corrected Data
+Saving corrected and reformatted emissions data.
 ```{r}
-t.test(emissions~Country.Region, data=emissions_graph)
+write.csv(emissions_US_Denmark, here("Data for the Code", "emissions_corrected_US_Denmark.csv"), row.names=FALSE)
+
+#row.names=FALSE prevents R from adding extra blank rows to the csv.
+
+write.csv(emissions_long, here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_all.csv"), row.names=FALSE)
 ```
-The p value is very small, so the difference is significant. The United States released significantly more greenhouse gases than Denmark. 
 
-## Rate
 
+
+## Working with the Facebook Data
+
+
+```{r}
+allfiles<- list.files(here("Data for the Code", "Facebook_data"), pattern="Facebook_2022")
+```
+
+```{r}
+pivot_longer(Agentina:Vietnam, names_to="Country", values_to="Number")
+```
+
+```{r}
+
+```
 

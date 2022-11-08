@@ -1,0 +1,5791 @@
+"country","year","emissions"
+"Afghanistan","X1990",0.77
+"Afghanistan","X1991",0.74
+"Afghanistan","X1992",0.62
+"Afghanistan","X1993",0.58
+"Afghanistan","X1994",0.54
+"Afghanistan","X1995",0.53
+"Afghanistan","X1996",0.56
+"Afghanistan","X1997",0.6
+"Afghanistan","X1998",0.63
+"Afghanistan","X1999",0.66
+"Afghanistan","X2000",0.55
+"Afghanistan","X2001",0.57
+"Afghanistan","X2002",0.66
+"Afghanistan","X2003",0.66
+"Afghanistan","X2004",0.62
+"Afghanistan","X2005",0.64
+"Afghanistan","X2006",0.64
+"Afghanistan","X2007",0.64
+"Afghanistan","X2008",0.75
+"Afghanistan","X2009",0.8
+"Afghanistan","X2010",0.93
+"Afghanistan","X2011",0.97
+"Afghanistan","X2012",0.92
+"Afghanistan","X2013",0.83
+"Afghanistan","X2014",0.79
+"Afghanistan","X2015",0.78
+"Afghanistan","X2016",0.76
+"Afghanistan","X2017",0.74
+"Afghanistan","X2018",0.75
+"Afghanistan","X2019",0.76
+"Albania","X1990",3.44
+"Albania","X1991",2.74
+"Albania","X1992",2.14
+"Albania","X1993",2.14
+"Albania","X1994",2.41
+"Albania","X1995",2.38
+"Albania","X1996",2.3
+"Albania","X1997",2.09
+"Albania","X1998",2.18
+"Albania","X1999",2.58
+"Albania","X2000",2.72
+"Albania","X2001",2.29
+"Albania","X2002",2.5
+"Albania","X2003",2.62
+"Albania","X2004",2.66
+"Albania","X2005",2.6
+"Albania","X2006",2.58
+"Albania","X2007",2.61
+"Albania","X2008",2.54
+"Albania","X2009",2.57
+"Albania","X2010",2.67
+"Albania","X2011",2.92
+"Albania","X2012",2.77
+"Albania","X2013",2.79
+"Albania","X2014",2.95
+"Albania","X2015",2.91
+"Albania","X2016",3.08
+"Albania","X2017",3.28
+"Albania","X2018",3.22
+"Albania","X2019",3.07
+"Algeria","X1990",4.71
+"Algeria","X1991",4.76
+"Algeria","X1992",4.68
+"Algeria","X1993",4.89
+"Algeria","X1994",4.85
+"Algeria","X1995",5
+"Algeria","X1996",5.02
+"Algeria","X1997",4.94
+"Algeria","X1998",4.94
+"Algeria","X1999",5.05
+"Algeria","X2000",5.27
+"Algeria","X2001",4.99
+"Algeria","X2002",5.11
+"Algeria","X2003",5.43
+"Algeria","X2004",5.45
+"Algeria","X2005",5.6
+"Algeria","X2006",5.75
+"Algeria","X2007",5.75
+"Algeria","X2008",5.82
+"Algeria","X2009",5.78
+"Algeria","X2010",5.77
+"Algeria","X2011",5.87
+"Algeria","X2012",6.29
+"Algeria","X2013",6.28
+"Algeria","X2014",6.5
+"Algeria","X2015",6.61
+"Algeria","X2016",6.55
+"Algeria","X2017",6.51
+"Algeria","X2018",6.59
+"Algeria","X2019",6.56
+"Andorra","X1990",7.9
+"Andorra","X1991",7.63
+"Andorra","X1992",7.37
+"Andorra","X1993",7.21
+"Andorra","X1994",6.98
+"Andorra","X1995",7.17
+"Andorra","X1996",7.67
+"Andorra","X1997",7.94
+"Andorra","X1998",8.46
+"Andorra","X1999",8.87
+"Andorra","X2000",8.99
+"Andorra","X2001",8.8
+"Andorra","X2002",8.63
+"Andorra","X2003",8.38
+"Andorra","X2004",8.44
+"Andorra","X2005",8.4
+"Andorra","X2006",7.88
+"Andorra","X2007",7.68
+"Andorra","X2008",7.63
+"Andorra","X2009",7.37
+"Andorra","X2010",7.42
+"Andorra","X2011",7.19
+"Andorra","X2012",7.27
+"Andorra","X2013",7.29
+"Andorra","X2014",7.26
+"Andorra","X2015",7.43
+"Andorra","X2016",7.58
+"Andorra","X2017",7.6
+"Andorra","X2018",8.02
+"Andorra","X2019",8.13
+"Angola","X1990",5.58
+"Angola","X1991",5.44
+"Angola","X1992",5.32
+"Angola","X1993",5.37
+"Angola","X1994",5.42
+"Angola","X1995",5.47
+"Angola","X1996",5.66
+"Angola","X1997",5.41
+"Angola","X1998",5.85
+"Angola","X1999",5.52
+"Angola","X2000",4.96
+"Angola","X2001",5.99
+"Angola","X2002",6
+"Angola","X2003",6.16
+"Angola","X2004",6.11
+"Angola","X2005",5.91
+"Angola","X2006",5.6
+"Angola","X2007",5.61
+"Angola","X2008",5.53
+"Angola","X2009",5.44
+"Angola","X2010",5.44
+"Angola","X2011",5.23
+"Angola","X2012",5.01
+"Angola","X2013",4.92
+"Angola","X2014",4.82
+"Angola","X2015",4.87
+"Angola","X2016",4.63
+"Angola","X2017",4.4
+"Angola","X2018",3.9
+"Angola","X2019",4.03
+"Antigua and Barbuda","X1990",5.65
+"Antigua and Barbuda","X1991",5.78
+"Antigua and Barbuda","X1992",6.91
+"Antigua and Barbuda","X1993",6.41
+"Antigua and Barbuda","X1994",6.35
+"Antigua and Barbuda","X1995",6.6
+"Antigua and Barbuda","X1996",6.82
+"Antigua and Barbuda","X1997",7.15
+"Antigua and Barbuda","X1998",7.65
+"Antigua and Barbuda","X1999",7.8
+"Antigua and Barbuda","X2000",7.91
+"Antigua and Barbuda","X2001",8.35
+"Antigua and Barbuda","X2002",8.97
+"Antigua and Barbuda","X2003",9.33
+"Antigua and Barbuda","X2004",9.33
+"Antigua and Barbuda","X2005",9.57
+"Antigua and Barbuda","X2006",10.28
+"Antigua and Barbuda","X2007",10.8
+"Antigua and Barbuda","X2008",11.26
+"Antigua and Barbuda","X2009",22.1
+"Antigua and Barbuda","X2010",11.7
+"Antigua and Barbuda","X2011",12.19
+"Antigua and Barbuda","X2012",13.92
+"Antigua and Barbuda","X2013",11.44
+"Antigua and Barbuda","X2014",11.47
+"Antigua and Barbuda","X2015",11.61
+"Antigua and Barbuda","X2016",11.9
+"Antigua and Barbuda","X2017",12.06
+"Antigua and Barbuda","X2018",12.32
+"Antigua and Barbuda","X2019",12.53
+"Argentina","X1990",8.97
+"Argentina","X1991",8.98
+"Argentina","X1992",8.99
+"Argentina","X1993",8.89
+"Argentina","X1994",8.88
+"Argentina","X1995",8.85
+"Argentina","X1996",9.06
+"Argentina","X1997",9.11
+"Argentina","X1998",9.15
+"Argentina","X1999",9.26
+"Argentina","X2000",9.15
+"Argentina","X2001",10.17
+"Argentina","X2002",9.97
+"Argentina","X2003",10.45
+"Argentina","X2004",10.76
+"Argentina","X2005",10.75
+"Argentina","X2006",11.01
+"Argentina","X2007",11.22
+"Argentina","X2008",11.22
+"Argentina","X2009",10.61
+"Argentina","X2010",10.66
+"Argentina","X2011",10.08
+"Argentina","X2012",10.09
+"Argentina","X2013",10.21
+"Argentina","X2014",10.05
+"Argentina","X2015",10.1
+"Argentina","X2016",9.25
+"Argentina","X2017",9.25
+"Argentina","X2018",9.1
+"Argentina","X2019",8.88
+"Armenia","X1990",6.94
+"Armenia","X1991",7.17
+"Armenia","X1992",4.34
+"Armenia","X1993",2.59
+"Armenia","X1994",1.88
+"Armenia","X1995",NA
+"Armenia","X1996",1.8
+"Armenia","X1997",2.02
+"Armenia","X1998",2.01
+"Armenia","X1999",1.86
+"Armenia","X2000",1.99
+"Armenia","X2001",2.04
+"Armenia","X2002",1.94
+"Armenia","X2003",2.1
+"Armenia","X2004",2.24
+"Armenia","X2005",2.5
+"Armenia","X2006",2.65
+"Armenia","X2007",2.89
+"Armenia","X2008",3.1
+"Armenia","X2009",2.72
+"Armenia","X2010",2.67
+"Armenia","X2011",2.82
+"Armenia","X2012",3.16
+"Armenia","X2013",3.13
+"Armenia","X2014",3.11
+"Armenia","X2015",3.1
+"Armenia","X2016",3.22
+"Armenia","X2017",3.15
+"Armenia","X2018",3.21
+"Armenia","X2019",3.38
+"Australia","X1990",31.72
+"Australia","X1991",31.32
+"Australia","X1992",30.98
+"Australia","X1993",30.8
+"Australia","X1994",30.81
+"Australia","X1995",30.88
+"Australia","X1996",30.44
+"Australia","X1997",30.61
+"Australia","X1998",31.74
+"Australia","X1999",33.43
+"Australia","X2000",33.98
+"Australia","X2001",33.81
+"Australia","X2002",33.23
+"Australia","X2003",28.96
+"Australia","X2004",31.18
+"Australia","X2005",28.95
+"Australia","X2006",30.84
+"Australia","X2007",30.63
+"Australia","X2008",28.65
+"Australia","X2009",28.87
+"Australia","X2010",27.07
+"Australia","X2011",28.65
+"Australia","X2012",28.14
+"Australia","X2013",23.96
+"Australia","X2014",24.28
+"Australia","X2015",23.89
+"Australia","X2016",23.91
+"Australia","X2017",25.47
+"Australia","X2018",24.87
+"Australia","X2019",23.99
+"Austria","X1990",8.22
+"Austria","X1991",8.69
+"Austria","X1992",7.86
+"Austria","X1993",7.78
+"Austria","X1994",7.76
+"Austria","X1995",8.06
+"Austria","X1996",8.53
+"Austria","X1997",8.39
+"Austria","X1998",8.38
+"Austria","X1999",8.13
+"Austria","X2000",8.14
+"Austria","X2001",9.55
+"Austria","X2002",9.67
+"Austria","X2003",10.25
+"Austria","X2004",10.29
+"Austria","X2005",10.23
+"Austria","X2006",9.91
+"Austria","X2007",9.51
+"Austria","X2008",9.43
+"Austria","X2009",8.58
+"Austria","X2010",9.25
+"Austria","X2011",8.87
+"Austria","X2012",8.45
+"Austria","X2013",8.47
+"Austria","X2014",7.97
+"Austria","X2015",8.01
+"Austria","X2016",7.97
+"Austria","X2017",8.13
+"Austria","X2018",7.73
+"Austria","X2019",7.86
+"Azerbaijan","X1990",10.33
+"Azerbaijan","X1991",9.85
+"Azerbaijan","X1992",10.94
+"Azerbaijan","X1993",8.02
+"Azerbaijan","X1994",5.37
+"Azerbaijan","X1995",5.19
+"Azerbaijan","X1996",4.42
+"Azerbaijan","X1997",4.32
+"Azerbaijan","X1998",4.33
+"Azerbaijan","X1999",4.31
+"Azerbaijan","X2000",4.5
+"Azerbaijan","X2001",4.36
+"Azerbaijan","X2002",4.34
+"Azerbaijan","X2003",4.63
+"Azerbaijan","X2004",4.61
+"Azerbaijan","X2005",4.89
+"Azerbaijan","X2006",5.06
+"Azerbaijan","X2007",4.83
+"Azerbaijan","X2008",5.23
+"Azerbaijan","X2009",4.62
+"Azerbaijan","X2010",4.44
+"Azerbaijan","X2011",4.58
+"Azerbaijan","X2012",4.86
+"Azerbaijan","X2013",4.93
+"Azerbaijan","X2014",5.01
+"Azerbaijan","X2015",4.94
+"Azerbaijan","X2016",5.02
+"Azerbaijan","X2017",4.9
+"Azerbaijan","X2018",5.01
+"Azerbaijan","X2019",5.28
+"Bahamas","X1990",8.52
+"Bahamas","X1991",8.64
+"Bahamas","X1992",10.48
+"Bahamas","X1993",8.55
+"Bahamas","X1994",8.31
+"Bahamas","X1995",8.69
+"Bahamas","X1996",8.29
+"Bahamas","X1997",7.49
+"Bahamas","X1998",9.18
+"Bahamas","X1999",8.95
+"Bahamas","X2000",8.59
+"Bahamas","X2001",8.08
+"Bahamas","X2002",8.56
+"Bahamas","X2003",8.31
+"Bahamas","X2004",7.96
+"Bahamas","X2005",7.34
+"Bahamas","X2006",7.15
+"Bahamas","X2007",7.05
+"Bahamas","X2008",7.34
+"Bahamas","X2009",18.5
+"Bahamas","X2010",6.68
+"Bahamas","X2011",8.12
+"Bahamas","X2012",10.58
+"Bahamas","X2013",8.64
+"Bahamas","X2014",7.64
+"Bahamas","X2015",6.77
+"Bahamas","X2016",6.33
+"Bahamas","X2017",6.74
+"Bahamas","X2018",8.11
+"Bahamas","X2019",8.16
+"Bahrain","X1990",31.71
+"Bahrain","X1991",30.12
+"Bahrain","X1992",33.56
+"Bahrain","X1993",34.6
+"Bahrain","X1994",34.62
+"Bahrain","X1995",35.02
+"Bahrain","X1996",36.28
+"Bahrain","X1997",36.98
+"Bahrain","X1998",38.72
+"Bahrain","X1999",38.27
+"Bahrain","X2000",38.28
+"Bahrain","X2001",37.68
+"Bahrain","X2002",37.38
+"Bahrain","X2003",36.67
+"Bahrain","X2004",34.7
+"Bahrain","X2005",36.09
+"Bahrain","X2006",36.08
+"Bahrain","X2007",34.54
+"Bahrain","X2008",34.36
+"Bahrain","X2009",32.78
+"Bahrain","X2010",32.89
+"Bahrain","X2011",32.47
+"Bahrain","X2012",33.18
+"Bahrain","X2013",34.92
+"Bahrain","X2014",35.95
+"Bahrain","X2015",35.62
+"Bahrain","X2016",34.61
+"Bahrain","X2017",33.63
+"Bahrain","X2018",32.59
+"Bahrain","X2019",33.15
+"Bangladesh","X1990",1.13
+"Bangladesh","X1991",1.11
+"Bangladesh","X1992",1.1
+"Bangladesh","X1993",1.09
+"Bangladesh","X1994",1.09
+"Bangladesh","X1995",1.12
+"Bangladesh","X1996",1.1
+"Bangladesh","X1997",1.09
+"Bangladesh","X1998",1.07
+"Bangladesh","X1999",1.08
+"Bangladesh","X2000",1.08
+"Bangladesh","X2001",1.1
+"Bangladesh","X2002",1.11
+"Bangladesh","X2003",1.1
+"Bangladesh","X2004",1.1
+"Bangladesh","X2005",1.12
+"Bangladesh","X2006",1.15
+"Bangladesh","X2007",1.15
+"Bangladesh","X2008",1.2
+"Bangladesh","X2009",1.22
+"Bangladesh","X2010",1.26
+"Bangladesh","X2011",1.28
+"Bangladesh","X2012",1.29
+"Bangladesh","X2013",1.3
+"Bangladesh","X2014",1.32
+"Bangladesh","X2015",1.37
+"Bangladesh","X2016",1.37
+"Bangladesh","X2017",1.41
+"Bangladesh","X2018",1.42
+"Bangladesh","X2019",1.46
+"Barbados","X1990",11.92
+"Barbados","X1991",11.99
+"Barbados","X1992",12.86
+"Barbados","X1993",12.24
+"Barbados","X1994",12.46
+"Barbados","X1995",12.63
+"Barbados","X1996",12.62
+"Barbados","X1997",12.98
+"Barbados","X1998",13.33
+"Barbados","X1999",13.46
+"Barbados","X2000",13.22
+"Barbados","X2001",13.41
+"Barbados","X2002",13.55
+"Barbados","X2003",13.55
+"Barbados","X2004",13.48
+"Barbados","X2005",13.59
+"Barbados","X2006",13.74
+"Barbados","X2007",13.76
+"Barbados","X2008",14.83
+"Barbados","X2009",24.89
+"Barbados","X2010",13.98
+"Barbados","X2011",14.75
+"Barbados","X2012",16.04
+"Barbados","X2013",13.67
+"Barbados","X2014",13.09
+"Barbados","X2015",13.11
+"Barbados","X2016",13.22
+"Barbados","X2017",12.88
+"Barbados","X2018",13.11
+"Barbados","X2019",13.21
+"Belarus","X1990",10.28
+"Belarus","X1991",9.78
+"Belarus","X1992",8.43
+"Belarus","X1993",7.16
+"Belarus","X1994",5.88
+"Belarus","X1995",5.11
+"Belarus","X1996",5.21
+"Belarus","X1997",5.27
+"Belarus","X1998",5.1
+"Belarus","X1999",4.89
+"Belarus","X2000",4.65
+"Belarus","X2001",5.34
+"Belarus","X2002",5.32
+"Belarus","X2003",5.47
+"Belarus","X2004",5.9
+"Belarus","X2005",6.03
+"Belarus","X2006",6.4
+"Belarus","X2007",6.3
+"Belarus","X2008",6.75
+"Belarus","X2009",6.46
+"Belarus","X2010",6.96
+"Belarus","X2011",7.58
+"Belarus","X2012",7.75
+"Belarus","X2013",7.81
+"Belarus","X2014",7.72
+"Belarus","X2015",7.22
+"Belarus","X2016",6.61
+"Belarus","X2017",6.76
+"Belarus","X2018",7.07
+"Belarus","X2019",6.94
+"Belgium","X1990",12.73
+"Belgium","X1991",13.17
+"Belgium","X1992",12.92
+"Belgium","X1993",12.66
+"Belgium","X1994",13.15
+"Belgium","X1995",13.13
+"Belgium","X1996",13.64
+"Belgium","X1997",13.29
+"Belgium","X1998",13.53
+"Belgium","X1999",13.12
+"Belgium","X2000",13.1
+"Belgium","X2001",13.19
+"Belgium","X2002",12.42
+"Belgium","X2003",12.7
+"Belgium","X2004",12.5
+"Belgium","X2005",12.08
+"Belgium","X2006",11.71
+"Belgium","X2007",11.19
+"Belgium","X2008",11.31
+"Belgium","X2009",10.57
+"Belgium","X2010",11.17
+"Belgium","X2011",10.04
+"Belgium","X2012",9.86
+"Belgium","X2013",9.9
+"Belgium","X2014",9.29
+"Belgium","X2015",9.67
+"Belgium","X2016",9.75
+"Belgium","X2017",9.54
+"Belgium","X2018",9.56
+"Belgium","X2019",9.42
+"Belize","X1990",70.26
+"Belize","X1991",70.06
+"Belize","X1992",70.04
+"Belize","X1993",69.2
+"Belize","X1994",68.34
+"Belize","X1995",61.33
+"Belize","X1996",53.95
+"Belize","X1997",47.57
+"Belize","X1998",41.52
+"Belize","X1999",35.16
+"Belize","X2000",29.88
+"Belize","X2001",16.19
+"Belize","X2002",16.15
+"Belize","X2003",16.59
+"Belize","X2004",14.67
+"Belize","X2005",14.78
+"Belize","X2006",14.52
+"Belize","X2007",14.77
+"Belize","X2008",14.27
+"Belize","X2009",17.19
+"Belize","X2010",14.17
+"Belize","X2011",21.87
+"Belize","X2012",20.37
+"Belize","X2013",19.86
+"Belize","X2014",19.13
+"Belize","X2015",19.38
+"Belize","X2016",18.33
+"Belize","X2017",18.11
+"Belize","X2018",17.6
+"Belize","X2019",17.55
+"Benin","X1990",3.96
+"Benin","X1991",3.85
+"Benin","X1992",3.74
+"Benin","X1993",3.62
+"Benin","X1994",3.54
+"Benin","X1995",3.39
+"Benin","X1996",3.52
+"Benin","X1997",3.47
+"Benin","X1998",3.53
+"Benin","X1999",3.4
+"Benin","X2000",3.32
+"Benin","X2001",2.44
+"Benin","X2002",2.51
+"Benin","X2003",2.43
+"Benin","X2004",2.37
+"Benin","X2005",2.45
+"Benin","X2006",2.4
+"Benin","X2007",2.42
+"Benin","X2008",2.32
+"Benin","X2009",2.32
+"Benin","X2010",2.3
+"Benin","X2011",2.25
+"Benin","X2012",2.18
+"Benin","X2013",2.19
+"Benin","X2014",2.18
+"Benin","X2015",2.16
+"Benin","X2016",2.26
+"Benin","X2017",2.21
+"Benin","X2018",2.25
+"Benin","X2019",2.18
+"Bhutan","X1990",-10.97
+"Bhutan","X1991",-10.8
+"Bhutan","X1992",-10.89
+"Bhutan","X1993",-10.91
+"Bhutan","X1994",-10.91
+"Bhutan","X1995",-10.7
+"Bhutan","X1996",-10.54
+"Bhutan","X1997",-10.36
+"Bhutan","X1998",-10.1
+"Bhutan","X1999",-9.77
+"Bhutan","X2000",-9.65
+"Bhutan","X2001",-9.52
+"Bhutan","X2002",-9.32
+"Bhutan","X2003",-9.12
+"Bhutan","X2004",-8.89
+"Bhutan","X2005",-8.58
+"Bhutan","X2006",-8.49
+"Bhutan","X2007",-8.28
+"Bhutan","X2008",-8.45
+"Bhutan","X2009",-8.27
+"Bhutan","X2010",-8.01
+"Bhutan","X2011",-0.05
+"Bhutan","X2012",0.09
+"Bhutan","X2013",0.04
+"Bhutan","X2014",0.08
+"Bhutan","X2015",0.15
+"Bhutan","X2016",0.35
+"Bhutan","X2017",0.4
+"Bhutan","X2018",0.49
+"Bhutan","X2019",0.47
+"Bolivia","X1990",16.46
+"Bolivia","X1991",16.27
+"Bolivia","X1992",16.05
+"Bolivia","X1993",15.53
+"Bolivia","X1994",15.11
+"Bolivia","X1995",14.62
+"Bolivia","X1996",14.43
+"Bolivia","X1997",14.45
+"Bolivia","X1998",14.16
+"Bolivia","X1999",14.58
+"Bolivia","X2000",13.19
+"Bolivia","X2001",10.55
+"Bolivia","X2002",11.03
+"Bolivia","X2003",10.55
+"Bolivia","X2004",11.76
+"Bolivia","X2005",11.12
+"Bolivia","X2006",11.15
+"Bolivia","X2007",11.5
+"Bolivia","X2008",10.82
+"Bolivia","X2009",10.49
+"Bolivia","X2010",12.49
+"Bolivia","X2011",11.21
+"Bolivia","X2012",11.11
+"Bolivia","X2013",11
+"Bolivia","X2014",10.9
+"Bolivia","X2015",11.01
+"Bolivia","X2016",11.82
+"Bolivia","X2017",11.54
+"Bolivia","X2018",11.41
+"Bolivia","X2019",12.05
+"Bosnia and Herzegovina","X1990",7.51
+"Bosnia and Herzegovina","X1991",7.05
+"Bosnia and Herzegovina","X1992",5.55
+"Bosnia and Herzegovina","X1993",4.92
+"Bosnia and Herzegovina","X1994",2.45
+"Bosnia and Herzegovina","X1995",2.49
+"Bosnia and Herzegovina","X1996",2.81
+"Bosnia and Herzegovina","X1997",4.14
+"Bosnia and Herzegovina","X1998",4.9
+"Bosnia and Herzegovina","X1999",4.88
+"Bosnia and Herzegovina","X2000",5.88
+"Bosnia and Herzegovina","X2001",4.98
+"Bosnia and Herzegovina","X2002",5.02
+"Bosnia and Herzegovina","X2003",5.15
+"Bosnia and Herzegovina","X2004",5.43
+"Bosnia and Herzegovina","X2005",5.62
+"Bosnia and Herzegovina","X2006",6.12
+"Bosnia and Herzegovina","X2007",6.43
+"Bosnia and Herzegovina","X2008",6.96
+"Bosnia and Herzegovina","X2009",7.06
+"Bosnia and Herzegovina","X2010",7.13
+"Bosnia and Herzegovina","X2011",6.96
+"Bosnia and Herzegovina","X2012",6.57
+"Bosnia and Herzegovina","X2013",6.63
+"Bosnia and Herzegovina","X2014",6.02
+"Bosnia and Herzegovina","X2015",6.17
+"Bosnia and Herzegovina","X2016",7.6
+"Bosnia and Herzegovina","X2017",7.76
+"Bosnia and Herzegovina","X2018",7.83
+"Bosnia and Herzegovina","X2019",7.42
+"Botswana","X1990",42.22
+"Botswana","X1991",40.51
+"Botswana","X1992",39.58
+"Botswana","X1993",38.33
+"Botswana","X1994",37.56
+"Botswana","X1995",37.27
+"Botswana","X1996",37.29
+"Botswana","X1997",36.13
+"Botswana","X1998",35.15
+"Botswana","X1999",34.39
+"Botswana","X2000",33.5
+"Botswana","X2001",33.97
+"Botswana","X2002",33.58
+"Botswana","X2003",28.9
+"Botswana","X2004",28.74
+"Botswana","X2005",28.98
+"Botswana","X2006",29.39
+"Botswana","X2007",27.84
+"Botswana","X2008",31.81
+"Botswana","X2009",26.54
+"Botswana","X2010",31.35
+"Botswana","X2011",33.31
+"Botswana","X2012",26.69
+"Botswana","X2013",26.85
+"Botswana","X2014",25.9
+"Botswana","X2015",25.24
+"Botswana","X2016",24.27
+"Botswana","X2017",25.49
+"Botswana","X2018",23.96
+"Botswana","X2019",22.72
+"Brazil","X1990",11
+"Brazil","X1991",10.95
+"Brazil","X1992",10.82
+"Brazil","X1993",10.72
+"Brazil","X1994",10.65
+"Brazil","X1995",10.64
+"Brazil","X1996",10.51
+"Brazil","X1997",10.53
+"Brazil","X1998",10.58
+"Brazil","X1999",10.49
+"Brazil","X2000",10.35
+"Brazil","X2001",10.71
+"Brazil","X2002",10.77
+"Brazil","X2003",10.71
+"Brazil","X2004",10.83
+"Brazil","X2005",10.78
+"Brazil","X2006",10.62
+"Brazil","X2007",10.69
+"Brazil","X2008",10.6
+"Brazil","X2009",10.36
+"Brazil","X2010",10.78
+"Brazil","X2011",6.46
+"Brazil","X2012",6.62
+"Brazil","X2013",6.69
+"Brazil","X2014",6.83
+"Brazil","X2015",6.68
+"Brazil","X2016",7.06
+"Brazil","X2017",7.1
+"Brazil","X2018",6.85
+"Brazil","X2019",6.88
+"Brunei","X1990",24.34
+"Brunei","X1991",24.45
+"Brunei","X1992",24.81
+"Brunei","X1993",25.62
+"Brunei","X1994",25.96
+"Brunei","X1995",26.58
+"Brunei","X1996",25.84
+"Brunei","X1997",27.21
+"Brunei","X1998",37.07
+"Brunei","X1999",23.1
+"Brunei","X2000",23.89
+"Brunei","X2001",23.27
+"Brunei","X2002",22.68
+"Brunei","X2003",25.53
+"Brunei","X2004",23.55
+"Brunei","X2005",22.78
+"Brunei","X2006",29.79
+"Brunei","X2007",28.12
+"Brunei","X2008",30.05
+"Brunei","X2009",29.16
+"Brunei","X2010",27
+"Brunei","X2011",24.96
+"Brunei","X2012",24.55
+"Brunei","X2013",23.68
+"Brunei","X2014",23.32
+"Brunei","X2015",21.15
+"Brunei","X2016",22.45
+"Brunei","X2017",23.15
+"Brunei","X2018",23.64
+"Brunei","X2019",22.24
+"Bulgaria","X1990",8.77
+"Bulgaria","X1991",6.89
+"Bulgaria","X1992",6.28
+"Bulgaria","X1993",6.16
+"Bulgaria","X1994",5.72
+"Bulgaria","X1995",5.89
+"Bulgaria","X1996",5.99
+"Bulgaria","X1997",5.65
+"Bulgaria","X1998",5.25
+"Bulgaria","X1999",4.45
+"Bulgaria","X2000",4.41
+"Bulgaria","X2001",4.57
+"Bulgaria","X2002",4.33
+"Bulgaria","X2003",4.99
+"Bulgaria","X2004",4.86
+"Bulgaria","X2005",4.9
+"Bulgaria","X2006",4.93
+"Bulgaria","X2007",5.52
+"Bulgaria","X2008",5.24
+"Bulgaria","X2009",4.27
+"Bulgaria","X2010",4.52
+"Bulgaria","X2011",6.91
+"Bulgaria","X2012",6.16
+"Bulgaria","X2013",5.48
+"Bulgaria","X2014",5.87
+"Bulgaria","X2015",6.29
+"Bulgaria","X2016",2.86
+"Bulgaria","X2017",3.2
+"Bulgaria","X2018",2.76
+"Bulgaria","X2019",2.51
+"Burkina Faso","X1990",2.9
+"Burkina Faso","X1991",2.87
+"Burkina Faso","X1992",2.82
+"Burkina Faso","X1993",2.77
+"Burkina Faso","X1994",2.75
+"Burkina Faso","X1995",2.71
+"Burkina Faso","X1996",2.63
+"Burkina Faso","X1997",2.61
+"Burkina Faso","X1998",2.62
+"Burkina Faso","X1999",2.53
+"Burkina Faso","X2000",2.58
+"Burkina Faso","X2001",2.67
+"Burkina Faso","X2002",2.65
+"Burkina Faso","X2003",2.84
+"Burkina Faso","X2004",2.8
+"Burkina Faso","X2005",2.77
+"Burkina Faso","X2006",2.68
+"Burkina Faso","X2007",2.65
+"Burkina Faso","X2008",2.63
+"Burkina Faso","X2009",2.6
+"Burkina Faso","X2010",2.62
+"Burkina Faso","X2011",1.92
+"Burkina Faso","X2012",1.91
+"Burkina Faso","X2013",1.9
+"Burkina Faso","X2014",1.88
+"Burkina Faso","X2015",1.87
+"Burkina Faso","X2016",2.87
+"Burkina Faso","X2017",2.84
+"Burkina Faso","X2018",2.8
+"Burkina Faso","X2019",2.77
+"Burundi","X1990",1.32
+"Burundi","X1991",1.31
+"Burundi","X1992",1.28
+"Burundi","X1993",1.25
+"Burundi","X1994",1.21
+"Burundi","X1995",1.22
+"Burundi","X1996",1.21
+"Burundi","X1997",1.21
+"Burundi","X1998",1.2
+"Burundi","X1999",1.21
+"Burundi","X2000",1.19
+"Burundi","X2001",0.84
+"Burundi","X2002",0.82
+"Burundi","X2003",0.79
+"Burundi","X2004",0.77
+"Burundi","X2005",0.76
+"Burundi","X2006",0.75
+"Burundi","X2007",0.74
+"Burundi","X2008",0.73
+"Burundi","X2009",0.72
+"Burundi","X2010",0.74
+"Burundi","X2011",0.19
+"Burundi","X2012",0.19
+"Burundi","X2013",0.23
+"Burundi","X2014",0.22
+"Burundi","X2015",0.22
+"Burundi","X2016",0.72
+"Burundi","X2017",0.75
+"Burundi","X2018",0.75
+"Burundi","X2019",0.7
+"Cambodia","X1990",2.77
+"Cambodia","X1991",2.64
+"Cambodia","X1992",2.6
+"Cambodia","X1993",2.6
+"Cambodia","X1994",2.39
+"Cambodia","X1995",2.57
+"Cambodia","X1996",2.15
+"Cambodia","X1997",2.21
+"Cambodia","X1998",2.45
+"Cambodia","X1999",2.36
+"Cambodia","X2000",2.17
+"Cambodia","X2001",2.17
+"Cambodia","X2002",2.31
+"Cambodia","X2003",2.46
+"Cambodia","X2004",2.49
+"Cambodia","X2005",2.33
+"Cambodia","X2006",2.55
+"Cambodia","X2007",2.58
+"Cambodia","X2008",2.53
+"Cambodia","X2009",2.6
+"Cambodia","X2010",2.5
+"Cambodia","X2011",6.86
+"Cambodia","X2012",6.63
+"Cambodia","X2013",6.53
+"Cambodia","X2014",6.46
+"Cambodia","X2015",6.5
+"Cambodia","X2016",4.28
+"Cambodia","X2017",4.36
+"Cambodia","X2018",4.33
+"Cambodia","X2019",4.35
+"Cameroon","X1990",6.25
+"Cameroon","X1991",6.73
+"Cameroon","X1992",6.52
+"Cameroon","X1993",6.16
+"Cameroon","X1994",10.02
+"Cameroon","X1995",9.75
+"Cameroon","X1996",9.58
+"Cameroon","X1997",9.37
+"Cameroon","X1998",9.39
+"Cameroon","X1999",9.08
+"Cameroon","X2000",8.94
+"Cameroon","X2001",7.81
+"Cameroon","X2002",7.61
+"Cameroon","X2003",7.58
+"Cameroon","X2004",7.21
+"Cameroon","X2005",7.16
+"Cameroon","X2006",6.83
+"Cameroon","X2007",6.68
+"Cameroon","X2008",6.52
+"Cameroon","X2009",6.34
+"Cameroon","X2010",6.19
+"Cameroon","X2011",5.64
+"Cameroon","X2012",5.5
+"Cameroon","X2013",5.43
+"Cameroon","X2014",5.32
+"Cameroon","X2015",5.24
+"Cameroon","X2016",5.17
+"Cameroon","X2017",5.03
+"Cameroon","X2018",4.93
+"Cameroon","X2019",4.82
+"Canada","X1990",21.92
+"Canada","X1991",21.5
+"Canada","X1992",21.75
+"Canada","X1993",21.38
+"Canada","X1994",21.77
+"Canada","X1995",22.06
+"Canada","X1996",22.57
+"Canada","X1997",22.74
+"Canada","X1998",23.09
+"Canada","X1999",22.87
+"Canada","X2000",23.23
+"Canada","X2001",30.25
+"Canada","X2002",30.59
+"Canada","X2003",31.01
+"Canada","X2004",30.62
+"Canada","X2005",30.77
+"Canada","X2006",30.11
+"Canada","X2007",30.84
+"Canada","X2008",29.76
+"Canada","X2009",28.39
+"Canada","X2010",28.57
+"Canada","X2011",23.94
+"Canada","X2012",23.69
+"Canada","X2013",23.79
+"Canada","X2014",23.76
+"Canada","X2015",23.56
+"Canada","X2016",20.51
+"Canada","X2017",20.72
+"Canada","X2018",20.95
+"Canada","X2019",20.59
+"Cape Verde","X1990",-0.84
+"Cape Verde","X1991",-0.79
+"Cape Verde","X1992",-0.67
+"Cape Verde","X1993",-0.63
+"Cape Verde","X1994",-0.66
+"Cape Verde","X1995",-0.55
+"Cape Verde","X1996",-0.59
+"Cape Verde","X1997",-0.54
+"Cape Verde","X1998",-0.46
+"Cape Verde","X1999",-0.38
+"Cape Verde","X2000",-0.32
+"Cape Verde","X2001",0.79
+"Cape Verde","X2002",0.86
+"Cape Verde","X2003",0.91
+"Cape Verde","X2004",0.98
+"Cape Verde","X2005",1.19
+"Cape Verde","X2006",1.31
+"Cape Verde","X2007",1.2
+"Cape Verde","X2008",1.22
+"Cape Verde","X2009",1.31
+"Cape Verde","X2010",1.37
+"Cape Verde","X2011",1.33
+"Cape Verde","X2012",1.25
+"Cape Verde","X2013",1.19
+"Cape Verde","X2014",1.17
+"Cape Verde","X2015",1.17
+"Cape Verde","X2016",1.24
+"Cape Verde","X2017",1.27
+"Cape Verde","X2018",1.31
+"Cape Verde","X2019",1.36
+"Central African Republic","X1990",16.59
+"Central African Republic","X1991",16.29
+"Central African Republic","X1992",15.86
+"Central African Republic","X1993",15.42
+"Central African Republic","X1994",15.78
+"Central African Republic","X1995",15.39
+"Central African Republic","X1996",11.56
+"Central African Republic","X1997",12.25
+"Central African Republic","X1998",13.45
+"Central African Republic","X1999",12.09
+"Central African Republic","X2000",12.15
+"Central African Republic","X2001",14.07
+"Central African Republic","X2002",12.67
+"Central African Republic","X2003",16.04
+"Central African Republic","X2004",12.94
+"Central African Republic","X2005",14.27
+"Central African Republic","X2006",13.74
+"Central African Republic","X2007",14.01
+"Central African Republic","X2008",13.7
+"Central African Republic","X2009",11.01
+"Central African Republic","X2010",12.6
+"Central African Republic","X2011",13.07
+"Central African Republic","X2012",11.96
+"Central African Republic","X2013",11.63
+"Central African Republic","X2014",10.94
+"Central African Republic","X2015",11.31
+"Central African Republic","X2016",12.79
+"Central African Republic","X2017",11.58
+"Central African Republic","X2018",11.42
+"Central African Republic","X2019",9.82
+"Chad","X1990",4.18
+"Chad","X1991",5.09
+"Chad","X1992",5.07
+"Chad","X1993",5.06
+"Chad","X1994",5.04
+"Chad","X1995",5.02
+"Chad","X1996",5.3
+"Chad","X1997",5.35
+"Chad","X1998",5.75
+"Chad","X1999",5.77
+"Chad","X2000",5.58
+"Chad","X2001",5.83
+"Chad","X2002",6.08
+"Chad","X2003",5.81
+"Chad","X2004",5.96
+"Chad","X2005",5.93
+"Chad","X2006",5.88
+"Chad","X2007",5.92
+"Chad","X2008",5.79
+"Chad","X2009",5.66
+"Chad","X2010",5.82
+"Chad","X2011",6.57
+"Chad","X2012",6.65
+"Chad","X2013",6.58
+"Chad","X2014",6.56
+"Chad","X2015",6.73
+"Chad","X2016",6.68
+"Chad","X2017",6.57
+"Chad","X2018",6.67
+"Chad","X2019",6.63
+"Chile","X1990",2.12
+"Chile","X1991",2
+"Chile","X1992",2.08
+"Chile","X1993",2.23
+"Chile","X1994",2.48
+"Chile","X1995",2.71
+"Chile","X1996",3.12
+"Chile","X1997",3.56
+"Chile","X1998",3.59
+"Chile","X1999",3.74
+"Chile","X2000",3.43
+"Chile","X2001",2.05
+"Chile","X2002",2.07
+"Chile","X2003",2.09
+"Chile","X2004",2.41
+"Chile","X2005",2.42
+"Chile","X2006",2.47
+"Chile","X2007",2.91
+"Chile","X2008",3.17
+"Chile","X2009",2.99
+"Chile","X2010",3.26
+"Chile","X2011",0.98
+"Chile","X2012",1.11
+"Chile","X2013",1.28
+"Chile","X2014",0.86
+"Chile","X2015",1.19
+"Chile","X2016",2.68
+"Chile","X2017",2.76
+"Chile","X2018",2.66
+"Chile","X2019",2.92
+"China","X1990",2.55
+"China","X1991",2.64
+"China","X1992",2.72
+"China","X1993",2.88
+"China","X1994",2.98
+"China","X1995",3.29
+"China","X1996",3.27
+"China","X1997",3.23
+"China","X1998",3.3
+"China","X1999",3.22
+"China","X2000",3.34
+"China","X2001",3.48
+"China","X2002",3.7
+"China","X2003",4.18
+"China","X2004",4.76
+"China","X2005",5.32
+"China","X2006",5.81
+"China","X2007",6.24
+"China","X2008",6.4
+"China","X2009",6.8
+"China","X2010",7.39
+"China","X2011",7.72
+"China","X2012",7.88
+"China","X2013",8.19
+"China","X2014",8.18
+"China","X2015",8.05
+"China","X2016",8.04
+"China","X2017",8.15
+"China","X2018",8.43
+"China","X2019",8.56
+"Colombia","X1990",6.53
+"Colombia","X1991",6.45
+"Colombia","X1992",6.41
+"Colombia","X1993",6.43
+"Colombia","X1994",6.38
+"Colombia","X1995",6.37
+"Colombia","X1996",6.27
+"Colombia","X1997",6.32
+"Colombia","X1998",6.26
+"Colombia","X1999",5.87
+"Colombia","X2000",5.88
+"Colombia","X2001",5.53
+"Colombia","X2002",5.4
+"Colombia","X2003",5.36
+"Colombia","X2004",5.33
+"Colombia","X2005",5.3
+"Colombia","X2006",5.25
+"Colombia","X2007",5.32
+"Colombia","X2008",5.27
+"Colombia","X2009",5.29
+"Colombia","X2010",5.35
+"Colombia","X2011",4.85
+"Colombia","X2012",4.79
+"Colombia","X2013",4.89
+"Colombia","X2014",4.92
+"Colombia","X2015",4.88
+"Colombia","X2016",5.43
+"Colombia","X2017",5.24
+"Colombia","X2018",5.34
+"Colombia","X2019",5.37
+"Comoros","X1990",0.78
+"Comoros","X1991",0.77
+"Comoros","X1992",0.76
+"Comoros","X1993",0.75
+"Comoros","X1994",0.74
+"Comoros","X1995",0.73
+"Comoros","X1996",0.72
+"Comoros","X1997",0.71
+"Comoros","X1998",0.72
+"Comoros","X1999",0.72
+"Comoros","X2000",0.67
+"Comoros","X2001",0.69
+"Comoros","X2002",0.68
+"Comoros","X2003",0.7
+"Comoros","X2004",0.71
+"Comoros","X2005",0.74
+"Comoros","X2006",0.74
+"Comoros","X2007",0.6
+"Comoros","X2008",0.63
+"Comoros","X2009",0.65
+"Comoros","X2010",0.69
+"Comoros","X2011",0.67
+"Comoros","X2012",0.68
+"Comoros","X2013",0.72
+"Comoros","X2014",0.68
+"Comoros","X2015",0.69
+"Comoros","X2016",0.73
+"Comoros","X2017",0.79
+"Comoros","X2018",0.81
+"Comoros","X2019",0.83
+"Cook Islands","X1990",NA
+"Cook Islands","X1991",NA
+"Cook Islands","X1992",NA
+"Cook Islands","X1993",NA
+"Cook Islands","X1994",NA
+"Cook Islands","X1995",NA
+"Cook Islands","X1996",NA
+"Cook Islands","X1997",NA
+"Cook Islands","X1998",NA
+"Cook Islands","X1999",NA
+"Cook Islands","X2000",NA
+"Cook Islands","X2001",NA
+"Cook Islands","X2002",NA
+"Cook Islands","X2003",NA
+"Cook Islands","X2004",NA
+"Cook Islands","X2005",NA
+"Cook Islands","X2006",NA
+"Cook Islands","X2007",NA
+"Cook Islands","X2008",NA
+"Cook Islands","X2009",NA
+"Cook Islands","X2010",NA
+"Cook Islands","X2011",NA
+"Cook Islands","X2012",NA
+"Cook Islands","X2013",NA
+"Cook Islands","X2014",NA
+"Cook Islands","X2015",NA
+"Cook Islands","X2016",NA
+"Cook Islands","X2017",NA
+"Cook Islands","X2018",NA
+"Cook Islands","X2019",NA
+"Costa Rica","X1990",3.53
+"Costa Rica","X1991",3.53
+"Costa Rica","X1992",3.78
+"Costa Rica","X1993",3.71
+"Costa Rica","X1994",3.74
+"Costa Rica","X1995",3.53
+"Costa Rica","X1996",3.44
+"Costa Rica","X1997",3.38
+"Costa Rica","X1998",3.49
+"Costa Rica","X1999",3.36
+"Costa Rica","X2000",3.26
+"Costa Rica","X2001",2.56
+"Costa Rica","X2002",2.52
+"Costa Rica","X2003",2.57
+"Costa Rica","X2004",2.53
+"Costa Rica","X2005",2.62
+"Costa Rica","X2006",2.66
+"Costa Rica","X2007",2.95
+"Costa Rica","X2008",2.94
+"Costa Rica","X2009",2.81
+"Costa Rica","X2010",2.8
+"Costa Rica","X2011",1.44
+"Costa Rica","X2012",1.43
+"Costa Rica","X2013",1.51
+"Costa Rica","X2014",1.5
+"Costa Rica","X2015",1.46
+"Costa Rica","X2016",1.63
+"Costa Rica","X2017",1.66
+"Costa Rica","X2018",1.7
+"Costa Rica","X2019",1.68
+"Croatia","X1990",5.8
+"Croatia","X1991",4.56
+"Croatia","X1992",4.89
+"Croatia","X1993",5.05
+"Croatia","X1994",5.01
+"Croatia","X1995",5.33
+"Croatia","X1996",5.22
+"Croatia","X1997",5.6
+"Croatia","X1998",5.69
+"Croatia","X1999",5.61
+"Croatia","X2000",5.46
+"Croatia","X2001",5.86
+"Croatia","X2002",6.1
+"Croatia","X2003",6.36
+"Croatia","X2004",6.29
+"Croatia","X2005",6.27
+"Croatia","X2006",6.44
+"Croatia","X2007",6.79
+"Croatia","X2008",6.6
+"Croatia","X2009",6.01
+"Croatia","X2010",5.9
+"Croatia","X2011",5.7
+"Croatia","X2012",5.25
+"Croatia","X2013",5.01
+"Croatia","X2014",4.84
+"Croatia","X2015",5.02
+"Croatia","X2016",4.39
+"Croatia","X2017",4.6
+"Croatia","X2018",4.37
+"Croatia","X2019",4.41
+"Cuba","X1990",4.15
+"Cuba","X1991",3.26
+"Cuba","X1992",2.67
+"Cuba","X1993",2.34
+"Cuba","X1994",2.46
+"Cuba","X1995",2.55
+"Cuba","X1996",2.79
+"Cuba","X1997",2.98
+"Cuba","X1998",2.93
+"Cuba","X1999",2.96
+"Cuba","X2000",2.99
+"Cuba","X2001",2.94
+"Cuba","X2002",2.83
+"Cuba","X2003",2.75
+"Cuba","X2004",2.68
+"Cuba","X2005",2.69
+"Cuba","X2006",2.78
+"Cuba","X2007",2.87
+"Cuba","X2008",2.82
+"Cuba","X2009",2.89
+"Cuba","X2010",2.98
+"Cuba","X2011",2.77
+"Cuba","X2012",2.86
+"Cuba","X2013",2.88
+"Cuba","X2014",2.7
+"Cuba","X2015",2.87
+"Cuba","X2016",3.54
+"Cuba","X2017",3.42
+"Cuba","X2018",3.46
+"Cuba","X2019",3.37
+"Cyprus","X1990",7.01
+"Cyprus","X1991",7.53
+"Cyprus","X1992",7.9
+"Cyprus","X1993",8.06
+"Cyprus","X1994",8.19
+"Cyprus","X1995",7.88
+"Cyprus","X1996",8.16
+"Cyprus","X1997",8.09
+"Cyprus","X1998",8.3
+"Cyprus","X1999",8.44
+"Cyprus","X2000",8.57
+"Cyprus","X2001",8.13
+"Cyprus","X2002",8.23
+"Cyprus","X2003",8.76
+"Cyprus","X2004",8.56
+"Cyprus","X2005",8.53
+"Cyprus","X2006",8.51
+"Cyprus","X2007",8.68
+"Cyprus","X2008",8.73
+"Cyprus","X2009",8.45
+"Cyprus","X2010",8.04
+"Cyprus","X2011",7.68
+"Cyprus","X2012",7.16
+"Cyprus","X2013",6.49
+"Cyprus","X2014",6.79
+"Cyprus","X2015",6.8
+"Cyprus","X2016",7.14
+"Cyprus","X2017",7.2
+"Cyprus","X2018",6.99
+"Cyprus","X2019",6.92
+"Czech Republic","X1990",16.7
+"Czech Republic","X1991",15.12
+"Czech Republic","X1992",14.67
+"Czech Republic","X1993",14.21
+"Czech Republic","X1994",13.49
+"Czech Republic","X1995",13.5
+"Czech Republic","X1996",13.67
+"Czech Republic","X1997",13.44
+"Czech Republic","X1998",12.81
+"Czech Republic","X1999",12.04
+"Czech Republic","X2000",13.13
+"Czech Republic","X2001",13.4
+"Czech Republic","X2002",12.87
+"Czech Republic","X2003",13.3
+"Czech Republic","X2004",13.35
+"Czech Republic","X2005",13.03
+"Czech Republic","X2006",13.09
+"Czech Republic","X2007",13.31
+"Czech Republic","X2008",12.71
+"Czech Republic","X2009",11.91
+"Czech Republic","X2010",12.01
+"Czech Republic","X2011",12.04
+"Czech Republic","X2012",11.77
+"Czech Republic","X2013",11.21
+"Czech Republic","X2014",10.88
+"Czech Republic","X2015",11.08
+"Czech Republic","X2016",11.09
+"Czech Republic","X2017",11.02
+"Czech Republic","X2018",10.86
+"Czech Republic","X2019",10.38
+"C√¥te d'Ivoire","X1990",5.85
+"C√¥te d'Ivoire","X1991",5.86
+"C√¥te d'Ivoire","X1992",5.86
+"C√¥te d'Ivoire","X1993",5.86
+"C√¥te d'Ivoire","X1994",5.87
+"C√¥te d'Ivoire","X1995",5.74
+"C√¥te d'Ivoire","X1996",5.61
+"C√¥te d'Ivoire","X1997",5.56
+"C√¥te d'Ivoire","X1998",5.44
+"C√¥te d'Ivoire","X1999",5.43
+"C√¥te d'Ivoire","X2000",5.29
+"C√¥te d'Ivoire","X2001",3.1
+"C√¥te d'Ivoire","X2002",3.06
+"C√¥te d'Ivoire","X2003",2.84
+"C√¥te d'Ivoire","X2004",2.69
+"C√¥te d'Ivoire","X2005",2.7
+"C√¥te d'Ivoire","X2006",2.59
+"C√¥te d'Ivoire","X2007",2.5
+"C√¥te d'Ivoire","X2008",2.43
+"C√¥te d'Ivoire","X2009",2.3
+"C√¥te d'Ivoire","X2010",2.23
+"C√¥te d'Ivoire","X2011",2.16
+"C√¥te d'Ivoire","X2012",2.19
+"C√¥te d'Ivoire","X2013",2.2
+"C√¥te d'Ivoire","X2014",2.14
+"C√¥te d'Ivoire","X2015",2.12
+"C√¥te d'Ivoire","X2016",2.13
+"C√¥te d'Ivoire","X2017",2.09
+"C√¥te d'Ivoire","X2018",2.02
+"C√¥te d'Ivoire","X2019",2
+"Democratic Republic of the Congo","X1990",12.45
+"Democratic Republic of the Congo","X1991",11.96
+"Democratic Republic of the Congo","X1992",11.51
+"Democratic Republic of the Congo","X1993",11.1
+"Democratic Republic of the Congo","X1994",10.75
+"Democratic Republic of the Congo","X1995",10.4
+"Democratic Republic of the Congo","X1996",10.03
+"Democratic Republic of the Congo","X1997",9.94
+"Democratic Republic of the Congo","X1998",9.75
+"Democratic Republic of the Congo","X1999",9.35
+"Democratic Republic of the Congo","X2000",9.04
+"Democratic Republic of the Congo","X2001",8.62
+"Democratic Republic of the Congo","X2002",8.62
+"Democratic Republic of the Congo","X2003",8.5
+"Democratic Republic of the Congo","X2004",8.29
+"Democratic Republic of the Congo","X2005",8.04
+"Democratic Republic of the Congo","X2006",7.83
+"Democratic Republic of the Congo","X2007",7.46
+"Democratic Republic of the Congo","X2008",7.29
+"Democratic Republic of the Congo","X2009",7.04
+"Democratic Republic of the Congo","X2010",6.85
+"Democratic Republic of the Congo","X2011",10.13
+"Democratic Republic of the Congo","X2012",9.75
+"Democratic Republic of the Congo","X2013",9.49
+"Democratic Republic of the Congo","X2014",9.19
+"Democratic Republic of the Congo","X2015",8.92
+"Democratic Republic of the Congo","X2016",8.63
+"Democratic Republic of the Congo","X2017",8.38
+"Democratic Republic of the Congo","X2018",8.05
+"Democratic Republic of the Congo","X2019",7.83
+"Denmark","X1990",13.46
+"Denmark","X1991",15.52
+"Denmark","X1992",14.27
+"Denmark","X1993",14.73
+"Denmark","X1994",15.38
+"Denmark","X1995",14.7
+"Denmark","X1996",17.18
+"Denmark","X1997",15.27
+"Denmark","X1998",14.46
+"Denmark","X1999",13.87
+"Denmark","X2000",13.11
+"Denmark","X2001",13.33
+"Denmark","X2002",13.16
+"Denmark","X2003",14.14
+"Denmark","X2004",12.96
+"Denmark","X2005",12.24
+"Denmark","X2006",13.62
+"Denmark","X2007",12.68
+"Denmark","X2008",11.97
+"Denmark","X2009",11.38
+"Denmark","X2010",11.38
+"Denmark","X2011",10.01
+"Denmark","X2012",9.07
+"Denmark","X2013",9.28
+"Denmark","X2014",8.49
+"Denmark","X2015",8.08
+"Denmark","X2016",8.78
+"Denmark","X2017",8.32
+"Denmark","X2018",8.19
+"Denmark","X2019",7.58
+"Djibouti","X1990",1.54
+"Djibouti","X1991",1.54
+"Djibouti","X1992",1.55
+"Djibouti","X1993",1.57
+"Djibouti","X1994",1.58
+"Djibouti","X1995",1.67
+"Djibouti","X1996",1.66
+"Djibouti","X1997",1.69
+"Djibouti","X1998",1.76
+"Djibouti","X1999",1.76
+"Djibouti","X2000",1.7
+"Djibouti","X2001",1.68
+"Djibouti","X2002",1.68
+"Djibouti","X2003",1.68
+"Djibouti","X2004",1.64
+"Djibouti","X2005",1.67
+"Djibouti","X2006",1.64
+"Djibouti","X2007",1.68
+"Djibouti","X2008",1.66
+"Djibouti","X2009",1.64
+"Djibouti","X2010",1.68
+"Djibouti","X2011",1.61
+"Djibouti","X2012",1.62
+"Djibouti","X2013",1.68
+"Djibouti","X2014",1.48
+"Djibouti","X2015",1.53
+"Djibouti","X2016",1.46
+"Djibouti","X2017",1.44
+"Djibouti","X2018",1.41
+"Djibouti","X2019",1.42
+"Dominica","X1990",3.45
+"Dominica","X1991",3.47
+"Dominica","X1992",3.73
+"Dominica","X1993",3.63
+"Dominica","X1994",3.67
+"Dominica","X1995",3.71
+"Dominica","X1996",3.31
+"Dominica","X1997",3.55
+"Dominica","X1998",3.51
+"Dominica","X1999",3.48
+"Dominica","X2000",3.65
+"Dominica","X2001",2.99
+"Dominica","X2002",2.49
+"Dominica","X2003",2.69
+"Dominica","X2004",2.91
+"Dominica","X2005",3.03
+"Dominica","X2006",3.16
+"Dominica","X2007",3.33
+"Dominica","X2008",3.35
+"Dominica","X2009",7.85
+"Dominica","X2010",3.32
+"Dominica","X2011",3.35
+"Dominica","X2012",4.32
+"Dominica","X2013",3.26
+"Dominica","X2014",3.36
+"Dominica","X2015",3.39
+"Dominica","X2016",3.29
+"Dominica","X2017",3.05
+"Dominica","X2018",3.04
+"Dominica","X2019",3.07
+"Dominican Republic","X1990",1.19
+"Dominican Republic","X1991",1.32
+"Dominican Republic","X1992",1.5
+"Dominican Republic","X1993",1.54
+"Dominican Republic","X1994",1.77
+"Dominican Republic","X1995",1.8
+"Dominican Republic","X1996",1.88
+"Dominican Republic","X1997",2.06
+"Dominican Republic","X1998",2.27
+"Dominican Republic","X1999",2.3
+"Dominican Republic","X2000",2.35
+"Dominican Republic","X2001",3.03
+"Dominican Republic","X2002",3.26
+"Dominican Republic","X2003",2.95
+"Dominican Republic","X2004",2.83
+"Dominican Republic","X2005",2.94
+"Dominican Republic","X2006",3.11
+"Dominican Republic","X2007",3.2
+"Dominican Republic","X2008",3.17
+"Dominican Republic","X2009",3.08
+"Dominican Republic","X2010",3.18
+"Dominican Republic","X2011",3.26
+"Dominican Republic","X2012",3.3
+"Dominican Republic","X2013",3.24
+"Dominican Republic","X2014",3.24
+"Dominican Republic","X2015",3.44
+"Dominican Republic","X2016",3.48
+"Dominican Republic","X2017",3.37
+"Dominican Republic","X2018",3.54
+"Dominican Republic","X2019",3.7
+"Ecuador","X1990",7.19
+"Ecuador","X1991",7.09
+"Ecuador","X1992",7.16
+"Ecuador","X1993",7.14
+"Ecuador","X1994",7.27
+"Ecuador","X1995",7.33
+"Ecuador","X1996",7.52
+"Ecuador","X1997",7.53
+"Ecuador","X1998",7.24
+"Ecuador","X1999",6.86
+"Ecuador","X2000",6.68
+"Ecuador","X2001",6.33
+"Ecuador","X2002",6.19
+"Ecuador","X2003",6.18
+"Ecuador","X2004",6.37
+"Ecuador","X2005",6.4
+"Ecuador","X2006",6.47
+"Ecuador","X2007",6.34
+"Ecuador","X2008",6.35
+"Ecuador","X2009",6.49
+"Ecuador","X2010",6.62
+"Ecuador","X2011",5.78
+"Ecuador","X2012",5.68
+"Ecuador","X2013",5.79
+"Ecuador","X2014",5.81
+"Ecuador","X2015",5.62
+"Ecuador","X2016",6
+"Ecuador","X2017",5.82
+"Ecuador","X2018",5.78
+"Ecuador","X2019",5.68
+"Egypt","X1990",2.38
+"Egypt","X1991",2.42
+"Egypt","X1992",2.42
+"Egypt","X1993",2.46
+"Egypt","X1994",2.35
+"Egypt","X1995",2.46
+"Egypt","X1996",2.53
+"Egypt","X1997",2.62
+"Egypt","X1998",2.65
+"Egypt","X1999",2.75
+"Egypt","X2000",2.69
+"Egypt","X2001",2.84
+"Egypt","X2002",2.86
+"Egypt","X2003",2.88
+"Egypt","X2004",3.01
+"Egypt","X2005",3.23
+"Egypt","X2006",3.32
+"Egypt","X2007",3.46
+"Egypt","X2008",3.52
+"Egypt","X2009",3.54
+"Egypt","X2010",3.5
+"Egypt","X2011",3.53
+"Egypt","X2012",3.58
+"Egypt","X2013",3.46
+"Egypt","X2014",3.45
+"Egypt","X2015",3.44
+"Egypt","X2016",3.45
+"Egypt","X2017",3.51
+"Egypt","X2018",3.51
+"Egypt","X2019",3.51
+"El Salvador","X1990",1.51
+"El Salvador","X1991",1.63
+"El Salvador","X1992",1.68
+"El Salvador","X1993",1.75
+"El Salvador","X1994",1.83
+"El Salvador","X1995",1.86
+"El Salvador","X1996",1.83
+"El Salvador","X1997",1.96
+"El Salvador","X1998",1.96
+"El Salvador","X1999",1.98
+"El Salvador","X2000",1.9
+"El Salvador","X2001",2
+"El Salvador","X2002",2.03
+"El Salvador","X2003",2.11
+"El Salvador","X2004",2.16
+"El Salvador","X2005",2.21
+"El Salvador","X2006",2.28
+"El Salvador","X2007",2.37
+"El Salvador","X2008",2.27
+"El Salvador","X2009",2.2
+"El Salvador","X2010",2.15
+"El Salvador","X2011",2.12
+"El Salvador","X2012",2.14
+"El Salvador","X2013",2.01
+"El Salvador","X2014",2.04
+"El Salvador","X2015",2.11
+"El Salvador","X2016",2.1
+"El Salvador","X2017",1.97
+"El Salvador","X2018",2.01
+"El Salvador","X2019",2.16
+"Equatorial Guinea","X1990",9.56
+"Equatorial Guinea","X1991",9.58
+"Equatorial Guinea","X1992",13.2
+"Equatorial Guinea","X1993",13.14
+"Equatorial Guinea","X1994",13.03
+"Equatorial Guinea","X1995",12.93
+"Equatorial Guinea","X1996",13.12
+"Equatorial Guinea","X1997",15.46
+"Equatorial Guinea","X1998",16.97
+"Equatorial Guinea","X1999",19.13
+"Equatorial Guinea","X2000",17.64
+"Equatorial Guinea","X2001",20.88
+"Equatorial Guinea","X2002",21.24
+"Equatorial Guinea","X2003",22.21
+"Equatorial Guinea","X2004",24.39
+"Equatorial Guinea","X2005",26.59
+"Equatorial Guinea","X2006",26.67
+"Equatorial Guinea","X2007",24.36
+"Equatorial Guinea","X2008",24.33
+"Equatorial Guinea","X2009",22.17
+"Equatorial Guinea","X2010",21.6
+"Equatorial Guinea","X2011",20
+"Equatorial Guinea","X2012",18.88
+"Equatorial Guinea","X2013",17.24
+"Equatorial Guinea","X2014",17.93
+"Equatorial Guinea","X2015",15.49
+"Equatorial Guinea","X2016",14.55
+"Equatorial Guinea","X2017",12.88
+"Equatorial Guinea","X2018",12.83
+"Equatorial Guinea","X2019",11.24
+"Eritrea","X1990",1.83
+"Eritrea","X1991",1.83
+"Eritrea","X1992",2.15
+"Eritrea","X1993",1.98
+"Eritrea","X1994",2.09
+"Eritrea","X1995",2.15
+"Eritrea","X1996",2.4
+"Eritrea","X1997",2.63
+"Eritrea","X1998",2.59
+"Eritrea","X1999",2.64
+"Eritrea","X2000",2.62
+"Eritrea","X2001",2.41
+"Eritrea","X2002",2.29
+"Eritrea","X2003",2.24
+"Eritrea","X2004",2.15
+"Eritrea","X2005",2.07
+"Eritrea","X2006",1.93
+"Eritrea","X2007",1.98
+"Eritrea","X2008",1.92
+"Eritrea","X2009",1.9
+"Eritrea","X2010",1.84
+"Eritrea","X2011",1.89
+"Eritrea","X2012",NA
+"Eritrea","X2013",NA
+"Eritrea","X2014",NA
+"Eritrea","X2015",NA
+"Eritrea","X2016",NA
+"Eritrea","X2017",NA
+"Eritrea","X2018",NA
+"Eritrea","X2019",NA
+"Estonia","X1990",24.04
+"Estonia","X1991",21.68
+"Estonia","X1992",16.91
+"Estonia","X1993",13.43
+"Estonia","X1994",13.08
+"Estonia","X1995",12.18
+"Estonia","X1996",12.97
+"Estonia","X1997",12.79
+"Estonia","X1998",12.56
+"Estonia","X1999",11.93
+"Estonia","X2000",11.62
+"Estonia","X2001",12.03
+"Estonia","X2002",11.81
+"Estonia","X2003",13.34
+"Estonia","X2004",13.54
+"Estonia","X2005",13.73
+"Estonia","X2006",12.89
+"Estonia","X2007",15.98
+"Estonia","X2008",14.86
+"Estonia","X2009",12.32
+"Estonia","X2010",15.38
+"Estonia","X2011",11.11
+"Estonia","X2012",10.22
+"Estonia","X2013",12.1
+"Estonia","X2014",11.1
+"Estonia","X2015",9.28
+"Estonia","X2016",15.67
+"Estonia","X2017",16.23
+"Estonia","X2018",15.12
+"Estonia","X2019",11.17
+"Eswatini","X1990",2.51
+"Eswatini","X1991",2.51
+"Eswatini","X1992",2.52
+"Eswatini","X1993",2.27
+"Eswatini","X1994",2.28
+"Eswatini","X1995",2.28
+"Eswatini","X1996",2.16
+"Eswatini","X1997",2.25
+"Eswatini","X1998",2.32
+"Eswatini","X1999",2.3
+"Eswatini","X2000",2.28
+"Eswatini","X2001",2.05
+"Eswatini","X2002",2.09
+"Eswatini","X2003",2.19
+"Eswatini","X2004",2.2
+"Eswatini","X2005",2.25
+"Eswatini","X2006",2.12
+"Eswatini","X2007",2.29
+"Eswatini","X2008",2.15
+"Eswatini","X2009",2.08
+"Eswatini","X2010",2.1
+"Eswatini","X2011",2.09
+"Eswatini","X2012",2.11
+"Eswatini","X2013",2.17
+"Eswatini","X2014",2.16
+"Eswatini","X2015",2.12
+"Eswatini","X2016",2.18
+"Eswatini","X2017",2.23
+"Eswatini","X2018",2.25
+"Eswatini","X2019",2.34
+"Ethiopia","X1990",1.99
+"Ethiopia","X1991",1.93
+"Ethiopia","X1992",1.87
+"Ethiopia","X1993",1.7
+"Ethiopia","X1994",1.66
+"Ethiopia","X1995",1.62
+"Ethiopia","X1996",1.62
+"Ethiopia","X1997",1.64
+"Ethiopia","X1998",1.68
+"Ethiopia","X1999",1.65
+"Ethiopia","X2000",1.54
+"Ethiopia","X2001",1.59
+"Ethiopia","X2002",1.68
+"Ethiopia","X2003",1.61
+"Ethiopia","X2004",1.6
+"Ethiopia","X2005",1.6
+"Ethiopia","X2006",1.62
+"Ethiopia","X2007",1.7
+"Ethiopia","X2008",1.7
+"Ethiopia","X2009",1.7
+"Ethiopia","X2010",1.71
+"Ethiopia","X2011",1.66
+"Ethiopia","X2012",1.68
+"Ethiopia","X2013",1.68
+"Ethiopia","X2014",1.69
+"Ethiopia","X2015",1.68
+"Ethiopia","X2016",1.69
+"Ethiopia","X2017",1.68
+"Ethiopia","X2018",1.66
+"Ethiopia","X2019",1.64
+"Fiji","X1990",-1.13
+"Fiji","X1991",-1.1
+"Fiji","X1992",-1.04
+"Fiji","X1993",-0.94
+"Fiji","X1994",-0.87
+"Fiji","X1995",-0.77
+"Fiji","X1996",-0.71
+"Fiji","X1997",-0.71
+"Fiji","X1998",-0.75
+"Fiji","X1999",-0.78
+"Fiji","X2000",-0.73
+"Fiji","X2001",-0.41
+"Fiji","X2002",-0.61
+"Fiji","X2003",-0.46
+"Fiji","X2004",0.09
+"Fiji","X2005",-0.14
+"Fiji","X2006",-0.04
+"Fiji","X2007",-0.16
+"Fiji","X2008",-0.49
+"Fiji","X2009",-0.48
+"Fiji","X2010",-0.28
+"Fiji","X2011",-0.34
+"Fiji","X2012",-0.42
+"Fiji","X2013",-0.29
+"Fiji","X2014",-0.76
+"Fiji","X2015",-0.62
+"Fiji","X2016",-0.47
+"Fiji","X2017",-0.25
+"Fiji","X2018",-0.27
+"Fiji","X2019",-0.18
+"Finland","X1990",7.73
+"Finland","X1991",7.66
+"Finland","X1992",7.01
+"Finland","X1993",7.22
+"Finland","X1994",8.49
+"Finland","X1995",7.68
+"Finland","X1996",8.92
+"Finland","X1997",8.52
+"Finland","X1998",7.8
+"Finland","X1999",7.65
+"Finland","X2000",7.38
+"Finland","X2001",11.44
+"Finland","X2002",11.88
+"Finland","X2003",13.42
+"Finland","X2004",12.65
+"Finland","X2005",10.28
+"Finland","X2006",12.41
+"Finland","X2007",12.01
+"Finland","X2008",10.43
+"Finland","X2009",9.7
+"Finland","X2010",11.18
+"Finland","X2011",2.25
+"Finland","X2012",1.19
+"Finland","X2013",1.33
+"Finland","X2014",0.59
+"Finland","X2015",-0.05
+"Finland","X2016",11.58
+"Finland","X2017",11.05
+"Finland","X2018",11.32
+"Finland","X2019",10.58
+"France","X1990",8.09
+"France","X1991",8.47
+"France","X1992",8.18
+"France","X1993",7.83
+"France","X1994",7.7
+"France","X1995",7.82
+"France","X1996",8.12
+"France","X1997",7.94
+"France","X1998",8.17
+"France","X1999",7.98
+"France","X2000",7.9
+"France","X2001",7.25
+"France","X2002",7.09
+"France","X2003",7.12
+"France","X2004",7.04
+"France","X2005",7.01
+"France","X2006",6.8
+"France","X2007",6.65
+"France","X2008",6.52
+"France","X2009",6.22
+"France","X2010",6.25
+"France","X2011",6.05
+"France","X2012",6.08
+"France","X2013",6.06
+"France","X2014",5.53
+"France","X2015",5.59
+"France","X2016",5.57
+"France","X2017",5.59
+"France","X2018",5.38
+"France","X2019",5.24
+"Gabon","X1990",14.62
+"Gabon","X1991",15.27
+"Gabon","X1992",14.83
+"Gabon","X1993",14.75
+"Gabon","X1994",15.09
+"Gabon","X1995",15.8
+"Gabon","X1996",16.27
+"Gabon","X1997",15.68
+"Gabon","X1998",16.23
+"Gabon","X1999",15.03
+"Gabon","X2000",14.3
+"Gabon","X2001",13.62
+"Gabon","X2002",12.84
+"Gabon","X2003",13.45
+"Gabon","X2004",12.86
+"Gabon","X2005",12.3
+"Gabon","X2006",11.12
+"Gabon","X2007",10.33
+"Gabon","X2008",10.48
+"Gabon","X2009",9.94
+"Gabon","X2010",10.15
+"Gabon","X2011",11.73
+"Gabon","X2012",11.06
+"Gabon","X2013",10.78
+"Gabon","X2014",10.58
+"Gabon","X2015",10.47
+"Gabon","X2016",10.36
+"Gabon","X2017",9.38
+"Gabon","X2018",8.92
+"Gabon","X2019",9.06
+"Gambia","X1990",5.28
+"Gambia","X1991",5.24
+"Gambia","X1992",5.17
+"Gambia","X1993",5.12
+"Gambia","X1994",4.54
+"Gambia","X1995",3.98
+"Gambia","X1996",3.57
+"Gambia","X1997",3.19
+"Gambia","X1998",2.87
+"Gambia","X1999",2.73
+"Gambia","X2000",2.37
+"Gambia","X2001",1.91
+"Gambia","X2002",1.69
+"Gambia","X2003",1.57
+"Gambia","X2004",1.46
+"Gambia","X2005",1.33
+"Gambia","X2006",1.35
+"Gambia","X2007",1.34
+"Gambia","X2008",1.38
+"Gambia","X2009",1.55
+"Gambia","X2010",1.53
+"Gambia","X2011",1.31
+"Gambia","X2012",1.32
+"Gambia","X2013",1.31
+"Gambia","X2014",1.34
+"Gambia","X2015",1.38
+"Gambia","X2016",1.29
+"Gambia","X2017",1.26
+"Gambia","X2018",1.17
+"Gambia","X2019",1.22
+"Georgia","X1990",6.54
+"Georgia","X1991",4.54
+"Georgia","X1992",2.95
+"Georgia","X1993",1.8
+"Georgia","X1994",0.35
+"Georgia","X1995",-0.29
+"Georgia","X1996",-0.64
+"Georgia","X1997",-0.85
+"Georgia","X1998",-0.99
+"Georgia","X1999",-1.07
+"Georgia","X2000",-0.99
+"Georgia","X2001",2.06
+"Georgia","X2002",1.94
+"Georgia","X2003",2.09
+"Georgia","X2004",2.12
+"Georgia","X2005",2.27
+"Georgia","X2006",2.38
+"Georgia","X2007",2.59
+"Georgia","X2008",2.36
+"Georgia","X2009",2.58
+"Georgia","X2010",2.53
+"Georgia","X2011",3.85
+"Georgia","X2012",4.11
+"Georgia","X2013",4.37
+"Georgia","X2014",4.52
+"Georgia","X2015",4.6
+"Georgia","X2016",4.72
+"Georgia","X2017",4.68
+"Georgia","X2018",4.6
+"Georgia","X2019",4.74
+"Germany","X1990",13.56
+"Germany","X1991",13.12
+"Germany","X1992",12.46
+"Germany","X1993",12.27
+"Germany","X1994",12.11
+"Germany","X1995",12.02
+"Germany","X1996",12.36
+"Germany","X1997",11.88
+"Germany","X1998",11.6
+"Germany","X1999",11.13
+"Germany","X2000",11.03
+"Germany","X2001",11.64
+"Germany","X2002",11.42
+"Germany","X2003",11.43
+"Germany","X2004",11.23
+"Germany","X2005",10.97
+"Germany","X2006",11.09
+"Germany","X2007",10.76
+"Germany","X2008",10.81
+"Germany","X2009",10.15
+"Germany","X2010",10.54
+"Germany","X2011",10.23
+"Germany","X2012",10.38
+"Germany","X2013",10.55
+"Germany","X2014",10
+"Germany","X2015",9.97
+"Germany","X2016",9.93
+"Germany","X2017",9.68
+"Germany","X2018",9.31
+"Germany","X2019",8.67
+"Ghana","X1990",1.49
+"Ghana","X1991",1.45
+"Ghana","X1992",1.44
+"Ghana","X1993",1.42
+"Ghana","X1994",1.4
+"Ghana","X1995",1.38
+"Ghana","X1996",1.4
+"Ghana","X1997",1.43
+"Ghana","X1998",1.59
+"Ghana","X1999",1.49
+"Ghana","X2000",1.47
+"Ghana","X2001",3.18
+"Ghana","X2002",3.16
+"Ghana","X2003",3.11
+"Ghana","X2004",2.98
+"Ghana","X2005",3.01
+"Ghana","X2006",2.99
+"Ghana","X2007",2.92
+"Ghana","X2008",2.84
+"Ghana","X2009",2.81
+"Ghana","X2010",2.82
+"Ghana","X2011",2.18
+"Ghana","X2012",2.23
+"Ghana","X2013",2.26
+"Ghana","X2014",2.19
+"Ghana","X2015",2.19
+"Ghana","X2016",0.25
+"Ghana","X2017",0.32
+"Ghana","X2018",0.37
+"Ghana","X2019",0.42
+"Greece","X1990",9.25
+"Greece","X1991",9.15
+"Greece","X1992",9.28
+"Greece","X1993",9.26
+"Greece","X1994",9.46
+"Greece","X1995",9.83
+"Greece","X1996",9.89
+"Greece","X1997",9.95
+"Greece","X1998",10.28
+"Greece","X1999",10.33
+"Greece","X2000",10.82
+"Greece","X2001",10.8
+"Greece","X2002",10.8
+"Greece","X2003",11.07
+"Greece","X2004",11.01
+"Greece","X2005",11.17
+"Greece","X2006",10.99
+"Greece","X2007",11.28
+"Greece","X2008",10.89
+"Greece","X2009",10.25
+"Greece","X2010",9.64
+"Greece","X2011",9.67
+"Greece","X2012",9.27
+"Greece","X2013",8.63
+"Greece","X2014",8.41
+"Greece","X2015",8.3
+"Greece","X2016",8.22
+"Greece","X2017",8.2
+"Greece","X2018",7.96
+"Greece","X2019",7.45
+"Grenada","X1990",19.11
+"Grenada","X1991",19.28
+"Grenada","X1992",19.73
+"Grenada","X1993",19.47
+"Grenada","X1994",19.45
+"Grenada","X1995",19.54
+"Grenada","X1996",19.72
+"Grenada","X1997",19.88
+"Grenada","X1998",20.15
+"Grenada","X1999",20.22
+"Grenada","X2000",20.12
+"Grenada","X2001",20.32
+"Grenada","X2002",20.53
+"Grenada","X2003",20.63
+"Grenada","X2004",20.5
+"Grenada","X2005",20.66
+"Grenada","X2006",20.84
+"Grenada","X2007",21.03
+"Grenada","X2008",21.23
+"Grenada","X2009",26.13
+"Grenada","X2010",21.24
+"Grenada","X2011",21.4
+"Grenada","X2012",22.36
+"Grenada","X2013",21.42
+"Grenada","X2014",20.79
+"Grenada","X2015",20.93
+"Grenada","X2016",20.94
+"Grenada","X2017",21.01
+"Grenada","X2018",21.29
+"Grenada","X2019",21.31
+"Guatemala","X1990",3.08
+"Guatemala","X1991",3.04
+"Guatemala","X1992",3.08
+"Guatemala","X1993",3.07
+"Guatemala","X1994",3.02
+"Guatemala","X1995",3.04
+"Guatemala","X1996",3
+"Guatemala","X1997",2.95
+"Guatemala","X1998",3.22
+"Guatemala","X1999",3.02
+"Guatemala","X2000",3.14
+"Guatemala","X2001",2.79
+"Guatemala","X2002",2.83
+"Guatemala","X2003",2.9
+"Guatemala","X2004",2.76
+"Guatemala","X2005",2.86
+"Guatemala","X2006",2.75
+"Guatemala","X2007",2.82
+"Guatemala","X2008",2.67
+"Guatemala","X2009",2.74
+"Guatemala","X2010",2.68
+"Guatemala","X2011",2.25
+"Guatemala","X2012",2.26
+"Guatemala","X2013",2.3
+"Guatemala","X2014",2.33
+"Guatemala","X2015",2.48
+"Guatemala","X2016",2.26
+"Guatemala","X2017",2.19
+"Guatemala","X2018",2.27
+"Guatemala","X2019",2.32
+"Guinea","X1990",3.06
+"Guinea","X1991",3.02
+"Guinea","X1992",2.99
+"Guinea","X1993",2.96
+"Guinea","X1994",2.94
+"Guinea","X1995",2.92
+"Guinea","X1996",2.77
+"Guinea","X1997",2.76
+"Guinea","X1998",2.87
+"Guinea","X1999",2.75
+"Guinea","X2000",2.74
+"Guinea","X2001",2.8
+"Guinea","X2002",2.88
+"Guinea","X2003",2.85
+"Guinea","X2004",2.8
+"Guinea","X2005",2.9
+"Guinea","X2006",2.87
+"Guinea","X2007",2.85
+"Guinea","X2008",2.85
+"Guinea","X2009",2.83
+"Guinea","X2010",2.99
+"Guinea","X2011",3.05
+"Guinea","X2012",3.11
+"Guinea","X2013",3.05
+"Guinea","X2014",3.02
+"Guinea","X2015",3
+"Guinea","X2016",3.25
+"Guinea","X2017",3.2
+"Guinea","X2018",3.13
+"Guinea","X2019",3.18
+"Guinea-Bissau","X1990",3.27
+"Guinea-Bissau","X1991",3.21
+"Guinea-Bissau","X1992",3.17
+"Guinea-Bissau","X1993",3.13
+"Guinea-Bissau","X1994",3.09
+"Guinea-Bissau","X1995",3.05
+"Guinea-Bissau","X1996",2.67
+"Guinea-Bissau","X1997",2.65
+"Guinea-Bissau","X1998",2.8
+"Guinea-Bissau","X1999",3.04
+"Guinea-Bissau","X2000",2.73
+"Guinea-Bissau","X2001",2.81
+"Guinea-Bissau","X2002",2.86
+"Guinea-Bissau","X2003",2.87
+"Guinea-Bissau","X2004",2.81
+"Guinea-Bissau","X2005",2.7
+"Guinea-Bissau","X2006",2.85
+"Guinea-Bissau","X2007",2.79
+"Guinea-Bissau","X2008",2.55
+"Guinea-Bissau","X2009",2.54
+"Guinea-Bissau","X2010",2.56
+"Guinea-Bissau","X2011",2.44
+"Guinea-Bissau","X2012",2.64
+"Guinea-Bissau","X2013",2.43
+"Guinea-Bissau","X2014",2.42
+"Guinea-Bissau","X2015",2.5
+"Guinea-Bissau","X2016",2.31
+"Guinea-Bissau","X2017",2.23
+"Guinea-Bissau","X2018",2.23
+"Guinea-Bissau","X2019",2.19
+"Guyana","X1990",12.93
+"Guyana","X1991",13.15
+"Guyana","X1992",13.06
+"Guyana","X1993",13.15
+"Guyana","X1994",13.46
+"Guyana","X1995",14.45
+"Guyana","X1996",14.95
+"Guyana","X1997",15.45
+"Guyana","X1998",15.74
+"Guyana","X1999",15.91
+"Guyana","X2000",15.56
+"Guyana","X2001",16.6
+"Guyana","X2002",16.47
+"Guyana","X2003",16.82
+"Guyana","X2004",17.34
+"Guyana","X2005",16.83
+"Guyana","X2006",16.56
+"Guyana","X2007",16.97
+"Guyana","X2008",17.17
+"Guyana","X2009",17.18
+"Guyana","X2010",17.49
+"Guyana","X2011",27.71
+"Guyana","X2012",27.91
+"Guyana","X2013",27.97
+"Guyana","X2014",28.09
+"Guyana","X2015",28.13
+"Guyana","X2016",24.62
+"Guyana","X2017",24.58
+"Guyana","X2018",24.73
+"Guyana","X2019",25.29
+"Haiti","X1990",0.77
+"Haiti","X1991",0.78
+"Haiti","X1992",0.82
+"Haiti","X1993",0.76
+"Haiti","X1994",0.68
+"Haiti","X1995",0.76
+"Haiti","X1996",0.79
+"Haiti","X1997",0.82
+"Haiti","X1998",0.83
+"Haiti","X1999",0.83
+"Haiti","X2000",0.87
+"Haiti","X2001",0.88
+"Haiti","X2002",0.9
+"Haiti","X2003",0.89
+"Haiti","X2004",0.86
+"Haiti","X2005",0.86
+"Haiti","X2006",0.85
+"Haiti","X2007",0.88
+"Haiti","X2008",0.87
+"Haiti","X2009",0.86
+"Haiti","X2010",0.91
+"Haiti","X2011",0.98
+"Haiti","X2012",0.94
+"Haiti","X2013",0.96
+"Haiti","X2014",0.98
+"Haiti","X2015",1
+"Haiti","X2016",1.02
+"Haiti","X2017",1
+"Haiti","X2018",0.99
+"Haiti","X2019",0.99
+"Honduras","X1990",3.47
+"Honduras","X1991",3.4
+"Honduras","X1992",3.36
+"Honduras","X1993",3.23
+"Honduras","X1994",3.27
+"Honduras","X1995",3.31
+"Honduras","X1996",3.14
+"Honduras","X1997",3.12
+"Honduras","X1998",3.12
+"Honduras","X1999",2.86
+"Honduras","X2000",2.86
+"Honduras","X2001",2.78
+"Honduras","X2002",2.78
+"Honduras","X2003",3.11
+"Honduras","X2004",3
+"Honduras","X2005",3.02
+"Honduras","X2006",3
+"Honduras","X2007",3.02
+"Honduras","X2008",2.96
+"Honduras","X2009",2.91
+"Honduras","X2010",2.87
+"Honduras","X2011",3.04
+"Honduras","X2012",2.99
+"Honduras","X2013",3.02
+"Honduras","X2014",3.01
+"Honduras","X2015",3
+"Honduras","X2016",2.91
+"Honduras","X2017",2.82
+"Honduras","X2018",2.91
+"Honduras","X2019",2.89
+"Hungary","X1990",8.75
+"Hungary","X1991",8.26
+"Hungary","X1992",7.31
+"Hungary","X1993",7.36
+"Hungary","X1994",7.35
+"Hungary","X1995",7.19
+"Hungary","X1996",7.42
+"Hungary","X1997",7.27
+"Hungary","X1998",7.28
+"Hungary","X1999",7.38
+"Hungary","X2000",7.1
+"Hungary","X2001",7.4
+"Hungary","X2002",7.26
+"Hungary","X2003",7.55
+"Hungary","X2004",7.46
+"Hungary","X2005",7.4
+"Hungary","X2006",7.34
+"Hungary","X2007",7.14
+"Hungary","X2008",7.01
+"Hungary","X2009",6.44
+"Hungary","X2010",6.45
+"Hungary","X2011",6.3
+"Hungary","X2012",5.94
+"Hungary","X2013",5.72
+"Hungary","X2014",5.77
+"Hungary","X2015",6.08
+"Hungary","X2016",6.19
+"Hungary","X2017",6.42
+"Hungary","X2018",6.43
+"Hungary","X2019",6.39
+"Iceland","X1990",13.19
+"Iceland","X1991",12.57
+"Iceland","X1992",11.64
+"Iceland","X1993",11.38
+"Iceland","X1994",11.59
+"Iceland","X1995",11.26
+"Iceland","X1996",12.16
+"Iceland","X1997",11.95
+"Iceland","X1998",12.35
+"Iceland","X1999",12.09
+"Iceland","X2000",12.06
+"Iceland","X2001",11.33
+"Iceland","X2002",11.44
+"Iceland","X2003",11.26
+"Iceland","X2004",11.4
+"Iceland","X2005",11.08
+"Iceland","X2006",12.38
+"Iceland","X2007",12.09
+"Iceland","X2008",11.52
+"Iceland","X2009",10.45
+"Iceland","X2010",10.08
+"Iceland","X2011",9.27
+"Iceland","X2012",9.19
+"Iceland","X2013",9.62
+"Iceland","X2014",9.7
+"Iceland","X2015",9.75
+"Iceland","X2016",8.21
+"Iceland","X2017",8.19
+"Iceland","X2018",8.02
+"Iceland","X2019",7.68
+"India","X1990",1.15
+"India","X1991",1.19
+"India","X1992",1.19
+"India","X1993",1.2
+"India","X1994",1.23
+"India","X1995",1.27
+"India","X1996",1.3
+"India","X1997",1.33
+"India","X1998",1.34
+"India","X1999",1.39
+"India","X2000",1.4
+"India","X2001",1.61
+"India","X2002",1.6
+"India","X2003",1.61
+"India","X2004",1.66
+"India","X2005",1.7
+"India","X2006",1.75
+"India","X2007",1.85
+"India","X2008",1.91
+"India","X2009",2
+"India","X2010",2.06
+"India","X2011",2.07
+"India","X2012",2.16
+"India","X2013",2.19
+"India","X2014",2.3
+"India","X2015",2.29
+"India","X2016",2.32
+"India","X2017",2.4
+"India","X2018",2.48
+"India","X2019",2.46
+"Indonesia","X1990",6.76
+"Indonesia","X1991",6.75
+"Indonesia","X1992",6.75
+"Indonesia","X1993",6.72
+"Indonesia","X1994",6.72
+"Indonesia","X1995",6.8
+"Indonesia","X1996",5.82
+"Indonesia","X1997",10.53
+"Indonesia","X1998",6.64
+"Indonesia","X1999",6.03
+"Indonesia","X2000",5.63
+"Indonesia","X2001",4.75
+"Indonesia","X2002",6.9
+"Indonesia","X2003",5.3
+"Indonesia","X2004",6.8
+"Indonesia","X2005",5.5
+"Indonesia","X2006",7.26
+"Indonesia","X2007",4.76
+"Indonesia","X2008",4.65
+"Indonesia","X2009",6.23
+"Indonesia","X2010",4.68
+"Indonesia","X2011",6.87
+"Indonesia","X2012",6.85
+"Indonesia","X2013",6.51
+"Indonesia","X2014",7.9
+"Indonesia","X2015",8
+"Indonesia","X2016",5.48
+"Indonesia","X2017",5.47
+"Indonesia","X2018",6.32
+"Indonesia","X2019",7.24
+"Iran","X1990",5.4
+"Iran","X1991",5.77
+"Iran","X1992",6.03
+"Iran","X1993",6.07
+"Iran","X1994",6.52
+"Iran","X1995",6.6
+"Iran","X1996",6.75
+"Iran","X1997",6.96
+"Iran","X1998",6.9
+"Iran","X1999",7.4
+"Iran","X2000",7.73
+"Iran","X2001",7.49
+"Iran","X2002",7.62
+"Iran","X2003",8.06
+"Iran","X2004",8.49
+"Iran","X2005",8.95
+"Iran","X2006",9.46
+"Iran","X2007",9.86
+"Iran","X2008",9.86
+"Iran","X2009",10.07
+"Iran","X2010",10
+"Iran","X2011",10.63
+"Iran","X2012",10.51
+"Iran","X2013",10.66
+"Iran","X2014",10.9
+"Iran","X2015",10.75
+"Iran","X2016",11.07
+"Iran","X2017",11.31
+"Iran","X2018",11.32
+"Iran","X2019",10.78
+"Iraq","X1990",6.9
+"Iraq","X1991",3.51
+"Iraq","X1992",4.82
+"Iraq","X1993",6.12
+"Iraq","X1994",6.76
+"Iraq","X1995",6.47
+"Iraq","X1996",6.2
+"Iraq","X1997",7.58
+"Iraq","X1998",6.95
+"Iraq","X1999",6.29
+"Iraq","X2000",6.84
+"Iraq","X2001",6.98
+"Iraq","X2002",6.23
+"Iraq","X2003",5.04
+"Iraq","X2004",5.72
+"Iraq","X2005",5.41
+"Iraq","X2006",5.33
+"Iraq","X2007",5.12
+"Iraq","X2008",5.69
+"Iraq","X2009",5.96
+"Iraq","X2010",6.34
+"Iraq","X2011",6.58
+"Iraq","X2012",7.16
+"Iraq","X2013",7.3
+"Iraq","X2014",7.03
+"Iraq","X2015",7.14
+"Iraq","X2016",7.58
+"Iraq","X2017",7.81
+"Iraq","X2018",7.91
+"Iraq","X2019",8.17
+"Ireland","X1990",15.37
+"Ireland","X1991",15.44
+"Ireland","X1992",15.38
+"Ireland","X1993",15.48
+"Ireland","X1994",15.82
+"Ireland","X1995",15.96
+"Ireland","X1996",16.21
+"Ireland","X1997",16.43
+"Ireland","X1998",17.15
+"Ireland","X1999",17.42
+"Ireland","X2000",18.03
+"Ireland","X2001",18.41
+"Ireland","X2002",17.91
+"Ireland","X2003",17.68
+"Ireland","X2004",17.17
+"Ireland","X2005",17.11
+"Ireland","X2006",16.79
+"Ireland","X2007",15.92
+"Ireland","X2008",15.38
+"Ireland","X2009",14.07
+"Ireland","X2010",13.69
+"Ireland","X2011",12.82
+"Ireland","X2012",13.06
+"Ireland","X2013",12.79
+"Ireland","X2014",12.73
+"Ireland","X2015",13.01
+"Ireland","X2016",13.29
+"Ireland","X2017",13.04
+"Ireland","X2018",12.51
+"Ireland","X2019",11.89
+"Israel","X1990",9.46
+"Israel","X1991",9.12
+"Israel","X1992",9.36
+"Israel","X1993",9.89
+"Israel","X1994",10.26
+"Israel","X1995",10.68
+"Israel","X1996",10.95
+"Israel","X1997",11.2
+"Israel","X1998",11.17
+"Israel","X1999",11.25
+"Israel","X2000",11.74
+"Israel","X2001",11.44
+"Israel","X2002",11.52
+"Israel","X2003",11.43
+"Israel","X2004",11.39
+"Israel","X2005",11
+"Israel","X2006",11.41
+"Israel","X2007",11.65
+"Israel","X2008",11.54
+"Israel","X2009",11.2
+"Israel","X2010",11.71
+"Israel","X2011",11.47
+"Israel","X2012",12.08
+"Israel","X2013",10.8
+"Israel","X2014",10.38
+"Israel","X2015",10.4
+"Israel","X2016",10.18
+"Israel","X2017",10.16
+"Israel","X2018",9.55
+"Israel","X2019",9.64
+"Italy","X1990",7.91
+"Italy","X1991",7.86
+"Italy","X1992",7.81
+"Italy","X1993",7.7
+"Italy","X1994",7.61
+"Italy","X1995",8.05
+"Italy","X1996",7.99
+"Italy","X1997",8.06
+"Italy","X1998",8.25
+"Italy","X1999",8.39
+"Italy","X2000",8.48
+"Italy","X2001",8.45
+"Italy","X2002",8.6
+"Italy","X2003",8.89
+"Italy","X2004",9.03
+"Italy","X2005",9.01
+"Italy","X2006",8.78
+"Italy","X2007",8.62
+"Italy","X2008",8.31
+"Italy","X2009",7.44
+"Italy","X2010",7.56
+"Italy","X2011",7.37
+"Italy","X2012",7.05
+"Italy","X2013",6.44
+"Italy","X2014",6.05
+"Italy","X2015",6.25
+"Italy","X2016",6.55
+"Italy","X2017",6.47
+"Italy","X2018",6.38
+"Italy","X2019",6.3
+"Jamaica","X1990",3.87
+"Jamaica","X1991",3.84
+"Jamaica","X1992",4.14
+"Jamaica","X1993",4.18
+"Jamaica","X1994",4.15
+"Jamaica","X1995",4.24
+"Jamaica","X1996",4.34
+"Jamaica","X1997",4.35
+"Jamaica","X1998",4.52
+"Jamaica","X1999",4.6
+"Jamaica","X2000",4.61
+"Jamaica","X2001",3.51
+"Jamaica","X2002",3.55
+"Jamaica","X2003",3.69
+"Jamaica","X2004",3.63
+"Jamaica","X2005",3.6
+"Jamaica","X2006",4.02
+"Jamaica","X2007",3.97
+"Jamaica","X2008",3.09
+"Jamaica","X2009",2.44
+"Jamaica","X2010",2.29
+"Jamaica","X2011",3.25
+"Jamaica","X2012",3.05
+"Jamaica","X2013",3.19
+"Jamaica","X2014",3.11
+"Jamaica","X2015",3.05
+"Jamaica","X2016",3.19
+"Jamaica","X2017",3.06
+"Jamaica","X2018",3.52
+"Jamaica","X2019",3.44
+"Japan","X1990",8.96
+"Japan","X1991",9.05
+"Japan","X1992",9.12
+"Japan","X1993",9.04
+"Japan","X1994",9.47
+"Japan","X1995",9.57
+"Japan","X1996",9.67
+"Japan","X1997",9.55
+"Japan","X1998",9.16
+"Japan","X1999",9.35
+"Japan","X2000",9.47
+"Japan","X2001",9.1
+"Japan","X2002",9.33
+"Japan","X2003",9.37
+"Japan","X2004",9.31
+"Japan","X2005",9.31
+"Japan","X2006",9.14
+"Japan","X2007",9.41
+"Japan","X2008",8.88
+"Japan","X2009",8.42
+"Japan","X2010",8.87
+"Japan","X2011",9.73
+"Japan","X2012",10.08
+"Japan","X2013",10.19
+"Japan","X2014",9.87
+"Japan","X2015",9.6
+"Japan","X2016",9.68
+"Japan","X2017",9.57
+"Japan","X2018",9.24
+"Japan","X2019",8.96
+"Jordan","X1990",5.22
+"Jordan","X1991",5.07
+"Jordan","X1992",5.49
+"Jordan","X1993",5.37
+"Jordan","X1994",5.36
+"Jordan","X1995",5.08
+"Jordan","X1996",4.76
+"Jordan","X1997",4.55
+"Jordan","X1998",4.3
+"Jordan","X1999",4.04
+"Jordan","X2000",4.08
+"Jordan","X2001",4.02
+"Jordan","X2002",4.09
+"Jordan","X2003",4.11
+"Jordan","X2004",4.29
+"Jordan","X2005",4.42
+"Jordan","X2006",4.39
+"Jordan","X2007",4.44
+"Jordan","X2008",4.12
+"Jordan","X2009",4.03
+"Jordan","X2010",3.79
+"Jordan","X2011",3.71
+"Jordan","X2012",3.96
+"Jordan","X2013",3.8
+"Jordan","X2014",3.87
+"Jordan","X2015",3.77
+"Jordan","X2016",3.69
+"Jordan","X2017",3.79
+"Jordan","X2018",3.63
+"Jordan","X2019",3.62
+"Kazakhstan","X1990",18.1
+"Kazakhstan","X1991",18.48
+"Kazakhstan","X1992",18.62
+"Kazakhstan","X1993",16.5
+"Kazakhstan","X1994",15.44
+"Kazakhstan","X1995",13.94
+"Kazakhstan","X1996",12.51
+"Kazakhstan","X1997",11.2
+"Kazakhstan","X1998",11.43
+"Kazakhstan","X1999",10.53
+"Kazakhstan","X2000",10.49
+"Kazakhstan","X2001",10.39
+"Kazakhstan","X2002",12.17
+"Kazakhstan","X2003",12.82
+"Kazakhstan","X2004",13.82
+"Kazakhstan","X2005",14.61
+"Kazakhstan","X2006",15.7
+"Kazakhstan","X2007",16.28
+"Kazakhstan","X2008",18.93
+"Kazakhstan","X2009",16.76
+"Kazakhstan","X2010",17.71
+"Kazakhstan","X2011",17.85
+"Kazakhstan","X2012",17.47
+"Kazakhstan","X2013",18.06
+"Kazakhstan","X2014",14.98
+"Kazakhstan","X2015",13.7
+"Kazakhstan","X2016",14.42
+"Kazakhstan","X2017",15.36
+"Kazakhstan","X2018",15.08
+"Kazakhstan","X2019",14.67
+"Kenya","X1990",1.29
+"Kenya","X1991",1.2
+"Kenya","X1992",1.16
+"Kenya","X1993",1.11
+"Kenya","X1994",1.09
+"Kenya","X1995",1.07
+"Kenya","X1996",1.01
+"Kenya","X1997",0.98
+"Kenya","X1998",0.99
+"Kenya","X1999",1.03
+"Kenya","X2000",0.97
+"Kenya","X2001",1.51
+"Kenya","X2002",1.5
+"Kenya","X2003",1.48
+"Kenya","X2004",1.52
+"Kenya","X2005",1.49
+"Kenya","X2006",1.45
+"Kenya","X2007",1.84
+"Kenya","X2008",1.82
+"Kenya","X2009",1.77
+"Kenya","X2010",1.76
+"Kenya","X2011",1.6
+"Kenya","X2012",1.53
+"Kenya","X2013",1.52
+"Kenya","X2014",1.54
+"Kenya","X2015",1.55
+"Kenya","X2016",1.31
+"Kenya","X2017",1.21
+"Kenya","X2018",1.19
+"Kenya","X2019",1.4
+"Kiribati","X1990",0.54
+"Kiribati","X1991",0.54
+"Kiribati","X1992",0.54
+"Kiribati","X1993",0.59
+"Kiribati","X1994",0.56
+"Kiribati","X1995",0.59
+"Kiribati","X1996",0.65
+"Kiribati","X1997",0.61
+"Kiribati","X1998",0.61
+"Kiribati","X1999",0.61
+"Kiribati","X2000",0.64
+"Kiribati","X2001",0.62
+"Kiribati","X2002",0.72
+"Kiribati","X2003",0.75
+"Kiribati","X2004",0.83
+"Kiribati","X2005",0.99
+"Kiribati","X2006",1.03
+"Kiribati","X2007",0.87
+"Kiribati","X2008",0.88
+"Kiribati","X2009",0.81
+"Kiribati","X2010",0.76
+"Kiribati","X2011",0.76
+"Kiribati","X2012",0.79
+"Kiribati","X2013",0.84
+"Kiribati","X2014",0.8
+"Kiribati","X2015",0.81
+"Kiribati","X2016",0.86
+"Kiribati","X2017",1.02
+"Kiribati","X2018",1.01
+"Kiribati","X2019",1
+"Kuwait","X1990",18.63
+"Kuwait","X1991",5.21
+"Kuwait","X1992",NA
+"Kuwait","X1993",NA
+"Kuwait","X1994",NA
+"Kuwait","X1995",33.51
+"Kuwait","X1996",33.11
+"Kuwait","X1997",33
+"Kuwait","X1998",33.43
+"Kuwait","X1999",32.78
+"Kuwait","X2000",34.13
+"Kuwait","X2001",34.66
+"Kuwait","X2002",34.99
+"Kuwait","X2003",36.97
+"Kuwait","X2004",38.66
+"Kuwait","X2005",41.55
+"Kuwait","X2006",41.27
+"Kuwait","X2007",38.33
+"Kuwait","X2008",38.75
+"Kuwait","X2009",36.57
+"Kuwait","X2010",35.88
+"Kuwait","X2011",35.68
+"Kuwait","X2012",35.12
+"Kuwait","X2013",34.56
+"Kuwait","X2014",32.81
+"Kuwait","X2015",32.84
+"Kuwait","X2016",33.29
+"Kuwait","X2017",32.32
+"Kuwait","X2018",32.35
+"Kuwait","X2019",32.49
+"Kyrgyzstan","X1990",7.16
+"Kyrgyzstan","X1991",6.53
+"Kyrgyzstan","X1992",4.78
+"Kyrgyzstan","X1993",3.71
+"Kyrgyzstan","X1994",2.57
+"Kyrgyzstan","X1995",1.95
+"Kyrgyzstan","X1996",2.12
+"Kyrgyzstan","X1997",2.06
+"Kyrgyzstan","X1998",2.08
+"Kyrgyzstan","X1999",1.76
+"Kyrgyzstan","X2000",1.73
+"Kyrgyzstan","X2001",1.79
+"Kyrgyzstan","X2002",1.97
+"Kyrgyzstan","X2003",2.08
+"Kyrgyzstan","X2004",2.08
+"Kyrgyzstan","X2005",2
+"Kyrgyzstan","X2006",1.99
+"Kyrgyzstan","X2007",2.21
+"Kyrgyzstan","X2008",2.41
+"Kyrgyzstan","X2009",2.3
+"Kyrgyzstan","X2010",2.21
+"Kyrgyzstan","X2011",2.31
+"Kyrgyzstan","X2012",2.73
+"Kyrgyzstan","X2013",2.59
+"Kyrgyzstan","X2014",2.64
+"Kyrgyzstan","X2015",2.67
+"Kyrgyzstan","X2016",2.13
+"Kyrgyzstan","X2017",2.05
+"Kyrgyzstan","X2018",2.34
+"Kyrgyzstan","X2019",2.11
+"Laos","X1990",4.55
+"Laos","X1991",4.41
+"Laos","X1992",4.35
+"Laos","X1993",4.25
+"Laos","X1994",4.22
+"Laos","X1995",4.13
+"Laos","X1996",4.12
+"Laos","X1997",3.97
+"Laos","X1998",4.23
+"Laos","X1999",3.9
+"Laos","X2000",3.81
+"Laos","X2001",3.84
+"Laos","X2002",3.98
+"Laos","X2003",4.03
+"Laos","X2004",4.72
+"Laos","X2005",4.17
+"Laos","X2006",3.95
+"Laos","X2007",4.7
+"Laos","X2008",3.9
+"Laos","X2009",4.07
+"Laos","X2010",4.58
+"Laos","X2011",3.39
+"Laos","X2012",3.63
+"Laos","X2013",3.77
+"Laos","X2014",3.74
+"Laos","X2015",4.38
+"Laos","X2016",5.52
+"Laos","X2017",5.66
+"Laos","X2018",5.56
+"Laos","X2019",5.5
+"Latvia","X1990",4.66
+"Latvia","X1991",4.04
+"Latvia","X1992",3.07
+"Latvia","X1993",1.89
+"Latvia","X1994",0.75
+"Latvia","X1995",0.08
+"Latvia","X1996",0.08
+"Latvia","X1997",-0.15
+"Latvia","X1998",-0.33
+"Latvia","X1999",-0.6
+"Latvia","X2000",-0.9
+"Latvia","X2001",-1.19
+"Latvia","X2002",-1.18
+"Latvia","X2003",-1.13
+"Latvia","X2004",-1.1
+"Latvia","X2005",-1.04
+"Latvia","X2006",-0.81
+"Latvia","X2007",-0.62
+"Latvia","X2008",-0.77
+"Latvia","X2009",-1.15
+"Latvia","X2010",-0.62
+"Latvia","X2011",4.46
+"Latvia","X2012",4.42
+"Latvia","X2013",4.43
+"Latvia","X2014",4.44
+"Latvia","X2015",4.5
+"Latvia","X2016",4.4
+"Latvia","X2017",4.41
+"Latvia","X2018",4.72
+"Latvia","X2019",4.66
+"Lebanon","X1990",2.6
+"Lebanon","X1991",3.01
+"Lebanon","X1992",2.88
+"Lebanon","X1993",3.78
+"Lebanon","X1994",3.88
+"Lebanon","X1995",4.39
+"Lebanon","X1996",4.58
+"Lebanon","X1997",5.13
+"Lebanon","X1998",5.18
+"Lebanon","X1999",5.36
+"Lebanon","X2000",4.93
+"Lebanon","X2001",5.07
+"Lebanon","X2002",4.84
+"Lebanon","X2003",4.77
+"Lebanon","X2004",4.7
+"Lebanon","X2005",4.45
+"Lebanon","X2006",4.19
+"Lebanon","X2007",3.96
+"Lebanon","X2008",4.76
+"Lebanon","X2009",5.43
+"Lebanon","X2010",5.1
+"Lebanon","X2011",4.97
+"Lebanon","X2012",5.15
+"Lebanon","X2013",4.82
+"Lebanon","X2014",4.9
+"Lebanon","X2015",5.02
+"Lebanon","X2016",5.06
+"Lebanon","X2017",5.26
+"Lebanon","X2018",5.04
+"Lebanon","X2019",5.12
+"Lesotho","X1990",1.15
+"Lesotho","X1991",1.12
+"Lesotho","X1992",1.19
+"Lesotho","X1993",1.15
+"Lesotho","X1994",1.1
+"Lesotho","X1995",1.05
+"Lesotho","X1996",1
+"Lesotho","X1997",0.98
+"Lesotho","X1998",0.95
+"Lesotho","X1999",1.18
+"Lesotho","X2000",1.13
+"Lesotho","X2001",1.11
+"Lesotho","X2002",1.03
+"Lesotho","X2003",1.06
+"Lesotho","X2004",1.04
+"Lesotho","X2005",1.13
+"Lesotho","X2006",1.11
+"Lesotho","X2007",1.14
+"Lesotho","X2008",1.11
+"Lesotho","X2009",1.16
+"Lesotho","X2010",1.16
+"Lesotho","X2011",1.19
+"Lesotho","X2012",1.21
+"Lesotho","X2013",1.14
+"Lesotho","X2014",1.13
+"Lesotho","X2015",1.14
+"Lesotho","X2016",1.14
+"Lesotho","X2017",1.21
+"Lesotho","X2018",1.2
+"Lesotho","X2019",1.19
+"Liberia","X1990",6.93
+"Liberia","X1991",6.99
+"Liberia","X1992",7.14
+"Liberia","X1993",7.23
+"Liberia","X1994",7.19
+"Liberia","X1995",6.99
+"Liberia","X1996",6.58
+"Liberia","X1997",6.13
+"Liberia","X1998",5.7
+"Liberia","X1999",5.28
+"Liberia","X2000",5.02
+"Liberia","X2001",4.84
+"Liberia","X2002",4.73
+"Liberia","X2003",4.69
+"Liberia","X2004",4.61
+"Liberia","X2005",4.52
+"Liberia","X2006",4.44
+"Liberia","X2007",4.23
+"Liberia","X2008",4.05
+"Liberia","X2009",4.11
+"Liberia","X2010",3.83
+"Liberia","X2011",3.75
+"Liberia","X2012",3.67
+"Liberia","X2013",3.57
+"Liberia","X2014",3.63
+"Liberia","X2015",3.69
+"Liberia","X2016",3.45
+"Liberia","X2017",3.34
+"Liberia","X2018",3.22
+"Liberia","X2019",3.21
+"Libya","X1990",19.71
+"Libya","X1991",20.3
+"Libya","X1992",18.02
+"Libya","X1993",19.17
+"Libya","X1994",21.74
+"Libya","X1995",23
+"Libya","X1996",23.2
+"Libya","X1997",21.33
+"Libya","X1998",20.99
+"Libya","X1999",20.07
+"Libya","X2000",20.65
+"Libya","X2001",19.63
+"Libya","X2002",19.14
+"Libya","X2003",20.39
+"Libya","X2004",20.91
+"Libya","X2005",22.32
+"Libya","X2006",22.37
+"Libya","X2007",21.46
+"Libya","X2008",21.97
+"Libya","X2009",21.21
+"Libya","X2010",22.16
+"Libya","X2011",12.1
+"Libya","X2012",21.1
+"Libya","X2013",18.19
+"Libya","X2014",15.29
+"Libya","X2015",14.02
+"Libya","X2016",13.89
+"Libya","X2017",17.06
+"Libya","X2018",18.2
+"Libya","X2019",18.69
+"Liechtenstein","X1990",7.8
+"Liechtenstein","X1991",7.95
+"Liechtenstein","X1992",7.87
+"Liechtenstein","X1993",8.03
+"Liechtenstein","X1994",7.47
+"Liechtenstein","X1995",7.48
+"Liechtenstein","X1996",7.45
+"Liechtenstein","X1997",7.73
+"Liechtenstein","X1998",7.97
+"Liechtenstein","X1999",7.8
+"Liechtenstein","X2000",7.44
+"Liechtenstein","X2001",7.52
+"Liechtenstein","X2002",7.63
+"Liechtenstein","X2003",7.86
+"Liechtenstein","X2004",7.82
+"Liechtenstein","X2005",7.76
+"Liechtenstein","X2006",7.77
+"Liechtenstein","X2007",6.88
+"Liechtenstein","X2008",7.39
+"Liechtenstein","X2009",6.93
+"Liechtenstein","X2010",6.48
+"Liechtenstein","X2011",5.23
+"Liechtenstein","X2012",5.43
+"Liechtenstein","X2013",5.6
+"Liechtenstein","X2014",4.7
+"Liechtenstein","X2015",4.62
+"Liechtenstein","X2016",4.34
+"Liechtenstein","X2017",4.49
+"Liechtenstein","X2018",4.14
+"Liechtenstein","X2019",4.3
+"Lithuania","X1990",12.37
+"Lithuania","X1991",12.83
+"Lithuania","X1992",8.86
+"Lithuania","X1993",7.3
+"Lithuania","X1994",6.79
+"Lithuania","X1995",6.41
+"Lithuania","X1996",6.67
+"Lithuania","X1997",6.66
+"Lithuania","X1998",6.96
+"Lithuania","X1999",6.23
+"Lithuania","X2000",5.79
+"Lithuania","X2001",5.82
+"Lithuania","X2002",5.97
+"Lithuania","X2003",6.07
+"Lithuania","X2004",6.42
+"Lithuania","X2005",6.86
+"Lithuania","X2006",7.01
+"Lithuania","X2007",7.41
+"Lithuania","X2008",7.31
+"Lithuania","X2009",6.26
+"Lithuania","X2010",6.65
+"Lithuania","X2011",4.61
+"Lithuania","X2012",4.65
+"Lithuania","X2013",4.39
+"Lithuania","X2014",4.27
+"Lithuania","X2015",4.4
+"Lithuania","X2016",6.37
+"Lithuania","X2017",6.43
+"Lithuania","X2018",6.53
+"Lithuania","X2019",6.55
+"Luxembourg","X1990",30.26
+"Luxembourg","X1991",31.12
+"Luxembourg","X1992",29.93
+"Luxembourg","X1993",30.06
+"Luxembourg","X1994",27.55
+"Luxembourg","X1995",21.92
+"Luxembourg","X1996",21.82
+"Luxembourg","X1997",20.36
+"Luxembourg","X1998",18.52
+"Luxembourg","X1999",19.18
+"Luxembourg","X2000",20.36
+"Luxembourg","X2001",21.5
+"Luxembourg","X2002",23.03
+"Luxembourg","X2003",23.68
+"Luxembourg","X2004",26.51
+"Luxembourg","X2005",26.62
+"Luxembourg","X2006",25.77
+"Luxembourg","X2007",24.15
+"Luxembourg","X2008",23.57
+"Luxembourg","X2009",21.95
+"Luxembourg","X2010",22.73
+"Luxembourg","X2011",22.49
+"Luxembourg","X2012",21.52
+"Luxembourg","X2013",20.05
+"Luxembourg","X2014",18.69
+"Luxembourg","X2015",17.35
+"Luxembourg","X2016",16.44
+"Luxembourg","X2017",16.31
+"Luxembourg","X2018",16.5
+"Luxembourg","X2019",16.46
+"Macedonia","X1990",6.96
+"Macedonia","X1991",6.62
+"Macedonia","X1992",6.36
+"Macedonia","X1993",6.38
+"Macedonia","X1994",6.15
+"Macedonia","X1995",5.96
+"Macedonia","X1996",6.72
+"Macedonia","X1997",6.12
+"Macedonia","X1998",6.45
+"Macedonia","X1999",5.97
+"Macedonia","X2000",5.79
+"Macedonia","X2001",5.78
+"Macedonia","X2002",5.52
+"Macedonia","X2003",5.91
+"Macedonia","X2004",5.79
+"Macedonia","X2005",5.95
+"Macedonia","X2006",5.95
+"Macedonia","X2007",6.18
+"Macedonia","X2008",6.07
+"Macedonia","X2009",5.72
+"Macedonia","X2010",5.63
+"Macedonia","X2011",6.07
+"Macedonia","X2012",5.8
+"Macedonia","X2013",5.37
+"Macedonia","X2014",5.16
+"Macedonia","X2015",5.03
+"Macedonia","X2016",5
+"Macedonia","X2017",5.24
+"Macedonia","X2018",4.99
+"Macedonia","X2019",5.42
+"Madagascar","X1990",4.74
+"Madagascar","X1991",4.61
+"Madagascar","X1992",4.49
+"Madagascar","X1993",4.39
+"Madagascar","X1994",4.24
+"Madagascar","X1995",4.15
+"Madagascar","X1996",4.07
+"Madagascar","X1997",3.9
+"Madagascar","X1998",3.86
+"Madagascar","X1999",3.72
+"Madagascar","X2000",3.52
+"Madagascar","X2001",2.93
+"Madagascar","X2002",2.7
+"Madagascar","X2003",2.76
+"Madagascar","X2004",2.62
+"Madagascar","X2005",2.77
+"Madagascar","X2006",2.62
+"Madagascar","X2007",2.62
+"Madagascar","X2008",2.48
+"Madagascar","X2009",2.46
+"Madagascar","X2010",2.42
+"Madagascar","X2011",1.8
+"Madagascar","X2012",1.79
+"Madagascar","X2013",1.69
+"Madagascar","X2014",1.64
+"Madagascar","X2015",1.63
+"Madagascar","X2016",1.62
+"Madagascar","X2017",1.55
+"Madagascar","X2018",1.51
+"Madagascar","X2019",1.49
+"Malawi","X1990",1.24
+"Malawi","X1991",1.24
+"Malawi","X1992",1.22
+"Malawi","X1993",1.24
+"Malawi","X1994",1.19
+"Malawi","X1995",1.2
+"Malawi","X1996",1.19
+"Malawi","X1997",1.16
+"Malawi","X1998",1.15
+"Malawi","X1999",1.12
+"Malawi","X2000",1.09
+"Malawi","X2001",1.06
+"Malawi","X2002",1.07
+"Malawi","X2003",1.08
+"Malawi","X2004",1.04
+"Malawi","X2005",1.04
+"Malawi","X2006",1.02
+"Malawi","X2007",1.03
+"Malawi","X2008",1.04
+"Malawi","X2009",1
+"Malawi","X2010",1.04
+"Malawi","X2011",1.01
+"Malawi","X2012",1.02
+"Malawi","X2013",0.99
+"Malawi","X2014",1
+"Malawi","X2015",1
+"Malawi","X2016",1
+"Malawi","X2017",0.99
+"Malawi","X2018",1.04
+"Malawi","X2019",1.04
+"Malaysia","X1990",10.93
+"Malaysia","X1991",11.24
+"Malaysia","X1992",11.09
+"Malaysia","X1993",11.16
+"Malaysia","X1994",11.27
+"Malaysia","X1995",11.34
+"Malaysia","X1996",11.48
+"Malaysia","X1997",11.72
+"Malaysia","X1998",12.76
+"Malaysia","X1999",11.48
+"Malaysia","X2000",11.72
+"Malaysia","X2001",11.09
+"Malaysia","X2002",11.52
+"Malaysia","X2003",11.7
+"Malaysia","X2004",12.47
+"Malaysia","X2005",12.77
+"Malaysia","X2006",12.37
+"Malaysia","X2007",13.07
+"Malaysia","X2008",13.27
+"Malaysia","X2009",12.9
+"Malaysia","X2010",13.13
+"Malaysia","X2011",5.11
+"Malaysia","X2012",5.1
+"Malaysia","X2013",5.74
+"Malaysia","X2014",6.77
+"Malaysia","X2015",6.19
+"Malaysia","X2016",12.3
+"Malaysia","X2017",11.59
+"Malaysia","X2018",12.18
+"Malaysia","X2019",12.4
+"Maldives","X1990",0.91
+"Maldives","X1991",0.91
+"Maldives","X1992",1.17
+"Maldives","X1993",1.06
+"Maldives","X1994",1.05
+"Maldives","X1995",1.27
+"Maldives","X1996",1.34
+"Maldives","X1997",1.56
+"Maldives","X1998",1.45
+"Maldives","X1999",1.88
+"Maldives","X2000",1.98
+"Maldives","X2001",2.01
+"Maldives","X2002",2.43
+"Maldives","X2003",2.09
+"Maldives","X2004",2.74
+"Maldives","X2005",2.6
+"Maldives","X2006",3.04
+"Maldives","X2007",2.98
+"Maldives","X2008",2.95
+"Maldives","X2009",3.01
+"Maldives","X2010",3.07
+"Maldives","X2011",3.14
+"Maldives","X2012",3.41
+"Maldives","X2013",3.3
+"Maldives","X2014",3.75
+"Maldives","X2015",3.65
+"Maldives","X2016",4.41
+"Maldives","X2017",4.53
+"Maldives","X2018",4.93
+"Maldives","X2019",4.9
+"Mali","X1990",2.03
+"Mali","X1991",1.98
+"Mali","X1992",1.93
+"Mali","X1993",1.91
+"Mali","X1994",1.88
+"Mali","X1995",1.87
+"Mali","X1996",1.84
+"Mali","X1997",1.87
+"Mali","X1998",2.21
+"Mali","X1999",2.24
+"Mali","X2000",2.21
+"Mali","X2001",1.89
+"Mali","X2002",1.86
+"Mali","X2003",1.86
+"Mali","X2004",1.99
+"Mali","X2005",2
+"Mali","X2006",1.96
+"Mali","X2007",1.96
+"Mali","X2008",2
+"Mali","X2009",1.96
+"Mali","X2010",2.05
+"Mali","X2011",2.04
+"Mali","X2012",2.02
+"Mali","X2013",2.04
+"Mali","X2014",2.02
+"Mali","X2015",2.04
+"Mali","X2016",2.23
+"Mali","X2017",2.21
+"Mali","X2018",2.22
+"Mali","X2019",2.25
+"Malta","X1990",7.14
+"Malta","X1991",6.69
+"Malta","X1992",6.56
+"Malta","X1993",8.24
+"Malta","X1994",7.37
+"Malta","X1995",6.98
+"Malta","X1996",6.78
+"Malta","X1997",7.14
+"Malta","X1998",6.85
+"Malta","X1999",6.92
+"Malta","X2000",6.18
+"Malta","X2001",7.08
+"Malta","X2002",6.62
+"Malta","X2003",7.33
+"Malta","X2004",7.3
+"Malta","X2005",7.39
+"Malta","X2006",7.55
+"Malta","X2007",7.74
+"Malta","X2008",7.55
+"Malta","X2009",7.03
+"Malta","X2010",7.25
+"Malta","X2011",7.19
+"Malta","X2012",7.55
+"Malta","X2013",6.68
+"Malta","X2014",6.58
+"Malta","X2015",4.9
+"Malta","X2016",4.13
+"Malta","X2017",4.32
+"Malta","X2018",4.21
+"Malta","X2019",4.23
+"Marshall Islands","X1990",0.53
+"Marshall Islands","X1991",0.53
+"Marshall Islands","X1992",2.17
+"Marshall Islands","X1993",2.26
+"Marshall Islands","X1994",2.33
+"Marshall Islands","X1995",2.41
+"Marshall Islands","X1996",2.44
+"Marshall Islands","X1997",2.45
+"Marshall Islands","X1998",2.51
+"Marshall Islands","X1999",2.52
+"Marshall Islands","X2000",2.66
+"Marshall Islands","X2001",2.7
+"Marshall Islands","X2002",2.84
+"Marshall Islands","X2003",2.75
+"Marshall Islands","X2004",2.96
+"Marshall Islands","X2005",3.08
+"Marshall Islands","X2006",3.08
+"Marshall Islands","X2007",3.13
+"Marshall Islands","X2008",2.99
+"Marshall Islands","X2009",3.05
+"Marshall Islands","X2010",3.11
+"Marshall Islands","X2011",3.13
+"Marshall Islands","X2012",3.11
+"Marshall Islands","X2013",3.19
+"Marshall Islands","X2014",3.25
+"Marshall Islands","X2015",3.34
+"Marshall Islands","X2016",3.81
+"Marshall Islands","X2017",3.9
+"Marshall Islands","X2018",3.91
+"Marshall Islands","X2019",3.94
+"Mauritania","X1990",3.52
+"Mauritania","X1991",3.54
+"Mauritania","X1992",3.38
+"Mauritania","X1993",3.39
+"Mauritania","X1994",3.26
+"Mauritania","X1995",3.23
+"Mauritania","X1996",3.37
+"Mauritania","X1997",3.42
+"Mauritania","X1998",3.48
+"Mauritania","X1999",3.59
+"Mauritania","X2000",3.65
+"Mauritania","X2001",3.62
+"Mauritania","X2002",3.57
+"Mauritania","X2003",3.5
+"Mauritania","X2004",3.43
+"Mauritania","X2005",3.32
+"Mauritania","X2006",3.45
+"Mauritania","X2007",3.39
+"Mauritania","X2008",3.03
+"Mauritania","X2009",3.23
+"Mauritania","X2010",3.27
+"Mauritania","X2011",3.19
+"Mauritania","X2012",3.24
+"Mauritania","X2013",3.17
+"Mauritania","X2014",3.2
+"Mauritania","X2015",3.34
+"Mauritania","X2016",2.91
+"Mauritania","X2017",2.87
+"Mauritania","X2018",2.89
+"Mauritania","X2019",2.92
+"Mauritius","X1990",2.16
+"Mauritius","X1991",2.22
+"Mauritius","X1992",2.28
+"Mauritius","X1993",2.39
+"Mauritius","X1994",2.42
+"Mauritius","X1995",2.46
+"Mauritius","X1996",2.59
+"Mauritius","X1997",2.65
+"Mauritius","X1998",2.86
+"Mauritius","X1999",3.27
+"Mauritius","X2000",3.61
+"Mauritius","X2001",3.76
+"Mauritius","X2002",3.75
+"Mauritius","X2003",3.88
+"Mauritius","X2004",3.88
+"Mauritius","X2005",4.01
+"Mauritius","X2006",4.34
+"Mauritius","X2007",4.43
+"Mauritius","X2008",4.5
+"Mauritius","X2009",4.49
+"Mauritius","X2010",4.7
+"Mauritius","X2011",4.66
+"Mauritius","X2012",4.78
+"Mauritius","X2013",4.87
+"Mauritius","X2014",5.02
+"Mauritius","X2015",5.05
+"Mauritius","X2016",5.15
+"Mauritius","X2017",5.3
+"Mauritius","X2018",5.31
+"Mauritius","X2019",5.39
+"Mexico","X1990",5.08
+"Mexico","X1991",5.2
+"Mexico","X1992",5.14
+"Mexico","X1993",5.25
+"Mexico","X1994",5.46
+"Mexico","X1995",5.14
+"Mexico","X1996",5.26
+"Mexico","X1997",5.42
+"Mexico","X1998",5.69
+"Mexico","X1999",5.44
+"Mexico","X2000",5.64
+"Mexico","X2001",4.63
+"Mexico","X2002",4.66
+"Mexico","X2003",4.85
+"Mexico","X2004",4.86
+"Mexico","X2005",5.02
+"Mexico","X2006",5.14
+"Mexico","X2007",5.17
+"Mexico","X2008",5.14
+"Mexico","X2009",4.98
+"Mexico","X2010",5.06
+"Mexico","X2011",5.87
+"Mexico","X2012",5.86
+"Mexico","X2013",5.68
+"Mexico","X2014",5.51
+"Mexico","X2015",5.6
+"Mexico","X2016",5.59
+"Mexico","X2017",5.51
+"Mexico","X2018",5.31
+"Mexico","X2019",5.26
+"Micronesia","X1990",0.08
+"Micronesia","X1991",-0.22
+"Micronesia","X1992",0.84
+"Micronesia","X1993",0.84
+"Micronesia","X1994",0.9
+"Micronesia","X1995",1.4
+"Micronesia","X1996",1.42
+"Micronesia","X1997",1.47
+"Micronesia","X1998",1.52
+"Micronesia","X1999",1.53
+"Micronesia","X2000",1.58
+"Micronesia","X2001",1.74
+"Micronesia","X2002",1.65
+"Micronesia","X2003",1.79
+"Micronesia","X2004",1.83
+"Micronesia","X2005",1.88
+"Micronesia","X2006",1.71
+"Micronesia","X2007",1.68
+"Micronesia","X2008",1.52
+"Micronesia","X2009",1.69
+"Micronesia","X2010",1.47
+"Micronesia","X2011",1.56
+"Micronesia","X2012",1.66
+"Micronesia","X2013",1.73
+"Micronesia","X2014",1.76
+"Micronesia","X2015",1.81
+"Micronesia","X2016",1.98
+"Micronesia","X2017",2
+"Micronesia","X2018",1.99
+"Micronesia","X2019",1.99
+"Moldova","X1990",12.75
+"Moldova","X1991",10.69
+"Moldova","X1992",9
+"Moldova","X1993",7.86
+"Moldova","X1994",6.84
+"Moldova","X1995",6.18
+"Moldova","X1996",5.58
+"Moldova","X1997",5.03
+"Moldova","X1998",4.54
+"Moldova","X1999",4.08
+"Moldova","X2000",3.8
+"Moldova","X2001",3.65
+"Moldova","X2002",3.7
+"Moldova","X2003",3.92
+"Moldova","X2004",3.92
+"Moldova","X2005",4.04
+"Moldova","X2006",3.93
+"Moldova","X2007",4.02
+"Moldova","X2008",3.98
+"Moldova","X2009",3.75
+"Moldova","X2010",4.07
+"Moldova","X2011",4.33
+"Moldova","X2012",4.24
+"Moldova","X2013",3.94
+"Moldova","X2014",4.17
+"Moldova","X2015",4.27
+"Moldova","X2016",4.59
+"Moldova","X2017",4.67
+"Moldova","X2018",4.94
+"Moldova","X2019",5.06
+"Mongolia","X1990",15.72
+"Mongolia","X1991",16.49
+"Mongolia","X1992",15.3
+"Mongolia","X1993",14.64
+"Mongolia","X1994",13.74
+"Mongolia","X1995",14.03
+"Mongolia","X1996",13.63
+"Mongolia","X1997",14.44
+"Mongolia","X1998",14.16
+"Mongolia","X1999",14.08
+"Mongolia","X2000",14.44
+"Mongolia","X2001",12.95
+"Mongolia","X2002",12.09
+"Mongolia","X2003",11.87
+"Mongolia","X2004",11.66
+"Mongolia","X2005",12.61
+"Mongolia","X2006",13.59
+"Mongolia","X2007",14.46
+"Mongolia","X2008",14.33
+"Mongolia","X2009",14.51
+"Mongolia","X2010",13.26
+"Mongolia","X2011",14.01
+"Mongolia","X2012",14.93
+"Mongolia","X2013",15.49
+"Mongolia","X2014",16.02
+"Mongolia","X2015",16.23
+"Mongolia","X2016",16.68
+"Mongolia","X2017",17.3
+"Mongolia","X2018",17.58
+"Mongolia","X2019",18.34
+"Montenegro","X1990",6.83
+"Montenegro","X1991",5.88
+"Montenegro","X1992",5.88
+"Montenegro","X1993",5.57
+"Montenegro","X1994",5.51
+"Montenegro","X1995",5.73
+"Montenegro","X1996",6.15
+"Montenegro","X1997",6.4
+"Montenegro","X1998",6.57
+"Montenegro","X1999",5.65
+"Montenegro","X2000",6.08
+"Montenegro","X2001",0.07
+"Montenegro","X2002",0.24
+"Montenegro","X2003",0.44
+"Montenegro","X2004",0.46
+"Montenegro","X2005",0.13
+"Montenegro","X2006",0.22
+"Montenegro","X2007",-0.13
+"Montenegro","X2008",0.59
+"Montenegro","X2009",-1.17
+"Montenegro","X2010",0.01
+"Montenegro","X2011",6.49
+"Montenegro","X2012",6.09
+"Montenegro","X2013",5.86
+"Montenegro","X2014",5.7
+"Montenegro","X2015",5.86
+"Montenegro","X2016",5.51
+"Montenegro","X2017",5.73
+"Montenegro","X2018",6.05
+"Montenegro","X2019",6.21
+"Morocco","X1990",1.29
+"Morocco","X1991",1.32
+"Morocco","X1992",1.34
+"Morocco","X1993",1.3
+"Morocco","X1994",1.4
+"Morocco","X1995",1.4
+"Morocco","X1996",1.41
+"Morocco","X1997",1.46
+"Morocco","X1998",1.47
+"Morocco","X1999",1.53
+"Morocco","X2000",1.55
+"Morocco","X2001",1.66
+"Morocco","X2002",1.7
+"Morocco","X2003",1.68
+"Morocco","X2004",1.81
+"Morocco","X2005",1.89
+"Morocco","X2006",1.93
+"Morocco","X2007",1.94
+"Morocco","X2008",1.99
+"Morocco","X2009",1.97
+"Morocco","X2010",2.05
+"Morocco","X2011",2.27
+"Morocco","X2012",2.29
+"Morocco","X2013",2.27
+"Morocco","X2014",2.28
+"Morocco","X2015",2.31
+"Morocco","X2016",2.23
+"Morocco","X2017",2.33
+"Morocco","X2018",2.36
+"Morocco","X2019",2.5
+"Mozambique","X1990",6.42
+"Mozambique","X1991",6.28
+"Mozambique","X1992",6.11
+"Mozambique","X1993",5.92
+"Mozambique","X1994",5.71
+"Mozambique","X1995",5.53
+"Mozambique","X1996",4.47
+"Mozambique","X1997",4.22
+"Mozambique","X1998",4.3
+"Mozambique","X1999",4.12
+"Mozambique","X2000",3.89
+"Mozambique","X2001",4.74
+"Mozambique","X2002",4.6
+"Mozambique","X2003",4.72
+"Mozambique","X2004",4.55
+"Mozambique","X2005",4.65
+"Mozambique","X2006",4.46
+"Mozambique","X2007",4.39
+"Mozambique","X2008",4.5
+"Mozambique","X2009",4.14
+"Mozambique","X2010",4.39
+"Mozambique","X2011",3.85
+"Mozambique","X2012",3.93
+"Mozambique","X2013",3.89
+"Mozambique","X2014",3.77
+"Mozambique","X2015",3.6
+"Mozambique","X2016",3.88
+"Mozambique","X2017",3.73
+"Mozambique","X2018",3.77
+"Mozambique","X2019",3.52
+"Myanmar","X1990",5.03
+"Myanmar","X1991",4.95
+"Myanmar","X1992",4.96
+"Myanmar","X1993",4.96
+"Myanmar","X1994",4.97
+"Myanmar","X1995",4.98
+"Myanmar","X1996",4.87
+"Myanmar","X1997",4.75
+"Myanmar","X1998",4.83
+"Myanmar","X1999",4.88
+"Myanmar","X2000",4.76
+"Myanmar","X2001",4.27
+"Myanmar","X2002",4.2
+"Myanmar","X2003",4.41
+"Myanmar","X2004",4.64
+"Myanmar","X2005",4.43
+"Myanmar","X2006",4.49
+"Myanmar","X2007",4.65
+"Myanmar","X2008",4.36
+"Myanmar","X2009",4.53
+"Myanmar","X2010",4.6
+"Myanmar","X2011",3.99
+"Myanmar","X2012",4.12
+"Myanmar","X2013",4.14
+"Myanmar","X2014",4.25
+"Myanmar","X2015",4.34
+"Myanmar","X2016",4.18
+"Myanmar","X2017",4.4
+"Myanmar","X2018",4.47
+"Myanmar","X2019",4.5
+"Namibia","X1990",NA
+"Namibia","X1991",13.42
+"Namibia","X1992",13.03
+"Namibia","X1993",12.7
+"Namibia","X1994",12.53
+"Namibia","X1995",12.31
+"Namibia","X1996",11.98
+"Namibia","X1997",11.64
+"Namibia","X1998",11.82
+"Namibia","X1999",11.63
+"Namibia","X2000",11.88
+"Namibia","X2001",11.69
+"Namibia","X2002",10.76
+"Namibia","X2003",10.95
+"Namibia","X2004",11.04
+"Namibia","X2005",11.17
+"Namibia","X2006",11.66
+"Namibia","X2007",11.14
+"Namibia","X2008",10.23
+"Namibia","X2009",11.45
+"Namibia","X2010",10.96
+"Namibia","X2011",13.08
+"Namibia","X2012",13.55
+"Namibia","X2013",10.27
+"Namibia","X2014",9.76
+"Namibia","X2015",9.63
+"Namibia","X2016",9.69
+"Namibia","X2017",9.59
+"Namibia","X2018",9.06
+"Namibia","X2019",8.51
+"Nauru","X1990",13.7
+"Nauru","X1991",13.38
+"Nauru","X1992",12.45
+"Nauru","X1993",11.54
+"Nauru","X1994",11.02
+"Nauru","X1995",10.61
+"Nauru","X1996",9.97
+"Nauru","X1997",10.04
+"Nauru","X1998",9.84
+"Nauru","X1999",9.37
+"Nauru","X2000",8.97
+"Nauru","X2001",8.35
+"Nauru","X2002",8.19
+"Nauru","X2003",7.36
+"Nauru","X2004",7.44
+"Nauru","X2005",7.79
+"Nauru","X2006",5.45
+"Nauru","X2007",4.99
+"Nauru","X2008",4.77
+"Nauru","X2009",4.53
+"Nauru","X2010",4.74
+"Nauru","X2011",4.47
+"Nauru","X2012",4.63
+"Nauru","X2013",5.14
+"Nauru","X2014",5.47
+"Nauru","X2015",5.89
+"Nauru","X2016",6.55
+"Nauru","X2017",6.88
+"Nauru","X2018",6.52
+"Nauru","X2019",6.5
+"Nepal","X1990",1.07
+"Nepal","X1991",1.05
+"Nepal","X1992",1.01
+"Nepal","X1993",1.02
+"Nepal","X1994",1.04
+"Nepal","X1995",1.07
+"Nepal","X1996",1.05
+"Nepal","X1997",1.04
+"Nepal","X1998",1.05
+"Nepal","X1999",1.09
+"Nepal","X2000",1.08
+"Nepal","X2001",0.96
+"Nepal","X2002",0.91
+"Nepal","X2003",0.95
+"Nepal","X2004",0.94
+"Nepal","X2005",0.95
+"Nepal","X2006",0.92
+"Nepal","X2007",0.92
+"Nepal","X2008",0.96
+"Nepal","X2009",1.02
+"Nepal","X2010",1.06
+"Nepal","X2011",1.36
+"Nepal","X2012",1.41
+"Nepal","X2013",1.44
+"Nepal","X2014",1.5
+"Nepal","X2015",1.46
+"Nepal","X2016",1.65
+"Nepal","X2017",1.66
+"Nepal","X2018",1.74
+"Nepal","X2019",1.69
+"Netherlands","X1990",13.63
+"Netherlands","X1991",13.88
+"Netherlands","X1992",13.73
+"Netherlands","X1993",13.98
+"Netherlands","X1994",13.88
+"Netherlands","X1995",14.15
+"Netherlands","X1996",14.78
+"Netherlands","X1997",14.19
+"Netherlands","X1998",14.11
+"Netherlands","X1999",13.24
+"Netherlands","X2000",13.02
+"Netherlands","X2001",12.97
+"Netherlands","X2002",12.88
+"Netherlands","X2003",12.81
+"Netherlands","X2004",12.88
+"Netherlands","X2005",12.49
+"Netherlands","X2006",12.19
+"Netherlands","X2007",12.13
+"Netherlands","X2008",11.92
+"Netherlands","X2009",11.55
+"Netherlands","X2010",12.14
+"Netherlands","X2011",11.3
+"Netherlands","X2012",11.17
+"Netherlands","X2013",11.11
+"Netherlands","X2014",10.65
+"Netherlands","X2015",11.09
+"Netherlands","X2016",11.08
+"Netherlands","X2017",10.78
+"Netherlands","X2018",10.37
+"Netherlands","X2019",10.01
+"New Zealand","X1990",13.59
+"New Zealand","X1991",12.85
+"New Zealand","X1992",12.95
+"New Zealand","X1993",12.58
+"New Zealand","X1994",12.82
+"New Zealand","X1995",12.97
+"New Zealand","X1996",12.87
+"New Zealand","X1997",13.36
+"New Zealand","X1998",12.81
+"New Zealand","X1999",13.33
+"New Zealand","X2000",13.3
+"New Zealand","X2001",14.71
+"New Zealand","X2002",14.87
+"New Zealand","X2003",15.2
+"New Zealand","X2004",14.64
+"New Zealand","X2005",14.84
+"New Zealand","X2006",14.7
+"New Zealand","X2007",14.3
+"New Zealand","X2008",14.14
+"New Zealand","X2009",13.34
+"New Zealand","X2010",13.15
+"New Zealand","X2011",14.35
+"New Zealand","X2012",14.85
+"New Zealand","X2013",14.65
+"New Zealand","X2014",14.53
+"New Zealand","X2015",14.2
+"New Zealand","X2016",14.89
+"New Zealand","X2017",14.92
+"New Zealand","X2018",14.53
+"New Zealand","X2019",14.58
+"Nicaragua","X1990",6.99
+"Nicaragua","X1991",6.51
+"Nicaragua","X1992",6.58
+"Nicaragua","X1993",6.58
+"Nicaragua","X1994",6.51
+"Nicaragua","X1995",6.25
+"Nicaragua","X1996",6.13
+"Nicaragua","X1997",6.2
+"Nicaragua","X1998",6.29
+"Nicaragua","X1999",6.3
+"Nicaragua","X2000",6.31
+"Nicaragua","X2001",7.01
+"Nicaragua","X2002",7
+"Nicaragua","X2003",7.13
+"Nicaragua","X2004",6.93
+"Nicaragua","X2005",6.92
+"Nicaragua","X2006",6.86
+"Nicaragua","X2007",6.8
+"Nicaragua","X2008",6.68
+"Nicaragua","X2009",6.6
+"Nicaragua","X2010",6.58
+"Nicaragua","X2011",4.54
+"Nicaragua","X2012",4.54
+"Nicaragua","X2013",4.52
+"Nicaragua","X2014",4.62
+"Nicaragua","X2015",4.7
+"Nicaragua","X2016",6.04
+"Nicaragua","X2017",5.92
+"Nicaragua","X2018",5.86
+"Nicaragua","X2019",5.87
+"Niger","X1990",2.33
+"Niger","X1991",2.31
+"Niger","X1992",2.29
+"Niger","X1993",2.29
+"Niger","X1994",2.27
+"Niger","X1995",2.25
+"Niger","X1996",2.25
+"Niger","X1997",2.24
+"Niger","X1998",2.25
+"Niger","X1999",2.22
+"Niger","X2000",2.19
+"Niger","X2001",1.79
+"Niger","X2002",1.8
+"Niger","X2003",1.8
+"Niger","X2004",1.8
+"Niger","X2005",1.8
+"Niger","X2006",1.8
+"Niger","X2007",1.82
+"Niger","X2008",1.83
+"Niger","X2009",1.84
+"Niger","X2010",1.78
+"Niger","X2011",1.77
+"Niger","X2012",1.82
+"Niger","X2013",1.85
+"Niger","X2014",1.86
+"Niger","X2015",1.85
+"Niger","X2016",1.87
+"Niger","X2017",1.86
+"Niger","X2018",1.87
+"Niger","X2019",1.89
+"Nigeria","X1990",2.81
+"Nigeria","X1991",2.91
+"Nigeria","X1992",2.98
+"Nigeria","X1993",2.88
+"Nigeria","X1994",2.76
+"Nigeria","X1995",2.73
+"Nigeria","X1996",2.89
+"Nigeria","X1997",2.74
+"Nigeria","X1998",2.53
+"Nigeria","X1999",2.36
+"Nigeria","X2000",2.4
+"Nigeria","X2001",2.31
+"Nigeria","X2002",2.13
+"Nigeria","X2003",2.22
+"Nigeria","X2004",2.17
+"Nigeria","X2005",2.15
+"Nigeria","X2006",2.01
+"Nigeria","X2007",1.89
+"Nigeria","X2008",1.88
+"Nigeria","X2009",1.74
+"Nigeria","X2010",1.85
+"Nigeria","X2011",1.87
+"Nigeria","X2012",1.84
+"Nigeria","X2013",1.87
+"Nigeria","X2014",1.88
+"Nigeria","X2015",1.8
+"Nigeria","X2016",1.81
+"Nigeria","X2017",1.78
+"Nigeria","X2018",1.76
+"Nigeria","X2019",1.76
+"Niue","X1990",NA
+"Niue","X1991",NA
+"Niue","X1992",NA
+"Niue","X1993",NA
+"Niue","X1994",NA
+"Niue","X1995",NA
+"Niue","X1996",NA
+"Niue","X1997",NA
+"Niue","X1998",NA
+"Niue","X1999",NA
+"Niue","X2000",NA
+"Niue","X2001",NA
+"Niue","X2002",NA
+"Niue","X2003",NA
+"Niue","X2004",NA
+"Niue","X2005",NA
+"Niue","X2006",NA
+"Niue","X2007",NA
+"Niue","X2008",NA
+"Niue","X2009",NA
+"Niue","X2010",NA
+"Niue","X2011",NA
+"Niue","X2012",NA
+"Niue","X2013",NA
+"Niue","X2014",NA
+"Niue","X2015",NA
+"Niue","X2016",NA
+"Niue","X2017",NA
+"Niue","X2018",NA
+"Niue","X2019",NA
+"North Korea","X1990",7.94
+"North Korea","X1991",7.47
+"North Korea","X1992",6.69
+"North Korea","X1993",6.15
+"North Korea","X1994",5.63
+"North Korea","X1995",5.22
+"North Korea","X1996",4.63
+"North Korea","X1997",4.23
+"North Korea","X1998",3.82
+"North Korea","X1999",3.97
+"North Korea","X2000",4.09
+"North Korea","X2001",3.98
+"North Korea","X2002",3.82
+"North Korea","X2003",3.86
+"North Korea","X2004",3.93
+"North Korea","X2005",4.04
+"North Korea","X2006",4.1
+"North Korea","X2007",3.55
+"North Korea","X2008",3.87
+"North Korea","X2009",3.17
+"North Korea","X2010",3.03
+"North Korea","X2011",2.5
+"North Korea","X2012",2.55
+"North Korea","X2013",2.1
+"North Korea","X2014",2.26
+"North Korea","X2015",1.99
+"North Korea","X2016",2.19
+"North Korea","X2017",3.16
+"North Korea","X2018",3.01
+"North Korea","X2019",3.22
+"Norway","X1990",7.33
+"Norway","X1991",6.68
+"Norway","X1992",6.7
+"Norway","X1993",7.22
+"Norway","X1994",7.63
+"Norway","X1995",7.58
+"Norway","X1996",7.58
+"Norway","X1997",7.94
+"Norway","X1998",8.17
+"Norway","X1999",8.56
+"Norway","X2000",7.27
+"Norway","X2001",5.55
+"Norway","X2002",5.41
+"Norway","X2003",5.82
+"Norway","X2004",5.85
+"Norway","X2005",5.59
+"Norway","X2006",5.61
+"Norway","X2007",5.62
+"Norway","X2008",5.27
+"Norway","X2009",5.12
+"Norway","X2010",5.85
+"Norway","X2011",6.17
+"Norway","X2012",5.85
+"Norway","X2013",5.96
+"Norway","X2014",5.83
+"Norway","X2015",5.85
+"Norway","X2016",5.69
+"Norway","X2017",5.45
+"Norway","X2018",5.38
+"Norway","X2019",5.05
+"Oman","X1990",10.73
+"Oman","X1991",12.43
+"Oman","X1992",11.76
+"Oman","X1993",11.92
+"Oman","X1994",12.38
+"Oman","X1995",13.57
+"Oman","X1996",13.78
+"Oman","X1997",14.26
+"Oman","X1998",13.91
+"Oman","X1999",15.19
+"Oman","X2000",17
+"Oman","X2001",18.48
+"Oman","X2002",18.93
+"Oman","X2003",19.34
+"Oman","X2004",18.59
+"Oman","X2005",18.15
+"Oman","X2006",20.95
+"Oman","X2007",21.45
+"Oman","X2008",20.57
+"Oman","X2009",20.7
+"Oman","X2010",21
+"Oman","X2011",21.93
+"Oman","X2012",22.73
+"Oman","X2013",22.17
+"Oman","X2014",21.61
+"Oman","X2015",21.44
+"Oman","X2016",21.15
+"Oman","X2017",20.23
+"Oman","X2018",20.61
+"Oman","X2019",20.16
+"Pakistan","X1990",1.56
+"Pakistan","X1991",1.55
+"Pakistan","X1992",1.59
+"Pakistan","X1993",1.63
+"Pakistan","X1994",1.64
+"Pakistan","X1995",1.68
+"Pakistan","X1996",1.69
+"Pakistan","X1997",1.69
+"Pakistan","X1998",1.67
+"Pakistan","X1999",1.72
+"Pakistan","X2000",1.69
+"Pakistan","X2001",1.67
+"Pakistan","X2002",1.67
+"Pakistan","X2003",1.69
+"Pakistan","X2004",1.77
+"Pakistan","X2005",1.78
+"Pakistan","X2006",1.86
+"Pakistan","X2007",1.92
+"Pakistan","X2008",1.89
+"Pakistan","X2009",1.91
+"Pakistan","X2010",1.84
+"Pakistan","X2011",1.84
+"Pakistan","X2012",1.82
+"Pakistan","X2013",1.84
+"Pakistan","X2014",1.87
+"Pakistan","X2015",1.91
+"Pakistan","X2016",1.99
+"Pakistan","X2017",2.08
+"Pakistan","X2018",2.02
+"Pakistan","X2019",2.03
+"Palau","X1990",0.84
+"Palau","X1991",0.84
+"Palau","X1992",13.3
+"Palau","X1993",13.01
+"Palau","X1994",12.7
+"Palau","X1995",12.35
+"Palau","X1996",12.15
+"Palau","X1997",12.06
+"Palau","X1998",11.91
+"Palau","X1999",11.74
+"Palau","X2000",11.98
+"Palau","X2001",12.04
+"Palau","X2002",11.97
+"Palau","X2003",11.81
+"Palau","X2004",12.74
+"Palau","X2005",14.14
+"Palau","X2006",13.93
+"Palau","X2007",13.49
+"Palau","X2008",12.45
+"Palau","X2009",12.25
+"Palau","X2010",13.07
+"Palau","X2011",13.16
+"Palau","X2012",13.86
+"Palau","X2013",13.97
+"Palau","X2014",13.9
+"Palau","X2015",13.15
+"Palau","X2016",15.67
+"Palau","X2017",16.11
+"Palau","X2018",15.85
+"Palau","X2019",15.94
+"Panama","X1990",5.6
+"Panama","X1991",5.68
+"Panama","X1992",5.83
+"Panama","X1993",5.81
+"Panama","X1994",5.8
+"Panama","X1995",5.75
+"Panama","X1996",5.63
+"Panama","X1997",5.5
+"Panama","X1998",5.76
+"Panama","X1999",5.36
+"Panama","X2000",5.28
+"Panama","X2001",5.11
+"Panama","X2002",4.78
+"Panama","X2003",4.78
+"Panama","X2004",4.69
+"Panama","X2005",5.1
+"Panama","X2006",5.17
+"Panama","X2007",5.08
+"Panama","X2008",5.02
+"Panama","X2009",5.37
+"Panama","X2010",5.45
+"Panama","X2011",5.65
+"Panama","X2012",5.74
+"Panama","X2013",5.64
+"Panama","X2014",5.66
+"Panama","X2015",5.56
+"Panama","X2016",5.52
+"Panama","X2017",5.29
+"Panama","X2018",5.24
+"Panama","X2019",5.96
+"Papua New Guinea","X1990",8.22
+"Papua New Guinea","X1991",8.24
+"Papua New Guinea","X1992",8.27
+"Papua New Guinea","X1993",8.3
+"Papua New Guinea","X1994",8.28
+"Papua New Guinea","X1995",8.77
+"Papua New Guinea","X1996",8.45
+"Papua New Guinea","X1997",10.91
+"Papua New Guinea","X1998",8.22
+"Papua New Guinea","X1999",8.23
+"Papua New Guinea","X2000",8.28
+"Papua New Guinea","X2001",8.09
+"Papua New Guinea","X2002",8.05
+"Papua New Guinea","X2003",7.89
+"Papua New Guinea","X2004",7.96
+"Papua New Guinea","X2005",7.61
+"Papua New Guinea","X2006",7.4
+"Papua New Guinea","X2007",7.19
+"Papua New Guinea","X2008",6.89
+"Papua New Guinea","X2009",6.74
+"Papua New Guinea","X2010",6.59
+"Papua New Guinea","X2011",7.53
+"Papua New Guinea","X2012",7.46
+"Papua New Guinea","X2013",7.46
+"Papua New Guinea","X2014",7.51
+"Papua New Guinea","X2015",7.69
+"Papua New Guinea","X2016",7.62
+"Papua New Guinea","X2017",7.48
+"Papua New Guinea","X2018",7.39
+"Papua New Guinea","X2019",7.23
+"Paraguay","X1990",17.8
+"Paraguay","X1991",16.65
+"Paraguay","X1992",16.08
+"Paraguay","X1993",15.73
+"Paraguay","X1994",15.35
+"Paraguay","X1995",15.4
+"Paraguay","X1996",15.04
+"Paraguay","X1997",14.94
+"Paraguay","X1998",14.64
+"Paraguay","X1999",14.94
+"Paraguay","X2000",13.76
+"Paraguay","X2001",16.46
+"Paraguay","X2002",16.2
+"Paraguay","X2003",16.21
+"Paraguay","X2004",15.56
+"Paraguay","X2005",15.54
+"Paraguay","X2006",15.33
+"Paraguay","X2007",15.66
+"Paraguay","X2008",15.13
+"Paraguay","X2009",15.26
+"Paraguay","X2010",15.45
+"Paraguay","X2011",17.31
+"Paraguay","X2012",17.26
+"Paraguay","X2013",17.27
+"Paraguay","X2014",17.31
+"Paraguay","X2015",17.14
+"Paraguay","X2016",13.8
+"Paraguay","X2017",14.05
+"Paraguay","X2018",13.6
+"Paraguay","X2019",13.71
+"Peru","X1990",4.72
+"Peru","X1991",4.58
+"Peru","X1992",4.52
+"Peru","X1993",4.48
+"Peru","X1994",4.49
+"Peru","X1995",4.61
+"Peru","X1996",4.68
+"Peru","X1997",4.63
+"Peru","X1998",4.58
+"Peru","X1999",4.67
+"Peru","X2000",4.63
+"Peru","X2001",4.68
+"Peru","X2002",4.7
+"Peru","X2003",4.65
+"Peru","X2004",4.76
+"Peru","X2005",4.77
+"Peru","X2006",4.71
+"Peru","X2007",4.82
+"Peru","X2008",4.95
+"Peru","X2009",5.05
+"Peru","X2010",5.17
+"Peru","X2011",6.1
+"Peru","X2012",6.06
+"Peru","X2013",6.07
+"Peru","X2014",6.13
+"Peru","X2015",6.11
+"Peru","X2016",6.14
+"Peru","X2017",5.96
+"Peru","X2018",5.87
+"Peru","X2019",5.86
+"Philippines","X1990",1.58
+"Philippines","X1991",1.54
+"Philippines","X1992",1.54
+"Philippines","X1993",1.58
+"Philippines","X1994",1.65
+"Philippines","X1995",1.78
+"Philippines","X1996",1.86
+"Philippines","X1997",1.93
+"Philippines","X1998",1.8
+"Philippines","X1999",1.83
+"Philippines","X2000",1.81
+"Philippines","X2001",1.76
+"Philippines","X2002",1.75
+"Philippines","X2003",1.75
+"Philippines","X2004",1.76
+"Philippines","X2005",1.74
+"Philippines","X2006",1.63
+"Philippines","X2007",1.67
+"Philippines","X2008",1.67
+"Philippines","X2009",1.68
+"Philippines","X2010",1.71
+"Philippines","X2011",1.7
+"Philippines","X2012",1.72
+"Philippines","X2013",1.8
+"Philippines","X2014",1.85
+"Philippines","X2015",1.91
+"Philippines","X2016",2
+"Philippines","X2017",2.13
+"Philippines","X2018",2.15
+"Philippines","X2019",2.19
+"Poland","X1990",10.68
+"Poland","X1991",10.62
+"Poland","X1992",10.3
+"Poland","X1993",10.29
+"Poland","X1994",10.13
+"Poland","X1995",10.11
+"Poland","X1996",10.48
+"Poland","X1997",10.21
+"Poland","X1998",9.45
+"Poland","X1999",9.18
+"Poland","X2000",8.92
+"Poland","X2001",7.34
+"Poland","X2002",7.17
+"Poland","X2003",7.48
+"Poland","X2004",7.59
+"Poland","X2005",7.63
+"Poland","X2006",8.02
+"Poland","X2007",8.03
+"Poland","X2008",7.87
+"Poland","X2009",7.48
+"Poland","X2010",7.98
+"Poland","X2011",9.05
+"Poland","X2012",8.86
+"Poland","X2013",8.72
+"Poland","X2014",8.37
+"Poland","X2015",8.46
+"Poland","X2016",8.6
+"Poland","X2017",8.94
+"Poland","X2018",8.89
+"Poland","X2019",8.43
+"Portugal","X1990",5.78
+"Portugal","X1991",5.97
+"Portugal","X1992",6.38
+"Portugal","X1993",6.26
+"Portugal","X1994",6.44
+"Portugal","X1995",6.79
+"Portugal","X1996",6.61
+"Portugal","X1997",6.81
+"Portugal","X1998",7.28
+"Portugal","X1999",7.9
+"Portugal","X2000",7.8
+"Portugal","X2001",7.59
+"Portugal","X2002",8.03
+"Portugal","X2003",7.54
+"Portugal","X2004",7.7
+"Portugal","X2005",7.98
+"Portugal","X2006",7.46
+"Portugal","X2007",7.32
+"Portugal","X2008",7.09
+"Portugal","X2009",7.01
+"Portugal","X2010",6.5
+"Portugal","X2011",6.29
+"Portugal","X2012",6.15
+"Portugal","X2013",6.03
+"Portugal","X2014",6.02
+"Portugal","X2015",6.44
+"Portugal","X2016",6.48
+"Portugal","X2017",6.98
+"Portugal","X2018",6.49
+"Portugal","X2019",6
+"Qatar","X1990",32.3
+"Qatar","X1991",37.81
+"Qatar","X1992",36.37
+"Qatar","X1993",41.49
+"Qatar","X1994",45.95
+"Qatar","X1995",46.77
+"Qatar","X1996",50.67
+"Qatar","X1997",61.89
+"Qatar","X1998",62.46
+"Qatar","X1999",65.56
+"Qatar","X2000",64.14
+"Qatar","X2001",61.05
+"Qatar","X2002",64.6
+"Qatar","X2003",65.92
+"Qatar","X2004",64.06
+"Qatar","X2005",57.42
+"Qatar","X2006",54.57
+"Qatar","X2007",51.89
+"Qatar","X2008",47.2
+"Qatar","X2009",42.03
+"Qatar","X2010",42.31
+"Qatar","X2011",43.33
+"Qatar","X2012",43.99
+"Qatar","X2013",42.17
+"Qatar","X2014",42.12
+"Qatar","X2015",41.62
+"Qatar","X2016",41.2
+"Qatar","X2017",40.39
+"Qatar","X2018",39.25
+"Qatar","X2019",40.52
+"Republic of Congo","X1990",8.24
+"Republic of Congo","X1991",8.02
+"Republic of Congo","X1992",7.87
+"Republic of Congo","X1993",7.44
+"Republic of Congo","X1994",6.84
+"Republic of Congo","X1995",6.98
+"Republic of Congo","X1996",6.82
+"Republic of Congo","X1997",6.82
+"Republic of Congo","X1998",7.09
+"Republic of Congo","X1999",7.05
+"Republic of Congo","X2000",6.89
+"Republic of Congo","X2001",6.49
+"Republic of Congo","X2002",5.63
+"Republic of Congo","X2003",5.95
+"Republic of Congo","X2004",5.96
+"Republic of Congo","X2005",6.36
+"Republic of Congo","X2006",6.56
+"Republic of Congo","X2007",5.76
+"Republic of Congo","X2008",5.68
+"Republic of Congo","X2009",5.73
+"Republic of Congo","X2010",6
+"Republic of Congo","X2011",5.84
+"Republic of Congo","X2012",5.57
+"Republic of Congo","X2013",5.38
+"Republic of Congo","X2014",5.11
+"Republic of Congo","X2015",5.16
+"Republic of Congo","X2016",5.21
+"Republic of Congo","X2017",5.11
+"Republic of Congo","X2018",5.52
+"Republic of Congo","X2019",5.59
+"Romania","X1990",9.69
+"Romania","X1991",8.1
+"Romania","X1992",7.31
+"Romania","X1993",6.85
+"Romania","X1994",6.68
+"Romania","X1995",6.94
+"Romania","X1996",7.12
+"Romania","X1997",6.63
+"Romania","X1998",5.93
+"Romania","X1999",5.24
+"Romania","X2000",5.42
+"Romania","X2001",5.57
+"Romania","X2002",5.53
+"Romania","X2003",5.8
+"Romania","X2004",5.76
+"Romania","X2005",5.77
+"Romania","X2006",5.97
+"Romania","X2007",5.95
+"Romania","X2008",5.95
+"Romania","X2009",5.22
+"Romania","X2010",5.11
+"Romania","X2011",-8.65
+"Romania","X2012",-8.8
+"Romania","X2013",-9.3
+"Romania","X2014",-9.37
+"Romania","X2015",-9.3
+"Romania","X2016",3.88
+"Romania","X2017",4.05
+"Romania","X2018",4.1
+"Romania","X2019",4.05
+"Russia","X1990",17.9
+"Russia","X1991",17.42
+"Russia","X1992",16.35
+"Russia","X1993",15.05
+"Russia","X1994",13.45
+"Russia","X1995",12.93
+"Russia","X1996",12.65
+"Russia","X1997",11.65
+"Russia","X1998",11.68
+"Russia","X1999",11.95
+"Russia","X2000",12.37
+"Russia","X2001",9.75
+"Russia","X2002",9.79
+"Russia","X2003",10.36
+"Russia","X2004",10.35
+"Russia","X2005",10.55
+"Russia","X2006",10.86
+"Russia","X2007",10.92
+"Russia","X2008",11
+"Russia","X2009",10
+"Russia","X2010",10.65
+"Russia","X2011",11.85
+"Russia","X2012",11.69
+"Russia","X2013",11.38
+"Russia","X2014",11.28
+"Russia","X2015",11.12
+"Russia","X2016",12.01
+"Russia","X2017",12.25
+"Russia","X2018",12.93
+"Russia","X2019",13.33
+"Rwanda","X1990",0.71
+"Rwanda","X1991",0.73
+"Rwanda","X1992",0.77
+"Rwanda","X1993",0.81
+"Rwanda","X1994",0.83
+"Rwanda","X1995",0.81
+"Rwanda","X1996",0.81
+"Rwanda","X1997",0.78
+"Rwanda","X1998",0.74
+"Rwanda","X1999",0.71
+"Rwanda","X2000",0.68
+"Rwanda","X2001",0.64
+"Rwanda","X2002",0.64
+"Rwanda","X2003",0.66
+"Rwanda","X2004",0.66
+"Rwanda","X2005",0.66
+"Rwanda","X2006",0.68
+"Rwanda","X2007",0.68
+"Rwanda","X2008",0.68
+"Rwanda","X2009",0.68
+"Rwanda","X2010",0.68
+"Rwanda","X2011",0.57
+"Rwanda","X2012",0.57
+"Rwanda","X2013",0.57
+"Rwanda","X2014",0.56
+"Rwanda","X2015",0.6
+"Rwanda","X2016",0.58
+"Rwanda","X2017",0.57
+"Rwanda","X2018",0.56
+"Rwanda","X2019",0.55
+"Saint Kitts and Nevis","X1990",4.59
+"Saint Kitts and Nevis","X1991",4.64
+"Saint Kitts and Nevis","X1992",5.63
+"Saint Kitts and Nevis","X1993",5.22
+"Saint Kitts and Nevis","X1994",5.43
+"Saint Kitts and Nevis","X1995",5.54
+"Saint Kitts and Nevis","X1996",5.54
+"Saint Kitts and Nevis","X1997",5.73
+"Saint Kitts and Nevis","X1998",6.15
+"Saint Kitts and Nevis","X1999",6.17
+"Saint Kitts and Nevis","X2000",6.31
+"Saint Kitts and Nevis","X2001",6.61
+"Saint Kitts and Nevis","X2002",7.08
+"Saint Kitts and Nevis","X2003",6.86
+"Saint Kitts and Nevis","X2004",6.99
+"Saint Kitts and Nevis","X2005",6.61
+"Saint Kitts and Nevis","X2006",6.83
+"Saint Kitts and Nevis","X2007",7.13
+"Saint Kitts and Nevis","X2008",7.13
+"Saint Kitts and Nevis","X2009",16.5
+"Saint Kitts and Nevis","X2010",6.98
+"Saint Kitts and Nevis","X2011",7.68
+"Saint Kitts and Nevis","X2012",8.7
+"Saint Kitts and Nevis","X2013",6.4
+"Saint Kitts and Nevis","X2014",6.37
+"Saint Kitts and Nevis","X2015",6.53
+"Saint Kitts and Nevis","X2016",6.64
+"Saint Kitts and Nevis","X2017",6.58
+"Saint Kitts and Nevis","X2018",6.61
+"Saint Kitts and Nevis","X2019",6.64
+"Saint Lucia","X1990",5.53
+"Saint Lucia","X1991",5.63
+"Saint Lucia","X1992",6.37
+"Saint Lucia","X1993",6.33
+"Saint Lucia","X1994",6.62
+"Saint Lucia","X1995",6.21
+"Saint Lucia","X1996",5.69
+"Saint Lucia","X1997",5.1
+"Saint Lucia","X1998",4.48
+"Saint Lucia","X1999",3.89
+"Saint Lucia","X2000",3.23
+"Saint Lucia","X2001",3.56
+"Saint Lucia","X2002",3.55
+"Saint Lucia","X2003",3.63
+"Saint Lucia","X2004",3.64
+"Saint Lucia","X2005",3.6
+"Saint Lucia","X2006",3.78
+"Saint Lucia","X2007",3.81
+"Saint Lucia","X2008",3.85
+"Saint Lucia","X2009",8.89
+"Saint Lucia","X2010",4.05
+"Saint Lucia","X2011",4.23
+"Saint Lucia","X2012",5.15
+"Saint Lucia","X2013",3.78
+"Saint Lucia","X2014",3.81
+"Saint Lucia","X2015",3.8
+"Saint Lucia","X2016",3.83
+"Saint Lucia","X2017",3.98
+"Saint Lucia","X2018",3.97
+"Saint Lucia","X2019",4.02
+"Saint Vincent and the Grenadines","X1990",1
+"Saint Vincent and the Grenadines","X1991",1.05
+"Saint Vincent and the Grenadines","X1992",1.35
+"Saint Vincent and the Grenadines","X1993",1.43
+"Saint Vincent and the Grenadines","X1994",1.55
+"Saint Vincent and the Grenadines","X1995",1.69
+"Saint Vincent and the Grenadines","X1996",1.66
+"Saint Vincent and the Grenadines","X1997",1.74
+"Saint Vincent and the Grenadines","X1998",2.09
+"Saint Vincent and the Grenadines","X1999",2.05
+"Saint Vincent and the Grenadines","X2000",1.82
+"Saint Vincent and the Grenadines","X2001",2.63
+"Saint Vincent and the Grenadines","X2002",2.85
+"Saint Vincent and the Grenadines","X2003",2.89
+"Saint Vincent and the Grenadines","X2004",2.99
+"Saint Vincent and the Grenadines","X2005",3.02
+"Saint Vincent and the Grenadines","X2006",3.05
+"Saint Vincent and the Grenadines","X2007",3.24
+"Saint Vincent and the Grenadines","X2008",3.11
+"Saint Vincent and the Grenadines","X2009",8.95
+"Saint Vincent and the Grenadines","X2010",3.04
+"Saint Vincent and the Grenadines","X2011",3.22
+"Saint Vincent and the Grenadines","X2012",4.05
+"Saint Vincent and the Grenadines","X2013",2.83
+"Saint Vincent and the Grenadines","X2014",3.2
+"Saint Vincent and the Grenadines","X2015",3
+"Saint Vincent and the Grenadines","X2016",3.09
+"Saint Vincent and the Grenadines","X2017",2.81
+"Saint Vincent and the Grenadines","X2018",3.05
+"Saint Vincent and the Grenadines","X2019",3.07
+"Samoa","X1990",2.72
+"Samoa","X1991",2.75
+"Samoa","X1992",2.74
+"Samoa","X1993",2.8
+"Samoa","X1994",2.92
+"Samoa","X1995",2.96
+"Samoa","X1996",3.03
+"Samoa","X1997",3
+"Samoa","X1998",3.12
+"Samoa","X1999",3.1
+"Samoa","X2000",3.11
+"Samoa","X2001",3.25
+"Samoa","X2002",3.28
+"Samoa","X2003",3.27
+"Samoa","X2004",3.38
+"Samoa","X2005",3.46
+"Samoa","X2006",3.39
+"Samoa","X2007",3.34
+"Samoa","X2008",3.15
+"Samoa","X2009",3.21
+"Samoa","X2010",3.34
+"Samoa","X2011",3.41
+"Samoa","X2012",3.39
+"Samoa","X2013",3.4
+"Samoa","X2014",3.49
+"Samoa","X2015",3.69
+"Samoa","X2016",4.01
+"Samoa","X2017",4.02
+"Samoa","X2018",3.99
+"Samoa","X2019",4.01
+"Sao Tome and Principe","X1990",0.58
+"Sao Tome and Principe","X1991",0.57
+"Sao Tome and Principe","X1992",0.55
+"Sao Tome and Principe","X1993",0.54
+"Sao Tome and Principe","X1994",0.55
+"Sao Tome and Principe","X1995",0.55
+"Sao Tome and Principe","X1996",0.54
+"Sao Tome and Principe","X1997",0.54
+"Sao Tome and Principe","X1998",0.56
+"Sao Tome and Principe","X1999",0.55
+"Sao Tome and Principe","X2000",0.57
+"Sao Tome and Principe","X2001",0.56
+"Sao Tome and Principe","X2002",0.59
+"Sao Tome and Principe","X2003",0.64
+"Sao Tome and Principe","X2004",0.68
+"Sao Tome and Principe","X2005",0.7
+"Sao Tome and Principe","X2006",0.7
+"Sao Tome and Principe","X2007",0.68
+"Sao Tome and Principe","X2008",0.71
+"Sao Tome and Principe","X2009",0.73
+"Sao Tome and Principe","X2010",0.76
+"Sao Tome and Principe","X2011",1.85
+"Sao Tome and Principe","X2012",1.92
+"Sao Tome and Principe","X2013",1.91
+"Sao Tome and Principe","X2014",1.87
+"Sao Tome and Principe","X2015",1.86
+"Sao Tome and Principe","X2016",1.86
+"Sao Tome and Principe","X2017",1.86
+"Sao Tome and Principe","X2018",1.84
+"Sao Tome and Principe","X2019",1.85
+"Saudi Arabia","X1990",14.85
+"Saudi Arabia","X1991",16.35
+"Saudi Arabia","X1992",16.88
+"Saudi Arabia","X1993",16.3
+"Saudi Arabia","X1994",15.88
+"Saudi Arabia","X1995",15.49
+"Saudi Arabia","X1996",15.99
+"Saudi Arabia","X1997",16.01
+"Saudi Arabia","X1998",16.53
+"Saudi Arabia","X1999",16.39
+"Saudi Arabia","X2000",16.82
+"Saudi Arabia","X2001",16.57
+"Saudi Arabia","X2002",16.96
+"Saudi Arabia","X2003",17.43
+"Saudi Arabia","X2004",17.65
+"Saudi Arabia","X2005",18.01
+"Saudi Arabia","X2006",18.43
+"Saudi Arabia","X2007",18.73
+"Saudi Arabia","X2008",19.78
+"Saudi Arabia","X2009",19.68
+"Saudi Arabia","X2010",20.77
+"Saudi Arabia","X2011",21.29
+"Saudi Arabia","X2012",21.91
+"Saudi Arabia","X2013",21.79
+"Saudi Arabia","X2014",22.59
+"Saudi Arabia","X2015",23.08
+"Saudi Arabia","X2016",22.8
+"Saudi Arabia","X2017",22.03
+"Saudi Arabia","X2018",21.22
+"Saudi Arabia","X2019",21.1
+"Senegal","X1990",2.41
+"Senegal","X1991",2.37
+"Senegal","X1992",2.36
+"Senegal","X1993",2.32
+"Senegal","X1994",2.29
+"Senegal","X1995",2.27
+"Senegal","X1996",2.35
+"Senegal","X1997",2.35
+"Senegal","X1998",2.42
+"Senegal","X1999",2.59
+"Senegal","X2000",2.53
+"Senegal","X2001",2.38
+"Senegal","X2002",2.27
+"Senegal","X2003",2.15
+"Senegal","X2004",2.29
+"Senegal","X2005",2.3
+"Senegal","X2006",2.28
+"Senegal","X2007",2.23
+"Senegal","X2008",2.25
+"Senegal","X2009",2.23
+"Senegal","X2010",2.25
+"Senegal","X2011",2.12
+"Senegal","X2012",2.03
+"Senegal","X2013",2.06
+"Senegal","X2014",2.04
+"Senegal","X2015",2.05
+"Senegal","X2016",2.12
+"Senegal","X2017",2.07
+"Senegal","X2018",2.04
+"Senegal","X2019",2.06
+"Serbia","X1990",10.49
+"Serbia","X1991",9.1
+"Serbia","X1992",8.22
+"Serbia","X1993",7.47
+"Serbia","X1994",6.93
+"Serbia","X1995",7.88
+"Serbia","X1996",8.85
+"Serbia","X1997",9.54
+"Serbia","X1998",9.52
+"Serbia","X1999",7.28
+"Serbia","X2000",7.68
+"Serbia","X2001",3.49
+"Serbia","X2002",3.94
+"Serbia","X2003",4.38
+"Serbia","X2004",5.09
+"Serbia","X2005",4.22
+"Serbia","X2006",4.54
+"Serbia","X2007",4.41
+"Serbia","X2008",4.13
+"Serbia","X2009",3.81
+"Serbia","X2010",3.76
+"Serbia","X2011",8.91
+"Serbia","X2012",8.28
+"Serbia","X2013",8.42
+"Serbia","X2014",7.34
+"Serbia","X2015",8.27
+"Serbia","X2016",8.91
+"Serbia","X2017",9.01
+"Serbia","X2018",8.81
+"Serbia","X2019",8.91
+"Seychelles","X1990",3.14
+"Seychelles","X1991",3.43
+"Seychelles","X1992",3.44
+"Seychelles","X1993",3.56
+"Seychelles","X1994",3.75
+"Seychelles","X1995",3.67
+"Seychelles","X1996",4.11
+"Seychelles","X1997",4.63
+"Seychelles","X1998",4.79
+"Seychelles","X1999",4.92
+"Seychelles","X2000",4.72
+"Seychelles","X2001",5.08
+"Seychelles","X2002",5.29
+"Seychelles","X2003",5.26
+"Seychelles","X2004",5.78
+"Seychelles","X2005",5.77
+"Seychelles","X2006",5.77
+"Seychelles","X2007",5.97
+"Seychelles","X2008",6.02
+"Seychelles","X2009",6.38
+"Seychelles","X2010",6.19
+"Seychelles","X2011",6.02
+"Seychelles","X2012",6.22
+"Seychelles","X2013",6.05
+"Seychelles","X2014",6.58
+"Seychelles","X2015",6.98
+"Seychelles","X2016",7.63
+"Seychelles","X2017",7.64
+"Seychelles","X2018",7.64
+"Seychelles","X2019",7.95
+"Sierra Leone","X1990",1.62
+"Sierra Leone","X1991",1.61
+"Sierra Leone","X1992",1.61
+"Sierra Leone","X1993",1.64
+"Sierra Leone","X1994",1.64
+"Sierra Leone","X1995",1.59
+"Sierra Leone","X1996",1.42
+"Sierra Leone","X1997",1.4
+"Sierra Leone","X1998",1.41
+"Sierra Leone","X1999",1.32
+"Sierra Leone","X2000",1.3
+"Sierra Leone","X2001",1.36
+"Sierra Leone","X2002",1.38
+"Sierra Leone","X2003",1.49
+"Sierra Leone","X2004",1.51
+"Sierra Leone","X2005",1.44
+"Sierra Leone","X2006",1.65
+"Sierra Leone","X2007",1.48
+"Sierra Leone","X2008",1.32
+"Sierra Leone","X2009",1.35
+"Sierra Leone","X2010",1.27
+"Sierra Leone","X2011",1.34
+"Sierra Leone","X2012",1.48
+"Sierra Leone","X2013",1.44
+"Sierra Leone","X2014",1.48
+"Sierra Leone","X2015",1.47
+"Sierra Leone","X2016",1.4
+"Sierra Leone","X2017",1.35
+"Sierra Leone","X2018",1.27
+"Sierra Leone","X2019",1.21
+"Singapore","X1990",10.13
+"Singapore","X1991",10.85
+"Singapore","X1992",11.34
+"Singapore","X1993",13.01
+"Singapore","X1994",13.63
+"Singapore","X1995",13.6
+"Singapore","X1996",13.44
+"Singapore","X1997",13.02
+"Singapore","X1998",12.41
+"Singapore","X1999",12.62
+"Singapore","X2000",13.61
+"Singapore","X2001",13.23
+"Singapore","X2002",12.93
+"Singapore","X2003",12.37
+"Singapore","X2004",12.57
+"Singapore","X2005",11.64
+"Singapore","X2006",11.38
+"Singapore","X2007",11.19
+"Singapore","X2008",10.67
+"Singapore","X2009",10.46
+"Singapore","X2010",11.01
+"Singapore","X2011",11.37
+"Singapore","X2012",11.02
+"Singapore","X2013",11.01
+"Singapore","X2014",11.08
+"Singapore","X2015",11.26
+"Singapore","X2016",11.38
+"Singapore","X2017",12.04
+"Singapore","X2018",11.8
+"Singapore","X2019",11.79
+"Slovakia","X1990",10.8
+"Slovakia","X1991",9.27
+"Slovakia","X1992",8.79
+"Slovakia","X1993",8.26
+"Slovakia","X1994",7.73
+"Slovakia","X1995",7.81
+"Slovakia","X1996",7.8
+"Slovakia","X1997",7.76
+"Slovakia","X1998",7.54
+"Slovakia","X1999",7.26
+"Slovakia","X2000",6.78
+"Slovakia","X2001",7.1
+"Slovakia","X2002",7.02
+"Slovakia","X2003",7.07
+"Slovakia","X2004",6.95
+"Slovakia","X2005",7.1
+"Slovakia","X2006",7.02
+"Slovakia","X2007",6.84
+"Slovakia","X2008",6.84
+"Slovakia","X2009",6.15
+"Slovakia","X2010",6.43
+"Slovakia","X2011",6.29
+"Slovakia","X2012",5.84
+"Slovakia","X2013",5.96
+"Slovakia","X2014",5.46
+"Slovakia","X2015",5.54
+"Slovakia","X2016",6.89
+"Slovakia","X2017",7.24
+"Slovakia","X2018",7.13
+"Slovakia","X2019",6.78
+"Slovenia","X1990",3.95
+"Slovenia","X1991",3.45
+"Slovenia","X1992",3.31
+"Slovenia","X1993",3.69
+"Slovenia","X1994",3.72
+"Slovenia","X1995",4.14
+"Slovenia","X1996",4.54
+"Slovenia","X1997",4.78
+"Slovenia","X1998",4.66
+"Slovenia","X1999",4.33
+"Slovenia","X2000",4.21
+"Slovenia","X2001",3.61
+"Slovenia","X2002",3.64
+"Slovenia","X2003",3.62
+"Slovenia","X2004",3.72
+"Slovenia","X2005",3.84
+"Slovenia","X2006",4
+"Slovenia","X2007",3.96
+"Slovenia","X2008",4.44
+"Slovenia","X2009",3.43
+"Slovenia","X2010",3.56
+"Slovenia","X2011",7.85
+"Slovenia","X2012",7.54
+"Slovenia","X2013",7.22
+"Slovenia","X2014",6.49
+"Slovenia","X2015",6.53
+"Slovenia","X2016",8.36
+"Slovenia","X2017",8.44
+"Slovenia","X2018",8.35
+"Slovenia","X2019",8.05
+"Solomon Islands","X1990",13.77
+"Solomon Islands","X1991",13.44
+"Solomon Islands","X1992",13.11
+"Solomon Islands","X1993",12.78
+"Solomon Islands","X1994",12.48
+"Solomon Islands","X1995",12.17
+"Solomon Islands","X1996",11.87
+"Solomon Islands","X1997",11.59
+"Solomon Islands","X1998",11.3
+"Solomon Islands","X1999",11.04
+"Solomon Islands","X2000",10.79
+"Solomon Islands","X2001",5.3
+"Solomon Islands","X2002",5.2
+"Solomon Islands","X2003",5.11
+"Solomon Islands","X2004",5.09
+"Solomon Islands","X2005",5.05
+"Solomon Islands","X2006",4.95
+"Solomon Islands","X2007",4.86
+"Solomon Islands","X2008",4.75
+"Solomon Islands","X2009",4.68
+"Solomon Islands","X2010",4.6
+"Solomon Islands","X2011",-31.5
+"Solomon Islands","X2012",-30.65
+"Solomon Islands","X2013",-29.74
+"Solomon Islands","X2014",-28.99
+"Solomon Islands","X2015",-28.25
+"Solomon Islands","X2016",74.7
+"Solomon Islands","X2017",72.79
+"Solomon Islands","X2018",70.96
+"Solomon Islands","X2019",69.21
+"Somalia","X1990",5.8
+"Somalia","X1991",5.36
+"Somalia","X1992",5.08
+"Somalia","X1993",5.34
+"Somalia","X1994",5.56
+"Somalia","X1995",5.56
+"Somalia","X1996",5.48
+"Somalia","X1997",5.35
+"Somalia","X1998",5.14
+"Somalia","X1999",4.95
+"Somalia","X2000",4.8
+"Somalia","X2001",4.69
+"Somalia","X2002",4.58
+"Somalia","X2003",4.45
+"Somalia","X2004",4.35
+"Somalia","X2005",4.26
+"Somalia","X2006",4.01
+"Somalia","X2007",3.8
+"Somalia","X2008",3.7
+"Somalia","X2009",3.6
+"Somalia","X2010",3.52
+"Somalia","X2011",3.43
+"Somalia","X2012",3.37
+"Somalia","X2013",3.29
+"Somalia","X2014",3.21
+"Somalia","X2015",3.13
+"Somalia","X2016",3.03
+"Somalia","X2017",2.94
+"Somalia","X2018",2.85
+"Somalia","X2019",2.75
+"South Africa","X1990",9.2
+"South Africa","X1991",8.87
+"South Africa","X1992",8.55
+"South Africa","X1993",8.61
+"South Africa","X1994",8.58
+"South Africa","X1995",8.71
+"South Africa","X1996",8.82
+"South Africa","X1997",9.05
+"South Africa","X1998",9.1
+"South Africa","X1999",8.51
+"South Africa","X2000",8.47
+"South Africa","X2001",9.09
+"South Africa","X2002",9.31
+"South Africa","X2003",9.71
+"South Africa","X2004",10.19
+"South Africa","X2005",10.07
+"South Africa","X2006",10
+"South Africa","X2007",10.3
+"South Africa","X2008",10.83
+"South Africa","X2009",10.26
+"South Africa","X2010",10.56
+"South Africa","X2011",10.09
+"South Africa","X2012",10.32
+"South Africa","X2013",10.33
+"South Africa","X2014",10.4
+"South Africa","X2015",9.79
+"South Africa","X2016",9.66
+"South Africa","X2017",9.78
+"South Africa","X2018",9.63
+"South Africa","X2019",9.6
+"South Korea","X1990",5.56
+"South Korea","X1991",6.16
+"South Korea","X1992",6.67
+"South Korea","X1993",7.32
+"South Korea","X1994",7.88
+"South Korea","X1995",8.53
+"South Korea","X1996",9.07
+"South Korea","X1997",9.55
+"South Korea","X1998",8.07
+"South Korea","X1999",8.83
+"South Korea","X2000",9.99
+"South Korea","X2001",9.89
+"South Korea","X2002",9.68
+"South Korea","X2003",9.79
+"South Korea","X2004",10.25
+"South Korea","X2005",10.13
+"South Korea","X2006",10.25
+"South Korea","X2007",10.4
+"South Korea","X2008",10.59
+"South Korea","X2009",10.82
+"South Korea","X2010",11.81
+"South Korea","X2011",12.4
+"South Korea","X2012",12.4
+"South Korea","X2013",12.35
+"South Korea","X2014",12.07
+"South Korea","X2015",12.42
+"South Korea","X2016",12.67
+"South Korea","X2017",12.9
+"South Korea","X2018",12.98
+"South Korea","X2019",12.61
+"South Sudan","X1990",6.75
+"South Sudan","X1991",7
+"South Sudan","X1992",7.61
+"South Sudan","X1993",8.16
+"South Sudan","X1994",8.67
+"South Sudan","X1995",8.81
+"South Sudan","X1996",9.44
+"South Sudan","X1997",10.02
+"South Sudan","X1998",10.51
+"South Sudan","X1999",10.6
+"South Sudan","X2000",10.53
+"South Sudan","X2001",9.36
+"South Sudan","X2002",9.61
+"South Sudan","X2003",9.68
+"South Sudan","X2004",9.65
+"South Sudan","X2005",9.68
+"South Sudan","X2006",9.1
+"South Sudan","X2007",9.13
+"South Sudan","X2008",8.81
+"South Sudan","X2009",8.65
+"South Sudan","X2010",8.23
+"South Sudan","X2011",7.59
+"South Sudan","X2012",5.91
+"South Sudan","X2013",5.86
+"South Sudan","X2014",5.93
+"South Sudan","X2015",5.89
+"South Sudan","X2016",6.16
+"South Sudan","X2017",5.89
+"South Sudan","X2018",6.12
+"South Sudan","X2019",5.45
+"Spain","X1990",5.99
+"Spain","X1991",6.14
+"Spain","X1992",6.36
+"Spain","X1993",5.95
+"Spain","X1994",6.25
+"Spain","X1995",6.56
+"Spain","X1996",6.37
+"Spain","X1997",6.88
+"Spain","X1998",7.09
+"Spain","X1999",7.67
+"Spain","X2000",8.06
+"Spain","X2001",8.53
+"Spain","X2002",8.82
+"Spain","X2003",8.87
+"Spain","X2004",9.1
+"Spain","X2005",9.28
+"Spain","X2006",8.99
+"Spain","X2007",9.18
+"Spain","X2008",8.31
+"Spain","X2009",7.45
+"Spain","X2010",7.09
+"Spain","X2011",7.29
+"Spain","X2012",7.15
+"Spain","X2013",6.61
+"Spain","X2014",6.6
+"Spain","X2015",6.83
+"Spain","X2016",6.49
+"Spain","X2017",6.83
+"Spain","X2018",6.65
+"Spain","X2019",6.22
+"Sri Lanka","X1990",1.65
+"Sri Lanka","X1991",1.62
+"Sri Lanka","X1992",1.7
+"Sri Lanka","X1993",1.7
+"Sri Lanka","X1994",1.73
+"Sri Lanka","X1995",1.72
+"Sri Lanka","X1996",1.7
+"Sri Lanka","X1997",1.59
+"Sri Lanka","X1998",1.44
+"Sri Lanka","X1999",1.4
+"Sri Lanka","X2000",1.36
+"Sri Lanka","X2001",1.22
+"Sri Lanka","X2002",1.26
+"Sri Lanka","X2003",1.31
+"Sri Lanka","X2004",1.3
+"Sri Lanka","X2005",1.39
+"Sri Lanka","X2006",1.3
+"Sri Lanka","X2007",1.34
+"Sri Lanka","X2008",1.34
+"Sri Lanka","X2009",1.29
+"Sri Lanka","X2010",1.34
+"Sri Lanka","X2011",1.38
+"Sri Lanka","X2012",1.46
+"Sri Lanka","X2013",1.32
+"Sri Lanka","X2014",1.44
+"Sri Lanka","X2015",1.62
+"Sri Lanka","X2016",1.69
+"Sri Lanka","X2017",1.7
+"Sri Lanka","X2018",1.64
+"Sri Lanka","X2019",1.74
+"Sudan","X1990",3.51
+"Sudan","X1991",3.42
+"Sudan","X1992",3.46
+"Sudan","X1993",3.42
+"Sudan","X1994",3.5
+"Sudan","X1995",3.44
+"Sudan","X1996",3.54
+"Sudan","X1997",3.77
+"Sudan","X1998",3.96
+"Sudan","X1999",4.03
+"Sudan","X2000",3.94
+"Sudan","X2001",3.42
+"Sudan","X2002",3.51
+"Sudan","X2003",3.5
+"Sudan","X2004",3.51
+"Sudan","X2005",3.59
+"Sudan","X2006",3.49
+"Sudan","X2007",3.58
+"Sudan","X2008",3.51
+"Sudan","X2009",3.49
+"Sudan","X2010",3.35
+"Sudan","X2011",3.36
+"Sudan","X2012",3.31
+"Sudan","X2013",3.24
+"Sudan","X2014",3.19
+"Sudan","X2015",3.2
+"Sudan","X2016",3.19
+"Sudan","X2017",3.1
+"Sudan","X2018",3.04
+"Sudan","X2019",2.97
+"Suriname","X1990",15.09
+"Suriname","X1991",15.67
+"Suriname","X1992",15.63
+"Suriname","X1993",15.24
+"Suriname","X1994",15.07
+"Suriname","X1995",15.11
+"Suriname","X1996",15.14
+"Suriname","X1997",14.9
+"Suriname","X1998",14.86
+"Suriname","X1999",14.8
+"Suriname","X2000",13.13
+"Suriname","X2001",13.85
+"Suriname","X2002",12.58
+"Suriname","X2003",12.9
+"Suriname","X2004",13.45
+"Suriname","X2005",13.66
+"Suriname","X2006",13.4
+"Suriname","X2007",13.03
+"Suriname","X2008",13.24
+"Suriname","X2009",13.35
+"Suriname","X2010",13.83
+"Suriname","X2011",22.16
+"Suriname","X2012",22.8
+"Suriname","X2013",22.27
+"Suriname","X2014",22.78
+"Suriname","X2015",22.73
+"Suriname","X2016",24.92
+"Suriname","X2017",23.88
+"Suriname","X2018",23.03
+"Suriname","X2019",23.79
+"Sweden","X1990",8.24
+"Sweden","X1991",8.25
+"Sweden","X1992",8.5
+"Sweden","X1993",8.45
+"Sweden","X1994",8.6
+"Sweden","X1995",8.51
+"Sweden","X1996",9.13
+"Sweden","X1997",8.42
+"Sweden","X1998",8.51
+"Sweden","X1999",8.35
+"Sweden","X2000",7.89
+"Sweden","X2001",6.21
+"Sweden","X2002",6.35
+"Sweden","X2003",6.44
+"Sweden","X2004",6.26
+"Sweden","X2005",5.83
+"Sweden","X2006",5.63
+"Sweden","X2007",5.37
+"Sweden","X2008",5.2
+"Sweden","X2009",4.74
+"Sweden","X2010",5.3
+"Sweden","X2011",3.66
+"Sweden","X2012",3.34
+"Sweden","X2013",3.13
+"Sweden","X2014",2.96
+"Sweden","X2015",2.92
+"Sweden","X2016",3.4
+"Sweden","X2017",3.32
+"Sweden","X2018",3.03
+"Sweden","X2019",2.91
+"Switzerland","X1990",7.64
+"Switzerland","X1991",7.87
+"Switzerland","X1992",7.78
+"Switzerland","X1993",7.37
+"Switzerland","X1994",7.18
+"Switzerland","X1995",7.27
+"Switzerland","X1996",7.32
+"Switzerland","X1997",7.1
+"Switzerland","X1998",7.3
+"Switzerland","X1999",7.28
+"Switzerland","X2000",7.14
+"Switzerland","X2001",7.19
+"Switzerland","X2002",6.91
+"Switzerland","X2003",7.03
+"Switzerland","X2004",7.05
+"Switzerland","X2005",7.1
+"Switzerland","X2006",7.02
+"Switzerland","X2007",6.7
+"Switzerland","X2008",6.83
+"Switzerland","X2009",6.56
+"Switzerland","X2010",6.69
+"Switzerland","X2011",6.12
+"Switzerland","X2012",6.21
+"Switzerland","X2013",6.27
+"Switzerland","X2014",5.73
+"Switzerland","X2015",5.57
+"Switzerland","X2016",5.57
+"Switzerland","X2017",5.4
+"Switzerland","X2018",5.21
+"Switzerland","X2019",5.16
+"Syria","X1990",5.17
+"Syria","X1991",5.66
+"Syria","X1992",5.78
+"Syria","X1993",5.82
+"Syria","X1994",5.9
+"Syria","X1995",5.99
+"Syria","X1996",5.99
+"Syria","X1997",5.88
+"Syria","X1998",5.97
+"Syria","X1999",5.78
+"Syria","X2000",5.64
+"Syria","X2001",5.48
+"Syria","X2002",5.45
+"Syria","X2003",5.36
+"Syria","X2004",4.97
+"Syria","X2005",5.39
+"Syria","X2006",5.33
+"Syria","X2007",5.26
+"Syria","X2008",5.09
+"Syria","X2009",4.79
+"Syria","X2010",4.81
+"Syria","X2011",4.58
+"Syria","X2012",3.78
+"Syria","X2013",2.76
+"Syria","X2014",2.58
+"Syria","X2015",2.57
+"Syria","X2016",2.72
+"Syria","X2017",3.01
+"Syria","X2018",2.85
+"Syria","X2019",2.84
+"Tajikistan","X1990",3.39
+"Tajikistan","X1991",3.15
+"Tajikistan","X1992",2.54
+"Tajikistan","X1993",1.99
+"Tajikistan","X1994",1.52
+"Tajikistan","X1995",1.39
+"Tajikistan","X1996",1.26
+"Tajikistan","X1997",1.28
+"Tajikistan","X1998",1.25
+"Tajikistan","X1999",1.15
+"Tajikistan","X2000",1.07
+"Tajikistan","X2001",0.99
+"Tajikistan","X2002",0.98
+"Tajikistan","X2003",0.99
+"Tajikistan","X2004",1.05
+"Tajikistan","X2005",1.04
+"Tajikistan","X2006",1.09
+"Tajikistan","X2007",1.17
+"Tajikistan","X2008",1.2
+"Tajikistan","X2009",1.13
+"Tajikistan","X2010",1.12
+"Tajikistan","X2011",1.13
+"Tajikistan","X2012",1.2
+"Tajikistan","X2013",1.23
+"Tajikistan","X2014",1.38
+"Tajikistan","X2015",1.42
+"Tajikistan","X2016",1.58
+"Tajikistan","X2017",1.7
+"Tajikistan","X2018",1.81
+"Tajikistan","X2019",1.86
+"Tanzania","X1990",3.9
+"Tanzania","X1991",3.78
+"Tanzania","X1992",3.66
+"Tanzania","X1993",3.56
+"Tanzania","X1994",3.47
+"Tanzania","X1995",3.51
+"Tanzania","X1996",3.2
+"Tanzania","X1997",3.11
+"Tanzania","X1998",3.17
+"Tanzania","X1999",3.1
+"Tanzania","X2000",2.95
+"Tanzania","X2001",3.01
+"Tanzania","X2002",3.09
+"Tanzania","X2003",3.23
+"Tanzania","X2004",3.12
+"Tanzania","X2005",3.19
+"Tanzania","X2006",2.97
+"Tanzania","X2007",2.93
+"Tanzania","X2008",2.92
+"Tanzania","X2009",2.88
+"Tanzania","X2010",2.87
+"Tanzania","X2011",2.83
+"Tanzania","X2012",2.84
+"Tanzania","X2013",2.8
+"Tanzania","X2014",2.73
+"Tanzania","X2015",2.77
+"Tanzania","X2016",2.9
+"Tanzania","X2017",2.79
+"Tanzania","X2018",2.7
+"Tanzania","X2019",2.67
+"Thailand","X1990",3.06
+"Thailand","X1991",3.23
+"Thailand","X1992",3.4
+"Thailand","X1993",3.65
+"Thailand","X1994",3.87
+"Thailand","X1995",4.14
+"Thailand","X1996",4.43
+"Thailand","X1997",4.49
+"Thailand","X1998",4.12
+"Thailand","X1999",4.23
+"Thailand","X2000",4.19
+"Thailand","X2001",3.6
+"Thailand","X2002",3.76
+"Thailand","X2003",3.93
+"Thailand","X2004",4.25
+"Thailand","X2005",4.31
+"Thailand","X2006",4.33
+"Thailand","X2007",4.52
+"Thailand","X2008",4.53
+"Thailand","X2009",4.48
+"Thailand","X2010",4.76
+"Thailand","X2011",5.24
+"Thailand","X2012",5.55
+"Thailand","X2013",5.69
+"Thailand","X2014",5.61
+"Thailand","X2015",5.64
+"Thailand","X2016",5.96
+"Thailand","X2017",6.04
+"Thailand","X2018",6.07
+"Thailand","X2019",6.28
+"Timor-Leste","X1990",1.24
+"Timor-Leste","X1991",1.3
+"Timor-Leste","X1992",1.26
+"Timor-Leste","X1993",1.26
+"Timor-Leste","X1994",1.33
+"Timor-Leste","X1995",1.32
+"Timor-Leste","X1996",1.33
+"Timor-Leste","X1997",1.33
+"Timor-Leste","X1998",1.34
+"Timor-Leste","X1999",1.21
+"Timor-Leste","X2000",1.27
+"Timor-Leste","X2001",2.42
+"Timor-Leste","X2002",3.52
+"Timor-Leste","X2003",4.32
+"Timor-Leste","X2004",5.03
+"Timor-Leste","X2005",5.9
+"Timor-Leste","X2006",6.12
+"Timor-Leste","X2007",6.28
+"Timor-Leste","X2008",6.52
+"Timor-Leste","X2009",6.7
+"Timor-Leste","X2010",6.86
+"Timor-Leste","X2011",6.64
+"Timor-Leste","X2012",6.51
+"Timor-Leste","X2013",6.37
+"Timor-Leste","X2014",6.24
+"Timor-Leste","X2015",6.07
+"Timor-Leste","X2016",5.83
+"Timor-Leste","X2017",5.48
+"Timor-Leste","X2018",5.18
+"Timor-Leste","X2019",4.93
+"Togo","X1990",1.66
+"Togo","X1991",1.58
+"Togo","X1992",1.47
+"Togo","X1993",1.41
+"Togo","X1994",1.44
+"Togo","X1995",1.4
+"Togo","X1996",1.49
+"Togo","X1997",1.39
+"Togo","X1998",1.56
+"Togo","X1999",1.59
+"Togo","X2000",1.45
+"Togo","X2001",1
+"Togo","X2002",1.06
+"Togo","X2003",1.15
+"Togo","X2004",1.07
+"Togo","X2005",1.2
+"Togo","X2006",1.07
+"Togo","X2007",0.99
+"Togo","X2008",1.02
+"Togo","X2009",1.23
+"Togo","X2010",1.17
+"Togo","X2011",1.21
+"Togo","X2012",1.11
+"Togo","X2013",1.07
+"Togo","X2014",1
+"Togo","X2015",1.08
+"Togo","X2016",1.09
+"Togo","X2017",1.05
+"Togo","X2018",1.07
+"Togo","X2019",1.08
+"Tonga","X1990",2.63
+"Tonga","X1991",2.76
+"Tonga","X1992",2.62
+"Tonga","X1993",2.71
+"Tonga","X1994",2.75
+"Tonga","X1995",2.7
+"Tonga","X1996",2.44
+"Tonga","X1997",2.5
+"Tonga","X1998",2.43
+"Tonga","X1999",2.56
+"Tonga","X2000",2.4
+"Tonga","X2001",2.31
+"Tonga","X2002",2.37
+"Tonga","X2003",2.58
+"Tonga","X2004",2.6
+"Tonga","X2005",2.67
+"Tonga","X2006",2.8
+"Tonga","X2007",2.58
+"Tonga","X2008",2.56
+"Tonga","X2009",2.65
+"Tonga","X2010",2.45
+"Tonga","X2011",2.37
+"Tonga","X2012",2.43
+"Tonga","X2013",2.52
+"Tonga","X2014",2.54
+"Tonga","X2015",2.57
+"Tonga","X2016",2.93
+"Tonga","X2017",3.24
+"Tonga","X2018",3
+"Tonga","X2019",2.98
+"Trinidad and Tobago","X1990",16.52
+"Trinidad and Tobago","X1991",16.35
+"Trinidad and Tobago","X1992",16.19
+"Trinidad and Tobago","X1993",12.77
+"Trinidad and Tobago","X1994",9.97
+"Trinidad and Tobago","X1995",9.63
+"Trinidad and Tobago","X1996",10.45
+"Trinidad and Tobago","X1997",10.81
+"Trinidad and Tobago","X1998",11.13
+"Trinidad and Tobago","X1999",11.44
+"Trinidad and Tobago","X2000",12.06
+"Trinidad and Tobago","X2001",13.43
+"Trinidad and Tobago","X2002",14.67
+"Trinidad and Tobago","X2003",17.55
+"Trinidad and Tobago","X2004",18.27
+"Trinidad and Tobago","X2005",19.78
+"Trinidad and Tobago","X2006",22.41
+"Trinidad and Tobago","X2007",22.89
+"Trinidad and Tobago","X2008",22.53
+"Trinidad and Tobago","X2009",21.8
+"Trinidad and Tobago","X2010",23.78
+"Trinidad and Tobago","X2011",24.38
+"Trinidad and Tobago","X2012",23.89
+"Trinidad and Tobago","X2013",24.46
+"Trinidad and Tobago","X2014",24.33
+"Trinidad and Tobago","X2015",23.52
+"Trinidad and Tobago","X2016",20.8
+"Trinidad and Tobago","X2017",20.86
+"Trinidad and Tobago","X2018",20.73
+"Trinidad and Tobago","X2019",20.41
+"Tunisia","X1990",2.47
+"Tunisia","X1991",2.52
+"Tunisia","X1992",2.62
+"Tunisia","X1993",2.59
+"Tunisia","X1994",2.51
+"Tunisia","X1995",2.52
+"Tunisia","X1996",2.63
+"Tunisia","X1997",2.66
+"Tunisia","X1998",2.77
+"Tunisia","X1999",2.89
+"Tunisia","X2000",3
+"Tunisia","X2001",3.03
+"Tunisia","X2002",3.02
+"Tunisia","X2003",2.98
+"Tunisia","X2004",3.08
+"Tunisia","X2005",3.12
+"Tunisia","X2006",3.21
+"Tunisia","X2007",3.3
+"Tunisia","X2008",3.32
+"Tunisia","X2009",3.32
+"Tunisia","X2010",3.51
+"Tunisia","X2011",3.86
+"Tunisia","X2012",3.98
+"Tunisia","X2013",3.92
+"Tunisia","X2014",4.1
+"Tunisia","X2015",4.08
+"Tunisia","X2016",3.29
+"Tunisia","X2017",3.28
+"Tunisia","X2018",3.25
+"Tunisia","X2019",3.23
+"Turkey","X1990",3.5
+"Turkey","X1991",3.48
+"Turkey","X1992",3.56
+"Turkey","X1993",3.61
+"Turkey","X1994",3.47
+"Turkey","X1995",3.67
+"Turkey","X1996",3.91
+"Turkey","X1997",3.99
+"Turkey","X1998",3.95
+"Turkey","X1999",3.89
+"Turkey","X2000",4.21
+"Turkey","X2001",3.4
+"Turkey","X2002",3.51
+"Turkey","X2003",3.63
+"Turkey","X2004",3.67
+"Turkey","X2005",3.81
+"Turkey","X2006",4.18
+"Turkey","X2007",4.56
+"Turkey","X2008",4.47
+"Turkey","X2009",4.45
+"Turkey","X2010",4.53
+"Turkey","X2011",4.54
+"Turkey","X2012",4.67
+"Turkey","X2013",4.48
+"Turkey","X2014",4.73
+"Turkey","X2015",4.74
+"Turkey","X2016",5.39
+"Turkey","X2017",5.82
+"Turkey","X2018",5.72
+"Turkey","X2019",5.51
+"Turkmenistan","X1990",30.24
+"Turkmenistan","X1991",27.27
+"Turkmenistan","X1992",18.69
+"Turkmenistan","X1993",19.86
+"Turkmenistan","X1994",17.61
+"Turkmenistan","X1995",17.41
+"Turkmenistan","X1996",16.2
+"Turkmenistan","X1997",13.7
+"Turkmenistan","X1998",13.8
+"Turkmenistan","X1999",16.72
+"Turkmenistan","X2000",19.65
+"Turkmenistan","X2001",19.61
+"Turkmenistan","X2002",20.36
+"Turkmenistan","X2003",22.74
+"Turkmenistan","X2004",23.95
+"Turkmenistan","X2005",24.31
+"Turkmenistan","X2006",24.4
+"Turkmenistan","X2007",25.95
+"Turkmenistan","X2008",26.69
+"Turkmenistan","X2009",20.94
+"Turkmenistan","X2010",22.92
+"Turkmenistan","X2011",26.42
+"Turkmenistan","X2012",27.42
+"Turkmenistan","X2013",28.17
+"Turkmenistan","X2014",27.68
+"Turkmenistan","X2015",27.87
+"Turkmenistan","X2016",27.01
+"Turkmenistan","X2017",26.49
+"Turkmenistan","X2018",26.49
+"Turkmenistan","X2019",26.48
+"Tuvalu","X1990",1.88
+"Tuvalu","X1991",1.97
+"Tuvalu","X1992",2.03
+"Tuvalu","X1993",2.02
+"Tuvalu","X1994",2.1
+"Tuvalu","X1995",2.15
+"Tuvalu","X1996",1.94
+"Tuvalu","X1997",2.06
+"Tuvalu","X1998",2.39
+"Tuvalu","X1999",2.05
+"Tuvalu","X2000",2.08
+"Tuvalu","X2001",2.28
+"Tuvalu","X2002",2.2
+"Tuvalu","X2003",2.12
+"Tuvalu","X2004",2.15
+"Tuvalu","X2005",2.19
+"Tuvalu","X2006",2.42
+"Tuvalu","X2007",2.6
+"Tuvalu","X2008",2.14
+"Tuvalu","X2009",2.24
+"Tuvalu","X2010",2.15
+"Tuvalu","X2011",2.17
+"Tuvalu","X2012",2.13
+"Tuvalu","X2013",2.03
+"Tuvalu","X2014",2.14
+"Tuvalu","X2015",1.94
+"Tuvalu","X2016",2.04
+"Tuvalu","X2017",2.16
+"Tuvalu","X2018",2.2
+"Tuvalu","X2019",2.2
+"Uganda","X1990",1.75
+"Uganda","X1991",1.73
+"Uganda","X1992",1.69
+"Uganda","X1993",1.65
+"Uganda","X1994",1.58
+"Uganda","X1995",1.57
+"Uganda","X1996",1.57
+"Uganda","X1997",1.6
+"Uganda","X1998",1.61
+"Uganda","X1999",1.55
+"Uganda","X2000",1.5
+"Uganda","X2001",1.44
+"Uganda","X2002",1.44
+"Uganda","X2003",1.47
+"Uganda","X2004",1.42
+"Uganda","X2005",1.45
+"Uganda","X2006",1.36
+"Uganda","X2007",1.4
+"Uganda","X2008",1.57
+"Uganda","X2009",1.55
+"Uganda","X2010",1.55
+"Uganda","X2011",1.5
+"Uganda","X2012",1.5
+"Uganda","X2013",1.45
+"Uganda","X2014",1.43
+"Uganda","X2015",1.44
+"Uganda","X2016",1.42
+"Uganda","X2017",1.39
+"Uganda","X2018",1.37
+"Uganda","X2019",1.34
+"Ukraine","X1990",14.96
+"Ukraine","X1991",14.11
+"Ukraine","X1992",12.36
+"Ukraine","X1993",10.75
+"Ukraine","X1994",9.07
+"Ukraine","X1995",8.69
+"Ukraine","X1996",7.58
+"Ukraine","X1997",7.17
+"Ukraine","X1998",6.68
+"Ukraine","X1999",6.61
+"Ukraine","X2000",6.45
+"Ukraine","X2001",7.04
+"Ukraine","X2002",7.21
+"Ukraine","X2003",7.78
+"Ukraine","X2004",7.29
+"Ukraine","X2005",7.07
+"Ukraine","X2006",7.27
+"Ukraine","X2007",7.51
+"Ukraine","X2008",7.31
+"Ukraine","X2009",6.15
+"Ukraine","X2010",6.61
+"Ukraine","X2011",7.2
+"Ukraine","X2012",7.06
+"Ukraine","X2013",6.97
+"Ukraine","X2014",6.25
+"Ukraine","X2015",5.17
+"Ukraine","X2016",5.49
+"Ukraine","X2017",4.93
+"Ukraine","X2018",5.22
+"Ukraine","X2019",4.99
+"United Arab Emirates","X1990",40.06
+"United Arab Emirates","X1991",41.85
+"United Arab Emirates","X1992",38.58
+"United Arab Emirates","X1993",38.48
+"United Arab Emirates","X1994",40.19
+"United Arab Emirates","X1995",40.31
+"United Arab Emirates","X1996",40.06
+"United Arab Emirates","X1997",39.29
+"United Arab Emirates","X1998",38.03
+"United Arab Emirates","X1999",36.69
+"United Arab Emirates","X2000",34.78
+"United Arab Emirates","X2001",37.27
+"United Arab Emirates","X2002",36.05
+"United Arab Emirates","X2003",35.94
+"United Arab Emirates","X2004",34.71
+"United Arab Emirates","X2005",32.72
+"United Arab Emirates","X2006",29.64
+"United Arab Emirates","X2007",27.27
+"United Arab Emirates","X2008",27.37
+"United Arab Emirates","X2009",24.55
+"United Arab Emirates","X2010",23.61
+"United Arab Emirates","X2011",23.19
+"United Arab Emirates","X2012",24.02
+"United Arab Emirates","X2013",25.1
+"United Arab Emirates","X2014",25.16
+"United Arab Emirates","X2015",26.47
+"United Arab Emirates","X2016",27.02
+"United Arab Emirates","X2017",26.21
+"United Arab Emirates","X2018",23.82
+"United Arab Emirates","X2019",24.93
+"United Kingdom","X1990",12.82
+"United Kingdom","X1991",12.93
+"United Kingdom","X1992",12.59
+"United Kingdom","X1993",12.24
+"United Kingdom","X1994",12.16
+"United Kingdom","X1995",11.99
+"United Kingdom","X1996",12.33
+"United Kingdom","X1997",11.95
+"United Kingdom","X1998",11.88
+"United Kingdom","X1999",11.43
+"United Kingdom","X2000",11.43
+"United Kingdom","X2001",11.56
+"United Kingdom","X2002",11.2
+"United Kingdom","X2003",11.3
+"United Kingdom","X2004",11.15
+"United Kingdom","X2005",10.98
+"United Kingdom","X2006",10.84
+"United Kingdom","X2007",10.51
+"United Kingdom","X2008",10.09
+"United Kingdom","X2009",9.12
+"United Kingdom","X2010",9.25
+"United Kingdom","X2011",8.52
+"United Kingdom","X2012",8.78
+"United Kingdom","X2013",8.45
+"United Kingdom","X2014",7.78
+"United Kingdom","X2015",7.48
+"United Kingdom","X2016",7.1
+"United Kingdom","X2017",6.82
+"United Kingdom","X2018",6.66
+"United Kingdom","X2019",6.42
+"United States","X1990",21.7
+"United States","X1991",21.24
+"United States","X1992",21.27
+"United States","X1993",21.42
+"United States","X1994",21.52
+"United States","X1995",21.52
+"United States","X1996",21.9
+"United States","X1997",22.6
+"United States","X1998",22.51
+"United States","X1999",22.26
+"United States","X2000",22.58
+"United States","X2001",22.23
+"United States","X2002",21.5
+"United States","X2003",21.53
+"United States","X2004",21.62
+"United States","X2005",21.5
+"United States","X2006",20.98
+"United States","X2007",21.14
+"United States","X2008",20.34
+"United States","X2009",18.77
+"United States","X2010",19.48
+"United States","X2011",18.65
+"United States","X2012",17.82
+"United States","X2013",18.14
+"United States","X2014",18.15
+"United States","X2015",17.66
+"United States","X2016",17.78
+"United States","X2017",17.5
+"United States","X2018",18.03
+"United States","X2019",17.58
+"Uruguay","X1990",4.96
+"Uruguay","X1991",5.44
+"Uruguay","X1992",5.91
+"Uruguay","X1993",6.03
+"Uruguay","X1994",5.95
+"Uruguay","X1995",5.97
+"Uruguay","X1996",6.34
+"Uruguay","X1997",6.2
+"Uruguay","X1998",6.04
+"Uruguay","X1999",6.33
+"Uruguay","X2000",5.75
+"Uruguay","X2001",6.6
+"Uruguay","X2002",6.69
+"Uruguay","X2003",6.96
+"Uruguay","X2004",7.54
+"Uruguay","X2005",7.59
+"Uruguay","X2006",8.22
+"Uruguay","X2007",7.9
+"Uruguay","X2008",8.65
+"Uruguay","X2009",8.49
+"Uruguay","X2010",7.75
+"Uruguay","X2011",9.1
+"Uruguay","X2012",9.33
+"Uruguay","X2013",9.01
+"Uruguay","X2014",8.83
+"Uruguay","X2015",8.75
+"Uruguay","X2016",10.32
+"Uruguay","X2017",10.06
+"Uruguay","X2018",9.99
+"Uruguay","X2019",9.92
+"Uzbekistan","X1990",8.02
+"Uzbekistan","X1991",7.91
+"Uzbekistan","X1992",7.24
+"Uzbekistan","X1993",7.19
+"Uzbekistan","X1994",6.88
+"Uzbekistan","X1995",6.25
+"Uzbekistan","X1996",6.19
+"Uzbekistan","X1997",6.24
+"Uzbekistan","X1998",6.85
+"Uzbekistan","X1999",6.78
+"Uzbekistan","X2000",6.99
+"Uzbekistan","X2001",6.58
+"Uzbekistan","X2002",6.75
+"Uzbekistan","X2003",6.35
+"Uzbekistan","X2004",6.42
+"Uzbekistan","X2005",6.15
+"Uzbekistan","X2006",6.48
+"Uzbekistan","X2007",6.22
+"Uzbekistan","X2008",6.46
+"Uzbekistan","X2009",5.89
+"Uzbekistan","X2010",6.15
+"Uzbekistan","X2011",6.38
+"Uzbekistan","X2012",5.77
+"Uzbekistan","X2013",5.64
+"Uzbekistan","X2014",5.3
+"Uzbekistan","X2015",5.05
+"Uzbekistan","X2016",5.26
+"Uzbekistan","X2017",5.34
+"Uzbekistan","X2018",5.48
+"Uzbekistan","X2019",5.52
+"Vanuatu","X1990",3.3
+"Vanuatu","X1991",3.3
+"Vanuatu","X1992",3.34
+"Vanuatu","X1993",3.42
+"Vanuatu","X1994",3.36
+"Vanuatu","X1995",3.32
+"Vanuatu","X1996",3.36
+"Vanuatu","X1997",3.34
+"Vanuatu","X1998",3.26
+"Vanuatu","X1999",3.26
+"Vanuatu","X2000",3.08
+"Vanuatu","X2001",2.92
+"Vanuatu","X2002",2.81
+"Vanuatu","X2003",2.86
+"Vanuatu","X2004",2.73
+"Vanuatu","X2005",2.75
+"Vanuatu","X2006",2.71
+"Vanuatu","X2007",3.2
+"Vanuatu","X2008",3.11
+"Vanuatu","X2009",3.01
+"Vanuatu","X2010",3
+"Vanuatu","X2011",3.02
+"Vanuatu","X2012",2.92
+"Vanuatu","X2013",2.83
+"Vanuatu","X2014",2.98
+"Vanuatu","X2015",2.86
+"Vanuatu","X2016",2.93
+"Vanuatu","X2017",2.87
+"Vanuatu","X2018",2.94
+"Vanuatu","X2019",2.9
+"Venezuela","X1990",20.22
+"Venezuela","X1991",20.25
+"Venezuela","X1992",19.91
+"Venezuela","X1993",19.9
+"Venezuela","X1994",19.64
+"Venezuela","X1995",20.16
+"Venezuela","X1996",20.74
+"Venezuela","X1997",21.07
+"Venezuela","X1998",20.97
+"Venezuela","X1999",19.78
+"Venezuela","X2000",19.98
+"Venezuela","X2001",17.42
+"Venezuela","X2002",16.93
+"Venezuela","X2003",16.19
+"Venezuela","X2004",16.51
+"Venezuela","X2005",16.76
+"Venezuela","X2006",16.47
+"Venezuela","X2007",16.05
+"Venezuela","X2008",16.26
+"Venezuela","X2009",15.73
+"Venezuela","X2010",15.78
+"Venezuela","X2011",16.15
+"Venezuela","X2012",17.13
+"Venezuela","X2013",16.96
+"Venezuela","X2014",16.73
+"Venezuela","X2015",15.95
+"Venezuela","X2016",13.17
+"Venezuela","X2017",12.37
+"Venezuela","X2018",11.67
+"Venezuela","X2019",10.51
+"Vietnam","X1990",0.03
+"Vietnam","X1991",0.08
+"Vietnam","X1992",0.12
+"Vietnam","X1993",0.19
+"Vietnam","X1994",0.25
+"Vietnam","X1995",0.35
+"Vietnam","X1996",0.44
+"Vietnam","X1997",0.53
+"Vietnam","X1998",0.67
+"Vietnam","X1999",0.71
+"Vietnam","X2000",0.79
+"Vietnam","X2001",1.95
+"Vietnam","X2002",2.13
+"Vietnam","X2003",2.17
+"Vietnam","X2004",2.39
+"Vietnam","X2005",2.48
+"Vietnam","X2006",2.51
+"Vietnam","X2007",2.65
+"Vietnam","X2008",2.73
+"Vietnam","X2009",2.97
+"Vietnam","X2010",3.15
+"Vietnam","X2011",2.7
+"Vietnam","X2012",2.69
+"Vietnam","X2013",2.82
+"Vietnam","X2014",2.95
+"Vietnam","X2015",3.36
+"Vietnam","X2016",3.45
+"Vietnam","X2017",3.49
+"Vietnam","X2018",4.05
+"Vietnam","X2019",4.54
+"Yemen","X1990",1.52
+"Yemen","X1991",1.59
+"Yemen","X1992",1.55
+"Yemen","X1993",1.57
+"Yemen","X1994",1.84
+"Yemen","X1995",1.84
+"Yemen","X1996",1.82
+"Yemen","X1997",1.87
+"Yemen","X1998",1.89
+"Yemen","X1999",2
+"Yemen","X2000",2.12
+"Yemen","X2001",2.13
+"Yemen","X2002",2.07
+"Yemen","X2003",2.2
+"Yemen","X2004",2.16
+"Yemen","X2005",2.22
+"Yemen","X2006",2.22
+"Yemen","X2007",2.19
+"Yemen","X2008",2.12
+"Yemen","X2009",2.2
+"Yemen","X2010",2.25
+"Yemen","X2011",2.06
+"Yemen","X2012",1.82
+"Yemen","X2013",2.15
+"Yemen","X2014",2.03
+"Yemen","X2015",1.11
+"Yemen","X2016",0.88
+"Yemen","X2017",0.86
+"Yemen","X2018",0.84
+"Yemen","X2019",0.87
+"Zambia","X1990",7.41
+"Zambia","X1991",7.26
+"Zambia","X1992",7.11
+"Zambia","X1993",6.89
+"Zambia","X1994",6.64
+"Zambia","X1995",6.45
+"Zambia","X1996",5.35
+"Zambia","X1997",5.26
+"Zambia","X1998",5.24
+"Zambia","X1999",4.94
+"Zambia","X2000",4.47
+"Zambia","X2001",4.89
+"Zambia","X2002",5.05
+"Zambia","X2003",5.43
+"Zambia","X2004",5.34
+"Zambia","X2005",5.42
+"Zambia","X2006",4.89
+"Zambia","X2007",4.97
+"Zambia","X2008",5.02
+"Zambia","X2009",4.62
+"Zambia","X2010",4.94
+"Zambia","X2011",5.8
+"Zambia","X2012",5.89
+"Zambia","X2013",5.78
+"Zambia","X2014",5.64
+"Zambia","X2015",5.78
+"Zambia","X2016",5.55
+"Zambia","X2017",5.39
+"Zambia","X2018",5.19
+"Zambia","X2019",5.12
+"Zimbabwe","X1990",4.09
+"Zimbabwe","X1991",4.02
+"Zimbabwe","X1992",4.02
+"Zimbabwe","X1993",3.63
+"Zimbabwe","X1994",3.55
+"Zimbabwe","X1995",3.49
+"Zimbabwe","X1996",3.61
+"Zimbabwe","X1997",3.5
+"Zimbabwe","X1998",3.59
+"Zimbabwe","X1999",3.76
+"Zimbabwe","X2000",3.5
+"Zimbabwe","X2001",3.58
+"Zimbabwe","X2002",3.34
+"Zimbabwe","X2003",3.13
+"Zimbabwe","X2004",3.12
+"Zimbabwe","X2005",3.17
+"Zimbabwe","X2006",3.06
+"Zimbabwe","X2007",3.08
+"Zimbabwe","X2008",2.89
+"Zimbabwe","X2009",2.93
+"Zimbabwe","X2010",3.11
+"Zimbabwe","X2011",3.27
+"Zimbabwe","X2012",3.22
+"Zimbabwe","X2013",3.16
+"Zimbabwe","X2014",2.97
+"Zimbabwe","X2015",3.06
+"Zimbabwe","X2016",8.26
+"Zimbabwe","X2017",8.12
+"Zimbabwe","X2018",8.19
+"Zimbabwe","X2019",8.05
