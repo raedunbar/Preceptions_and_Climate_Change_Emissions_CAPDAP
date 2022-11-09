@@ -313,33 +313,125 @@ Lets run this again:
 ```{r}
 summary(ccos_US_Denmark)
 ```
-Now the 3rd quartile is 29.21 and the max is 88.19. this may be because the United States is larger than Denmark, skewing the means, so lets use graphs instead.
+Now the 3rd quartile is 29.21 and the max is 88.19. this may be because the United States is larger than Denmark, skewing the means, so lets use graphs instead. The high 88 appears to be in the question_happening section, so lets look at that. 
 
 ```{r}
-ccos_US_Denmark_worry<- ccos_US_Denmark %>% filter(ccos_US_Denmark$question=="Ques__climate_worry")
-ggplot(ccos_US_Denmark, aes(x="response", y="Number")) + geom_bar(stat='identity', position='dodge', colour='Country')
+ccos_US_Denmark_happening<- ccos_US_Denmark %>% filter(ccos_US_Denmark$question=="Ques__happening") %>% group_by(Country)
+ggplot(ccos_US_Denmark_happening, aes(x=response, y=Number, fill=Country)) + geom_bar(stat='identity', position='dodge')+ scale_fill_manual(values=c(Denmark="light blue", United.States="light green"))+ theme(axis.text.x =element_text(angle = 90)) + theme_bw()
+#????The questions  on the x axis are blurred out, we should rotate them, which I attempted here and did not work, thoughts????
+```
+Both the U.S. and Denmark had a huge amount of people answer yes, so this is not an outlier, and thus our data is fine. Lets move on to our final data sheet, the Yale survey. 
+
+```{r}
+write.csv(ccos_US_Denmark, here("Data for the Code", "Corrected_Data_sets", "final_ccos_US_Denmark.csv"), row.names = FALSE)
+```
+YAY
+
+
+## Yale Survey Data
+Bring in the data
+```{r}
+yale<- read.csv(here("Data for the Code", "Yale_International Perspective of Climate Change.csv"))
+```
+
+Lets start by checking out the column names. 
+
+```{r}
+names(yale)
+```
+Well this is most certainly not what we want. Though it makes sense, as the first row in the data merges the cells to be an overall header of seceral columns, but it is not the header of an individual column. So, we will have to delete that first row and hopefully that will fix the column names. 
+
+Lets check the data further.
+
+```{r}
+glimpse(yale)
+```
+We have factor data for everything including ones that should be numerical data. We will need to change that back. 
+
+What we need to fix:
+1. delete the first row
+2. fix column names
+3. make the columns doubles
+
+## Fixing the Yale Data
+
+### Deleting the First Row and trying to fix column names
+
+Wouldn't it be great if I could take the first row and make it a vector and then assign it as the column names? Well if I thought it, I am sure there is code for it. 
+
+This was a pain
+```{r}
+as.vector(as.character((yale[1,])))
+#make a vector of the character data in row one of yale
+#??? not sure why this code is also needed up here, when I delted it, it did not work.???
+ccs_Yale_Corrected<- yale %>% slice(-1)
+#remove row one of yale and store it as a new data frame
+names(ccs_Yale_Corrected)<-c(as.vector(as.factor((yale[1,]))))
+#make the column names of the new data frame a vector of the character data in row one of yale
+```
+It did work though. 
+
+Next issue.
+
+## Make the columns double. 
+
+
+Unlike the data frame above, the columns that we need to switch to not all of them, but a select few. Lets see if : works. Pleaseeeee work.
+
+
+I tried it three different ways with "" and with $ and without both. None worked.
+
+```{r}
+indx <- sapply(ccs_Yale_Corrected, ccs_Yale_Corrected$Sample_2007:ccs_Yale_Corrected$Cl_aware)
+emissionsfix[indx] <- lapply(emissionsfix[indx], function(x) as.numeric(as.character(x)))
+```
+I will have to do a faster way later. 
+
+By hand it works:
+```{r}
+ccs_Yale_Corrected$Aware<- as.numeric(ccs_Yale_Corrected$Aware)
+```
+
+All right so Erika show me a faster way later. I am going to manually change the relevant ones to check my data out further. 
+
+For this survey data I will be using the unaware and aware, and serious, and not serious data survey questions referring to climate change.
+```{r}
+ccs_Yale_Corrected$Unaware<- as.numeric(ccs_Yale_Corrected$Unaware)
+ccs_Yale_Corrected$Serious<- as.numeric(ccs_Yale_Corrected$Serious)
+ccs_Yale_Corrected$Not_serious<- as.numeric(ccs_Yale_Corrected$Not_serious)
+
 ```
 
 
-
-
-To check for outliers I do not think we can graph all of them
+## Checking for Outliers
 ```{r}
-ggplot(ccos_US_Denmark, aes(x=Question))
+summary(ccs_Yale_Corrected)
 ```
 
 
+The Not_serious data has more than 30 % difference from its third quartile to its maximum, so that needs to be further investigated. the unaware data should be double checked as well. The other two are free of outliers.
 
-
-```{r}
-allfiles<- list.files(here("Data for the Code", "Facebook_data"), pattern="Facebook_2022")
-```
+## Graphing to Check Outliers 
 
 ```{r}
-pivot_longer(Agentina:Vietnam, names_to="Country", values_to="Number")
+ggplot(ccs_Yale_Corrected, aes(x=Unaware)) + geom_histogram(binwidth = 10)+ theme_bw()
 ```
+
+
+This is a fine spread with no apparent outliers. 
 
 ```{r}
-
+ggplot(ccs_Yale_Corrected, aes(x=Not_serious)) + geom_histogram(binwidth = 10)+ theme_bw()
 ```
+
+This histogram has a tail, but no outliers as well. The data looks good. 
+
+!!!!We will save our finished Yale csv, so make sure to re-run this when all the columns are switched to numeric that should be.!!!!!
+
+## Saving the new dataframe
+```{r}
+write.csv(ccs_Yale_Corrected, here("Data for the Code","Corrected_Data_sets", "ccs_Yale_Corrected.csv"), row.names = FALSE)
+```
+
+
 
