@@ -51,6 +51,8 @@ ggplot(emissions, aes(year, emissions)) +
   geom_path() + geom_point(aes(colour=country))+ theme_bw() 
  
 ```
+Already it is apparent that Denmar produces less GHG emissions per capita each year than the United States. 
+
 ### Running the Test
 ```{r}
 
