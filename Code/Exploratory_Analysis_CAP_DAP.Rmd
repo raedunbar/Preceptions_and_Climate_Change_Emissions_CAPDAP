@@ -23,7 +23,7 @@ library(ggfortify)
 ### Pulling the Data in
 
 ```{r}
-emissions<-read.csv(here("Data for the Code", "CAIT_percapita_allcountries.csv"), stringsAsFactors = TRUE)
+emissions<-read.csv(here("Data for the Code", "Raw Data Sets", "CAIT_percapita_allcountries.csv"), stringsAsFactors = TRUE)
 ```
 
 ### viewing the Data
@@ -202,7 +202,7 @@ write.csv(emissions_long, here("Data for the Code", "Corrected_Data_sets", "emis
 
 Lets see one of the data sets. 
 ```{r}
-DF<- read.csv(here("Data for the Code", "Facebook_data", "Facebook_2022_climate_awareness.csv"), stringsAsFactors = TRUE)
+DF<- read.csv(here("Data for the Code","Raw Data Sets", "Facebook_data", "Facebook_2022_climate_awareness.csv"), stringsAsFactors = TRUE)
 ```
 
 As of right now the Facebook data are in several different data csvs and all in wide format. 
@@ -214,7 +214,7 @@ We'll use `pivot_longer` from `tidyr` package
 ```{r}
 DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
 
-write.csv(DF_long, here("Data for the Code", "Facebook_data", "ccos_awareness.csv"), row.names = FALSE)
+write.csv(DF_long, here("Data for the Code", "Raw Data Sets", "Facebook_data", "ccos_awareness.csv"), row.names = FALSE)
 #Now we have the csv for the climate change opinion survey about awareness. 
 ```
 
@@ -222,14 +222,14 @@ That works well, however I would have to do it 30 times. So, lets do a loop that
 
 Get the list of files. Two of the files contain information just about the US and should not be used, so let's also exclude them.
 ```{r}
-myfiles<-list.files(here("Data for the Code", "Facebook_data"),pattern ="Facebook_2022")
+myfiles<-list.files(here("Data for the Code", "Raw Data Sets", "Facebook_data"),pattern ="Facebook_2022")
 
 ```
 
 Now build the loop. Include code to strip the suffix of each file and add it to the output file name. It should also add a column with the question that the data are for.
 ```{r}
 for (i in 1:length(myfiles)){
-  DF <- read.csv(here("Data for the Code", "Facebook_data", myfiles[i]))
+  DF <- read.csv(here("Data for the Code","Raw Data Sets", "Facebook_data", myfiles[i]))
   DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
 
   
@@ -243,26 +243,26 @@ colnames(DF_long)[1] <- "response"
 
 my_filename<-paste0("ccos",mystring[[1]][2])
 
-write.csv(DF_long, here("Data for the Code", "Corrected_Data_sets", my_filename), row.names = FALSE)               
+write.csv(DF_long, here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", my_filename), row.names = FALSE)               
 }
 ```
 Looks like it worked!
 
 Now let's open a few
 ```{r}
-awareness<-read.csv(here("Data for the Code", "Corrected_Data_sets", "ccos_climate_awareness.csv"))
+awareness<-read.csv(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format", "ccos_climate_awareness.csv"))
                     
-beliefs <-read.csv(here("Data for the Code", "Corrected_Data_sets",  "ccos_Climate_beliefs.csv"))
+beliefs <-read.csv(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format",  "ccos_Climate_beliefs.csv"))
 ```
 Ok - that's all working. So now I can pull them all together into one big data frame.
 
 ```{r}
-myfiles<-list.files(here("Data for the Code", "Corrected_Data_sets"),pattern ="ccos")
+myfiles<-list.files(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format"),pattern ="ccos")
 
-newDF<-read.csv(here("Data for the Code", "Corrected_Data_sets", myfiles[1]))
+newDF<-read.csv(here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", myfiles[1]))
 
 for (i in 2:length(myfiles)){
-  tempDF <- read.csv(here("Data for the Code", "Corrected_Data_sets", myfiles[i]))
+  tempDF <- read.csv(here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", myfiles[i]))
   newDF<-rbind(newDF, tempDF)
 }
 
@@ -331,7 +331,7 @@ YAY
 ## Yale Survey Data
 Bring in the data
 ```{r}
-yale<- read.csv(here("Data for the Code", "Yale_International Perspective of Climate Change.csv"))
+yale<- read.csv(here("Data for the Code", "Raw Data Sets", "Yale_International Perspective of Climate Change.csv"))
 ```
 
 Lets start by checking out the column names. 

@@ -1,0 +1,6 @@
+---
+title: "Emissions and Perceptions of Climate Change"
+author: "Rae Dunbar"
+date: "11/13/2022"
+output: html_document
+---
