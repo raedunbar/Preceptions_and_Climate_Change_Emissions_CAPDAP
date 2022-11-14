@@ -13,9 +13,9 @@ This data analysis will consist of three sections: the greenhouse gas emissions 
 
 In the emissions section Denmark's the United State's per capita emissions and the rate of decrease will both be compared.We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]
 
-The second section will include an analysis of several quesitons regarding climate change for both the U.S. and Denmark. These will whether the citizens are aware of climate change, how worried they are, and how big of a threat they believe climate change is in the next 20 years. We hypothesize Denmark will have a significantly higher percentage of people who are aware of climate change than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] We further hypothesize that more of Denmark's citizens will be very worried about climate change and see it as an extreme threat than U. S. citizens, because because climate change is uniformly depicted in Danish media as a problem, but it is not in the U.S.^4
+The second section will include an analysis of several questions regarding climate change for both the U.S. and Denmark. These will include what Americans and Danes believe causeds climate change, how worried they are about it, and how big of a threat they believe climate change is in the next 20 years. We hypothesize Denmark will have a significantly higher percentage of people who are believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] We further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not in the U.S.^4
 
-In the third section we will overlay the survey data with the emissions data to deterrmine the percentage of causation. We predict that people’s perceptions of climate change impacts about 30% of greenhouse gas emissions of a country, given there are several other significantly related variables, such as population, income, and political structure.^[Wang, Q., Feng, G., Wang, H., Chang. C., " The influence of political ideology on greenhouse gas emissions" Global Environmental Change 74, no.1 (May 2022):102496. DOOI: https://doi.org/10.1016/j.gloenvcha.2022.102496.]  
+In the third section we will overlay the survey data with the emissions data to determine the percentage of causation. We predict that people’s perceptions of climate change impacts about 30% of greenhouse gas emissions of a country, given there are several other significantly related variables, such as population, income, and political structure.^[Wang, Q., Feng, G., Wang, H., Chang. C., " The influence of political ideology on greenhouse gas emissions" Global Environmental Change 74, no.1 (May 2022):102496. DOOI: https://doi.org/10.1016/j.gloenvcha.2022.102496.]  
 
 ## Statistcal Analysis and Results
 
@@ -51,7 +51,7 @@ ggplot(emissions, aes(year, emissions)) +
   geom_path() + geom_point(aes(colour=country))+ theme_bw() 
  
 ```
-Already it is apparent that Denmar produces less GHG emissions per capita each year than the United States. 
+Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. 
 
 ### Running the Test
 ```{r}
@@ -67,6 +67,39 @@ To determine rate the emissions must be divided by the year.
 
 ## Perceptions of Climate Change
 
+Reading in the data:
+```{r}
+survey<- read.csv(here("Data for the Code", "Corrected_Data_sets", "final_ccos_US_Denmark.csv"), stringsAsFactors=TRUE )
+```
+
+
+Though more people may have been intereviewed in country or the other, the survey data is in percent, as in the percentage of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per couontrry:
+```{r}
+total<- beliefs %>% group_by(Country) %>% summarise(total=sum(Number))
+```
+
+This means we can fairly compare Danes and American's perceptions of climate change. 
+
+
+Lets first see what Danes and Americans believe caused climate. The options are the survey are: caused mostly by humans, caused by natural change in the environment, caused by both, and climate change is not happening.  
+
+```{r}
+beliefs<- survey %>% filter(survey$question=="Ques__Climate_beliefs") 
+```
+
+
+```{r}
+ggplot(beliefs, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
+```
+More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
+
+We have multiple categorical predictor variables with ratio data as the response variable, so we will use an ANOVA. 
+
+generalized linear model. Chapter 7 in my book.
+
+```{r}
+
+```
 
 
 ## Summary Discussion
