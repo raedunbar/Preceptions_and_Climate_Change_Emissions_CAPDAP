@@ -363,7 +363,7 @@ This was a pain
 ```{r}
 as.vector(as.character((yale[1,])))
 #make a vector of the character data in row one of yale
-#??? not sure why this code is also needed up here, when I delted it, it did not work.???
+#??? not sure why this code is also needed up here, when I deleted it, it did not work.???
 ccs_Yale_Corrected<- yale %>% slice(-1)
 #remove row one of yale and store it as a new data frame
 names(ccs_Yale_Corrected)<-c(as.vector(as.factor((yale[1,]))))
