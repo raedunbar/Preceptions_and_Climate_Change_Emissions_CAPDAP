@@ -1,0 +1,422 @@
+---
+title: "Explorative Data Analysis Climate Perceptions in Countries"
+author: "Rae Dunbar"
+date: "11/7/2022"
+output: html_document
+---
+For this project there are several csv's that came from three excel sheets. The first one is emissions per country from 1990-2019. The second is a survey about countries climate perceptions that Yale used for a research paper. And the third is from a Facebook survey of several countries perceptions of climate change. The facebook survey data put its data in wide format using several sheets, so there are several separate csvs. That data set will be the most burdensome to clean up. 
+
+Lets start with the emissions data.
+
+
+## Setting R up
+
+```{r}
+rm(list=ls())
+library(here)
+library(tidyverse)
+library(ggfortify)
+```
+
+## Starting with the Emissions Data
+
+### Pulling the Data in
+
+```{r}
+emissions<-read.csv(here("Data for the Code", "Raw Data Sets", "CAIT_percapita_allcountries.csv"), stringsAsFactors = TRUE)
+```
+
+### viewing the Data
+
+What are the headers?
+```{r}
+names(emissions)
+```
+It appears the first few columns after the country name and unit are the dates, starting with 1990 and going until 2019. There are a lot of other columns after that however, that are unclear of what data they hold. I will have to delete those and I will also need to make this into long format.
+
+Lets learn more.
+
+```{r}
+str(emissions)
+```
+Another issue I have noticed is all the data is coming in as factor data. We can check this with glimpse()
+
+```{r}
+glimpse(emissions)
+```
+Here we can see both the odd amount of empty data columns and that they are all listed as factor data, which we will need to change to numerical data. If we change it to numerical data we will also need to get rid of the X in front of the dates. 
+
+When looking at the full data set, we can also see that there are two rows at the bottom that are unnecessary.They appear to be metadata.
+
+What need to be fixed:
+1. removing the blank columns
+2. renaming the column names
+3. removing the last two rows
+4. turning the data into long format
+5. getting rid of the X's at the beginning of the dates
+
+##Fixing the Data
+
+First we only want columns with data, so we need to select the rows we desire.
+
+### Emitting the Empty Columns
+```{r}
+emissions<- emissions %>% select("Country.Region", "X1990":"X2019")
+emissions
+
+#The : actually worked inside select, which is neat.
+```
+Now we should rename the column names. 
+
+### Renaming the Column Names
+
+```{r}
+emissions<-rename(emissions, country=Country.Region)  
+# rename allows one to rename individual column names and does not require the coder to type all of the columns.
+#Make sure you assign it to your data frame!!!!!!
+```
+In a perfect world I would rename all of the dates to 1990 and so forth, rather than X1990.The issue is, R thinks when I type 1990 I am referring to a number, so the current column names will have to stay. We also need it in long format anyway, so just fixing the Country.Region one is good.
+
+When looking at the full data set, we can also see that there are two rows at the bottom that are unnecessary.They appear to be metadata. We need to remove these from the dataframe. 
+
+## Emitting the Last Two Rows
+```{r}
+emissions <- emissions %>% slice(-194,-195)
+# Gets rid of the last two rows.
+```
+
+Lastly, we need to make all the date columns into numeric rather than factor data, so when we put it in long format R knows they are numbers. 
+
+### Changing Factors to Numeric
+
+This code below messes the number ups somehow.
+```{r}
+#emissions$X1990<- as.numeric(emissions$X1990)
+```
+NA's were introduced by corecion, because some of the data contains the word "FALSE" in it. Which, is just changed to an NA. I believe this is the best course of action anyway, since the metadata does not explain what FALSE means. 
+
+To not have to run the above code 30 times, we can try a loop, though it did not work. 
+```{r}
+#for(i in emissions$X1990:emissions$X2019){
+#i <- as.numeric(as.character(i))
+#}
+```
+
+Lets try lapply and slapply instead.
+If we are to use them, we need the first column to not be a factor temporarily, soo it does not get turned into numeric data, which would be bad, given they are country names.
+
+```{r}
+#So, instead I separated the data frames into two, just changed the data types of the data frame with the dates in them, and then used cbind to glue them back together into one dataframe! 
+emissions1<- emissions %>% select(country)
+emissionsfix<- emissions %>% select(-country)
+indx <- sapply(emissionsfix, is.factor)
+emissionsfix[indx] <- lapply(emissionsfix[indx], function(x) as.numeric(as.character(x)))
+
+#sapply (the data frame, what you want to do to it). So you assign indx to all the columns that are factors in emissionsfix. And then lapply does what you want it to do to every single column. So you say I want you to work with emissionsfix[at the index indx] and then do this function, which is to make all of it to character and then to a number. You cannot go from factor to number.
+
+emissions<- cbind(emissions1, emissionsfix)
+```
+NA's were introduced by coercion into the countries that have FALSE listed as their emissions, because their emissions could not be recorded.
+
+Now we need to chagne the data from wide to long format.
+
+## Pivoting to long format
+
+This worked!
+```{r}
+emissions_long<-emissions %>% pivot_longer(cols=c('X1990':'X2019'),
+                    names_to='year',
+                    values_to='emissions')
+```
+
+Now we want to get rid of the X infront of the X1990 etc. 
+
+## Getting rid of the X
+
+For the technique that I came up with it is easier with fewer countries. So, we want to compare the emissions of Denmark to the United States from 1990 to 2019.
+
+First we need to filter the data so we can just look at the two states of interest. 
+```{r}
+emissions_US_Denmark<- emissions_long %>% filter(country=="Denmark" | country =="United States")
+```
+
+```{r}
+
+emissions_US_Denmark$year<- 'NA'
+emissions_US_Denmark$year<- as.numeric(emissions_US_Denmark$year)
+emissions_US_Denmark[1:30,2]<-1990:2019
+emissions_US_Denmark[31:60,2]<- 1990:2019
+```
+ str_replace
+ str_detect
+ str_split 
+ Feel free showing me the other way
+ 
+NA's were introduced by coercion if there was something other than a number entered in. 
+
+## Checking Data for Outliers
+
+Lets check for outliers.
+```{r}
+summary(emissions_US_Denmark)
+```
+Even with both countries together the max is not far from the third quartile, so there appears to be no outliers. Lets check this with graphs.
+
+### Graphing
+Lets graph the two to see if there are any outliers.
+Lets use a scatterplot first, since we have emissions and year. 
+```{r}
+ggplot(emissions_US_Denmark, aes(x=year, y=emissions, colour=country)) + geom_point()+ theme_bw()
+```
+Eventually I would like to graph this with a line of best fit. How would you do that? Is it geom_smooth(method=lm), because it is not working. 
+
+
+It looks like Denmark has significantly less emissions than the U.S. There are some odd spikes in Denmark's emissions, but nothing that seems to be an outlier. The data trends slowly downward which makes sense, given both countries are trying to reduce their emissions.
+
+
+Now time for a Boxplot
+
+Lets see with a boxplot how the data looks
+
+```{r}
+ggplot(emissions_US_Denmark, aes(x=country, y=emissions)) + geom_boxplot()+ theme_bw()
+```
+There standard deviation bars are not that big, espeically with the United States. The emissions look very reasonable for both. 
+
+the next step will be to calculate rate and to do a test, but we will save that for after we clean up the other data sets. For tests we will do either a repeated measures analysis or a time series analysis.
+
+
+## Save the Corrected Data
+Saving corrected and reformatted emissions data.
+```{r}
+write.csv(emissions_US_Denmark, here("Data for the Code", "emissions_corrected_US_Denmark.csv"), row.names=FALSE)
+
+#row.names=FALSE prevents R from adding extra blank rows to the csv.
+
+write.csv(emissions_long, here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_all.csv"), row.names=FALSE)
+```
+
+
+
+## Working with the Facebook Data
+
+Lets see one of the data sets. 
+```{r}
+DF<- read.csv(here("Data for the Code","Raw Data Sets", "Facebook_data", "Facebook_2022_climate_awareness.csv"), stringsAsFactors = TRUE)
+```
+
+As of right now the Facebook data are in several different data csvs and all in wide format. 
+
+We'd like to reformat these data so that every country is a row, the question is a new column, and the number responding with each answer is a new column. 
+
+We'll use `pivot_longer` from `tidyr` package
+
+```{r}
+DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
+
+write.csv(DF_long, here("Data for the Code", "Raw Data Sets", "Facebook_data", "ccos_awareness.csv"), row.names = FALSE)
+#Now we have the csv for the climate change opinion survey about awareness. 
+```
+
+That works well, however I would have to do it 30 times. So, lets do a loop that repeats this for each of the cc_awareness data sets?
+
+Get the list of files. Two of the files contain information just about the US and should not be used, so let's also exclude them.
+```{r}
+myfiles<-list.files(here("Data for the Code", "Raw Data Sets", "Facebook_data"),pattern ="Facebook_2022")
+
+```
+
+Now build the loop. Include code to strip the suffix of each file and add it to the output file name. It should also add a column with the question that the data are for.
+```{r}
+for (i in 1:length(myfiles)){
+  DF <- read.csv(here("Data for the Code","Raw Data Sets", "Facebook_data", myfiles[i]))
+  DF_long<- DF %>% pivot_longer(Albania:Zambia, names_to = "Country", values_to = "Number")
+
+  
+mystring<-str_split(myfiles[i], "Facebook_2022")
+
+Qname<-str_remove(mystring[[1]][2], pattern = ".csv")
+
+DF_long <- DF_long %>% mutate(question = paste0("Ques_", Qname))
+
+colnames(DF_long)[1] <- "response"
+
+my_filename<-paste0("ccos",mystring[[1]][2])
+
+write.csv(DF_long, here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", my_filename), row.names = FALSE)               
+}
+```
+Looks like it worked!
+
+Now let's open a few
+```{r}
+awareness<-read.csv(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format", "ccos_climate_awareness.csv"))
+                    
+beliefs <-read.csv(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format",  "ccos_Climate_beliefs.csv"))
+```
+Ok - that's all working. So now I can pull them all together into one big data frame.
+
+```{r}
+myfiles<-list.files(here("Data for the Code", "Corrected_Data_sets", "Facebook csv's Long Format"),pattern ="ccos")
+
+newDF<-read.csv(here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", myfiles[1]))
+
+for (i in 2:length(myfiles)){
+  tempDF <- read.csv(here("Data for the Code", "Corrected_Data_sets","Facebook csv's Long Format", myfiles[i]))
+  newDF<-rbind(newDF, tempDF)
+}
+
+my_filename<-"ccos_all.csv"
+
+write.csv(newDF, here("Data for the Code", "Corrected_Data_sets",my_filename), row.names = F)               
+
+```
+
+Now we can check for errors and outliers 
+
+## Checking the Data
+
+suck it in
+```{r}
+ccos<-read.csv(here("Data for the Code", "Corrected_Data_sets", "ccos_all.csv"))
+```
+
+column names
+```{r}
+names(ccos)
+```
+We have the column names we were expecting spelled just fine. Lets further examine the data. 
+```{r}
+glimpse(ccos)
+```
+So we have here the resposnes, questions, and answers for every country in this survey. We can see the columns that are percent of people who answered that way are correctly labeled as double and not character data. 
+We only want Denmark and the U.S. So, lets filter and see how the data looks. 
+
+```{r}
+ccos_US_Denmark<- ccos %>% filter(Country=="United.States" | Country=="Denmark")
+```
+
+## Checking for outliers
+
+```{r}
+summary(ccos_US_Denmark)
+```
+This tells me it is the number of individuals who responded a certain way. The question is, why is the max 3096 and the third quartile is only 44.612? This big difference may indicate an outlier. The large number is the unweighted base of the survey population. What the data collectors did was "To ensure that the survey sample more accurately reflects the characteristics of the population, we assign weights to survey responses, which doesn’t identify anyone but helps correct for sample bias." So, the unweighted data is without that. We do not want to include that in our data. 
+
+### Removing the unweighted base
+```{r}
+ccos_US_Denmark<- ccos_US_Denmark %>% filter(ccos_US_Denmark$ response!="(Unweighted Base)")
+```
+
+Lets run this again:
+
+```{r}
+summary(ccos_US_Denmark)
+```
+Now the 3rd quartile is 29.21 and the max is 88.19. this may be because the United States is larger than Denmark, skewing the means, so lets use graphs instead. The high 88 appears to be in the question_happening section, so lets look at that. 
+
+```{r}
+ccos_US_Denmark_happening<- ccos_US_Denmark %>% filter(ccos_US_Denmark$question=="Ques__happening") %>% group_by(Country)
+ggplot(ccos_US_Denmark_happening, aes(x=response, y=Number, fill=Country)) + geom_bar(stat='identity', position='dodge')+ scale_fill_manual(values=c(Denmark="light blue", United.States="light green"))+ theme(axis.text.x =element_text(angle = 90)) + theme_bw()
+#????The questions  on the x axis are blurred out, we should rotate them, which I attempted here and did not work, thoughts????
+```
+Both the U.S. and Denmark had a huge amount of people answer yes, so this is not an outlier, and thus our data is fine. Lets move on to our final data sheet, the Yale survey. 
+
+```{r}
+write.csv(ccos_US_Denmark, here("Data for the Code", "Corrected_Data_sets", "final_ccos_US_Denmark.csv"), row.names = FALSE)
+```
+
+## Yale Survey Data
+Bring in the data
+```{r}
+yale<- read.csv(here("Data for the Code", "Raw Data Sets", "Yale_International Perspective of Climate Change.csv"))
+```
+
+Lets start by checking out the column names. 
+
+```{r}
+names(yale)
+```
+Well this is most certainly not what we want. Though it makes sense, as the first row in the data merges the cells to be an overall header of seceral columns, but it is not the header of an individual column. So, we will have to delete that first row and hopefully that will fix the column names. 
+
+Lets check the data further.
+
+```{r}
+glimpse(yale)
+```
+We have factor data for everything including ones that should be numerical data. We will need to change that back. 
+
+What we need to fix:
+1. delete the first row
+2. fix column names
+3. make the columns doubles
+
+## Fixing the Yale Data
+
+### Deleting the First Row and trying to fix column names
+
+I could take the first row and make it a vector and then assign it as the column names. 
+
+```{r}
+as.vector(as.character((yale[1,])))
+#make a vector of the character data in row one of yale
+#??? not sure why this code is also needed up here, when I deleted it, it did not work.???
+ccs_Yale_Corrected<- yale %>% slice(-1)
+#remove row one of yale and store it as a new data frame
+names(ccs_Yale_Corrected)<-c(as.vector(as.factor((yale[1,]))))
+#make the column names of the new data frame a vector of the character data in row one of yale
+```
+
+
+Next issue.
+
+## Make the columns double. 
+
+
+Unlike the data frame above, the columns that we need to switch to not all of them, but a select few. Thus, sapply lapply will not work, so they must be changed individually.
+
+```{r}
+ccs_Yale_Corrected$Aware<- as.numeric(ccs_Yale_Corrected$Aware)
+```
+
+
+For this survey data I will be using the unaware and aware, and serious, and not serious data survey questions referring to climate change.
+```{r}
+ccs_Yale_Corrected$Unaware<- as.numeric(ccs_Yale_Corrected$Unaware)
+ccs_Yale_Corrected$Serious<- as.numeric(ccs_Yale_Corrected$Serious)
+ccs_Yale_Corrected$Not_serious<- as.numeric(ccs_Yale_Corrected$Not_serious)
+
+```
+
+
+## Checking for Outliers
+```{r}
+summary(ccs_Yale_Corrected)
+```
+
+
+The Not_serious data has more than 30 % difference from its third quartile to its maximum, so that needs to be further investigated. the unaware data should be double checked as well. The other two are free of outliers.
+
+## Graphing to Check Outliers 
+
+```{r}
+ggplot(ccs_Yale_Corrected, aes(x=Unaware)) + geom_histogram(binwidth = 10)+ theme_bw()
+```
+
+
+This is a fine spread with no apparent outliers. 
+
+```{r}
+ggplot(ccs_Yale_Corrected, aes(x=Not_serious)) + geom_histogram(binwidth = 10)+ theme_bw()
+```
+
+This histogram has a tail, but no outliers as well. The data looks good. 
+
+
+## Saving the new dataframe
+```{r}
+write.csv(ccs_Yale_Corrected, here("Data for the Code","Corrected_Data_sets", "ccs_Yale_Corrected.csv"), row.names = FALSE)
+```
+
+
+
