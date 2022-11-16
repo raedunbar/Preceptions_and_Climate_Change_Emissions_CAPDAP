@@ -73,7 +73,15 @@ survey<- read.csv(here("Data for the Code", "Corrected_Data_sets", "final_ccos_U
 ```
 
 
-Though more people may have been intereviewed in country or the other, the survey data is in percent, as in the percentage of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per couontrry:
+Though more people may have been interviewed in one country than the other, the survey data is in percent, as in the percentage of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per country per survey question.
+
+Lets check with the 'beilefs question' which is the first we will anaylzed.
+
+```{r}
+#Parcing out just the survey answers regarding climate change beliefs
+beliefs<- survey %>% filter(survey$question=="Ques__Climate_beliefs") 
+```
+
 ```{r}
 total<- beliefs %>% group_by(Country) %>% summarise(total=sum(Number))
 ```
@@ -81,26 +89,60 @@ total<- beliefs %>% group_by(Country) %>% summarise(total=sum(Number))
 This means we can fairly compare Danes and American's perceptions of climate change. 
 
 
+### Beliefs of Climate Change
+
 Lets first see what Danes and Americans believe caused climate. The options are the survey are: caused mostly by humans, caused by natural change in the environment, caused by both, and climate change is not happening.  
 
 ```{r}
-beliefs<- survey %>% filter(survey$question=="Ques__Climate_beliefs") 
-```
-
-
-```{r}
-ggplot(beliefs, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
+# Making the graph
+ggplot(beliefs, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + 
+  xlab("Response to Survey Question")+ ylab("Percent") + # renaming x and y axis labels
+  theme_bw() +
+  coord_flip() # switching x and y axis to read the suvey questions
 ```
 More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
 
-We have multiple categorical predictor variables with ratio data as the response variable, so we will use an ANOVA. 
+```{r}
+ggplot(beliefs, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+The pie chart clearly shows that most of the Danes surveyed believe climate change is human caused, whereas more Americans thought it was a mix of human and natural causes or that climate change is not happening.
 
-generalized linear model. Chapter 7 in my book.
+
+We have multiple categorical predictor variables with the response variable being ratio data that bounded between 0 and 100%, so we will run a generalized linear model.
+
+### Running the Statistical Test
+
+The family is not binoomial, poisson, or gamma, ugh what is it?
 
 ```{r}
-
+glm(Number~response, data=beliefs, family=) #Constructig the general linear model
+#The family (or ‘error’) part of a GLM is not too difficult to understand. This bit just determines what kind of distribution is used to describe the response variable. A general linear model always assumes normality— that’s pretty much its defining feature in fact—but with a generalized linear
 ```
 
+### Level of worriedness about Climate Changed
+In this survey question people were asked how worried they are about climate change. There are three options for 
+```{r}
+worry<- survey %>% filter(survey$question=="Ques__climate_worry") 
+```
+
+
+```{r}
+ggplot(worry, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
+```
+32% of Americans are very worried about climate change, wherease oonly 21% of Danes are. But 52% of Danes are somewhat worried at only 36% are. To better visualize this lets try another graph.   
+
+```{r}
+ggplot(worry, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+
+
+Lets do a statistical test to verify. 
 
 ## Summary Discussion
 
