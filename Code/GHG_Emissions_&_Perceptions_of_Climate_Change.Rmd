@@ -65,8 +65,8 @@ emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
 
 #year <- function(x) as.POSIXlt(x)$year + 1900
 # I do not know how the above code does this :(
-ggplot(emissions, aes(year, emissions)) + 
-  geom_path() + geom_point(aes(colour=country))+ theme_bw() 
+ggplot(emissions, aes(year, emissions, colour= country, group=country)) +  geom_line() +
+  geom_point(aes(colour=country))+ theme_bw() 
  
 ```
 Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. 
@@ -175,12 +175,19 @@ Gaussian family : for continuous decimal data with normal distribution, like wei
 
 
 ```{r}
-belief_glm<-glm(Number~response, data=beliefs, family= Gamma(link='inverse') ) #Constructing the general linear model
+beliefs<- beliefs %>% mutate(frequency=Number/100)
+belief_glm<-glm(frequency~response, data=beliefs, family= binomial) #Constructing the general linear model
 #The family (or ‘error’) part of a GLM is not too difficult to understand. This bit just determines what kind of distribution is used to describe the response variable. A general linear model always assumes normality— that’s pretty much its defining feature in fact—but with a generalized linear
 
 #changing the default link yoou doo family=poiossoono(link=log)) for log. Remember, this is the log link function for Poisson models. If you want to be explicit about the link function, or change the default, this
  
 ```
+
+```{r}
+ggplot(beliefs, aes(frequency, group=Country, fill=Country, position='dodge'))+ geom_histogram()+theme_bw()
+```
+
+
 Test autoplot
 
 ```{r}
@@ -202,7 +209,7 @@ worry<- survey %>% filter(survey$question=="Ques__climate_worry")
 
 
 ```{r}
-ggplot(worry, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
+ggplot(worry, aes(response,Number, fill=Country))+geom_bar(stat = 'identity') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
 ```
 32% of Americans are very worried about climate change, wherease oonly 21% of Danes are. But 52% of Danes are somewhat worried at only 36% are. To better visualize this lets try another graph.   
 
