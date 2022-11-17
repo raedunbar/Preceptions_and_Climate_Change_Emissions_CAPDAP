@@ -29,6 +29,7 @@ rm(list=ls())
 library(tidyverse)
 library(here)
 library(ggfortify)
+library(forecast)
 ```
 
 Pulling in the corrected Emissions data. For the raw data see the raw data folder on github. Please also see the metadata txt files per each data set in the metadata folder.
@@ -37,8 +38,25 @@ Lets first view the emissions of Denmark and the United States.
 
 Reading in the Data
 ```{r}
-emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_US_Denmark.csv"), stringsAsFactors = TRUE)
+emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_US_Denmark.csv"))
 ```
+
+Lets turn the date column into date data using the lubridate package.  
+To do that we need to put in the day and the month using string.
+
+```{r}
+emissions$year<-paste0("01-01-", emissions$year)
+```
+
+
+???This NA'd all my data and %y messed my dates up so I had to do the code below???
+```{r}
+emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
+#format tells R the dates are just a four digit year, a two digit year is %y, origin informs R where it starts.
+# must do the - in the %d- because the dates are entered with a -. 
+```
+
+#Now when running statistical tests R will know the data are dates.
 
 ### Creating the figure
 
@@ -54,9 +72,45 @@ ggplot(emissions, aes(year, emissions)) +
 Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. 
 
 ### Running the Test
-```{r}
 
+First determine the minimum date
+```{r}
+min_date=min(emissions$year)
+max_date=max(emissions$year)
 ```
+
+Turning our data into a time series 
+
+```{r}
+emissions_ts<-ts(emissions$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
+```
+
+```{r}
+head(emissions_ts)
+plot(emissions_ts, xlab="year", ylab="emissions")
+```
+Making a moving average:
+```{r}
+Ma_emissions<- forecast::ma(emissions_ts, order=3, centre = TRUE)
+```
+
+```{r}
+plot(emissions_ts)
+lines(Ma_emissions, col="maroon", lwd=3)
+```
+Not sure if I am supposed to do this next part...
+
+```{r}
+seasonal_add<-emissions_ts - Ma_emissions
+plot(seasonal_add)
+```
+ya.. this looks weird.
+
+```{r}
+fit_add<-decompose(emissions_ts, type='additive')
+plot(fit_add)
+```
+Ya, so I cannot decompose my data. She also did not teach us how to run the test, which is annoying. 
 
 ### Rate of Emissions
 
@@ -115,12 +169,30 @@ We have multiple categorical predictor variables with the response variable bein
 
 ### Running the Statistical Test
 
-The family is not binoomial, poisson, or gamma, ugh what is it?
+The family is not binomial, poisson, or gamma, ugh what is it? It accepted gaussain but autoplot looked wrong.
+
+Gaussian family : for continuous decimal data with normal distribution, like weight, length, et al. frequency. So given I have percentage data, which is similar, I believe I should use poisson. However, 
+
 
 ```{r}
-glm(Number~response, data=beliefs, family=) #Constructig the general linear model
+belief_glm<-glm(Number~response, data=beliefs, family= Gamma(link='inverse') ) #Constructing the general linear model
 #The family (or ‘error’) part of a GLM is not too difficult to understand. This bit just determines what kind of distribution is used to describe the response variable. A general linear model always assumes normality— that’s pretty much its defining feature in fact—but with a generalized linear
+
+#changing the default link yoou doo family=poiossoono(link=log)) for log. Remember, this is the log link function for Poisson models. If you want to be explicit about the link function, or change the default, this
+ 
 ```
+Test autoplot
+
+```{r}
+autoplot(belief_glm)
+```
+Something is still wrong
+
+```{r}
+anova(belief_glm)
+```
+???I believe I am not choosing the right family=.??? 
+???? Or I have really underdispersed data?
 
 ### Level of worriedness about Climate Changed
 In this survey question people were asked how worried they are about climate change. There are three options for 
@@ -140,9 +212,115 @@ ggplot(worry, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", w
   theme_void()+ # remove background, grid, numeric labels
 facet_wrap(~Country)
 ```
+We can see that most Danes are somewhat worried, with the smallest percentage being not worried at all. Most Americans are also somewhat worried, though the percentage is smaller compared too Denmark (51% to 35.6%). More Americans however are very worried, and more Americans are not at all worried than Danes. Interesting. A statistical test is needed to see if Americans are less worried than Danes.
+
+### Lets do a statistical test to verify. 
+Again we will do a general linear model.
+
+```{r}
+worry_glm<-glm(Number~response, data=worry, family= Gamma(link='inverse') ) #Constructing the 
+ 
+```
+Test autoplot
+
+```{r}
+autoplot(worry_glm)
+```
+again, very concerning
+
+```{r}
+anova(worry_glm)
+```
+## Is Climate Change a Big Threat 
+
+In this survey question people were asked whether or not climate change is a big threat within the next 20 years. The options were very serious threat, somewhat serious, not a threat at all, or I do not know.  
+
+parcing the data
+```{r}
+threat<- survey %>% filter(survey$question=="Ques__threat_20_years") 
+```
 
 
-Lets do a statistical test to verify. 
+```{r}
+ggplot(threat, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + xlab("Response to Survey Question")+ ylab("Percent") + theme_bw() + coord_flip()
+```
+More Americans than Danes think that climate change is a very serious threat, but Danes think it is a somewhat serious threat than Americans. More Americans also think that cliamte change is not a threat at all than Danes. Lets view a pie chart.
+
+```{r}
+ggplot(threat, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+We can see that most Danes, %53 think climate change is a somewhat serious threat, wherease most Americans, %40.6, think it is a very serioous threat. Only 17.5% of Danes think that it is not a threat at all, compared to the 22.3% of Americans that think that. Lets test with a statistical test.
+
+### Lets do a statistical test to verify. 
+Again we will do a general linear model.
+
+```{r}
+threat_glm<-glm(Number~response, data=threat, family= Gamma(link='inverse') ) #Constructing the 
+ 
+```
+Test autoplot
+
+```{r}
+autoplot(threat_glm)
+```
+again, very concerning
+
+```{r}
+anova(threat_glm)
+```
+## More or less Fossil Fuels
+
+Now that we know what Danes and Americans think about climate change and how worried they are, lets see how they are reacting. This next survey question asked people if their region should use more or less fossil fuels with the options being much more, somewhat more, same as today (same amount), somewhat less, or much less.
+
+Lets check with the 'beilefs question' which is the first we will anaylzed.
+
+```{r}
+#Parcing out just the survey answers regarding climate change beliefs
+fuels<- survey %>% filter(survey$question=="Ques__Fossil_moreorless") 
+```
+
+
+```{r}
+# Making the graph
+ggplot(fuels, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', position = 'dodge') + 
+  xlab("Response to Survey Question")+ ylab("Percent") + # renaming x and y axis labels
+  theme_bw() +
+  coord_flip() # switching x and y axis to read the suvey questions
+```
+More Americans think there should be much more or or somewhat more fossil fuels used than Danes. More Danes thinks threre should be somewhat less or much less fossil fuels used. This appears to clearly show that Danes think fossil fuel usage should be decreased, where at Americans think that less. Lets see in pie char form.
+
+```{r}
+ggplot(fuels, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+The pie chart clearly shows that most of the Danes surveyed, %53.6, believed much less fossil fuels should be used, with the second largest percentage of 25.7% believed somewhat less should be used. These percentages are larger than results in the United states, though the largest percentage of Americans also believed there should be much less fossil fuel usage at 40.5%, with the second most thinking somewhat less fossil fuel usage, 17.9%. More Americans believed there should be much more or somewhat more than Danes. Lets verify with a statistical test.
+
+we will run another generalized linear model.
+
+### Running the Statistical Test
+
+```{r}
+fuels_glm<-glm(Number~response, data=fuels, family= Gamma(link='inverse') ) #Constructing the 
+```
+Test autoplot
+
+```{r}
+autoplot(fuels_glm)
+```
+Something is still wrong
+
+```{r}
+anova(fuels_glm)
+```
+???I believe I am not choosing the right family=.??? 
+???? Or I have really underdispersed data?
+
+## Survey data Impacting Emissions 
 
 ## Summary Discussion
 
