@@ -13,7 +13,7 @@ This data analysis will consist of three sections: the greenhouse gas emissions 
 
 In the emissions section Denmark's the United State's per capita emissions and the rate of decrease will both be compared.We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]
 
-The second section will include an analysis of several questions regarding climate change for both the U.S. and Denmark. These will include what Americans and Danes believe caused climate change, how worried they are about it, how big of a threat they believe climate change is in the next 20 years, and if they believe fossil fuel usage should decrease, increase, or stay the same. We hypothesize Denmark will have a significantly higher percentage of people who believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] We further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not uniformly depicted in this manner in the U.S.^4 Lastly, we hypothesize that more Danes will answer that fossil fuel usage should be reduced than Americans, due to the aforementioned reasons.^(1,3,4) 
+The second section will include an analysis of several questions regarding climate change for both the U.S. and Denmark. These will include what Americans and Danes believe causeds climate change, how worried they are about it, and how big of a threat they believe climate change is in the next 20 years. We hypothesize Denmark will have a significantly higher percentage of people who are believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] We further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not in the U.S.^4
 
 In the third section we will overlay the survey data with the emissions data to determine the percentage of causation. We predict that people’s perceptions of climate change impacts about 30% of greenhouse gas emissions of a country, given there are several other significantly related variables, such as population, income, and political structure.^[Wang, Q., Feng, G., Wang, H., Chang. C., " The influence of political ideology on greenhouse gas emissions" Global Environmental Change 74, no.1 (May 2022):102496. DOOI: https://doi.org/10.1016/j.gloenvcha.2022.102496.]  
 
@@ -24,7 +24,7 @@ Statistical analysis will consist of the aforementioned three sections.
 ## Climate Change Emissions of Countries
 
 Preparing R
-```{r, message=FALSE}
+```{r}
 rm(list=ls())
 library(tidyverse)
 library(here)
@@ -41,32 +41,35 @@ Reading in the Data
 emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_US_Denmark.csv"))
 ```
 
-
 Lets turn the date column into date data using the lubridate package.  
-To do that we need to put in the day and the month using paste.
+To do that we need to put in the day and the month using string.
 
 ```{r}
 emissions$year<-paste0("01-01-", emissions$year)
 ```
 
-Now tell R the year column are dates so we can better perform statistical analysis. 
+
+???This NA'd all my data and %y messed my dates up so I had to do the code below???
 ```{r}
 emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
 #format tells R the dates are just a four digit year, a two digit year is %y, origin informs R where it starts.
 # must do the - in the %d- because the dates are entered with a -. 
 ```
 
-Now when running statistical tests R will know the data are dates.
+#Now when running statistical tests R will know the data are dates.
 
 ### Creating the figure
 
-Lets see the emissions of Denmark and the United States from 1990 to 2019.
+???HOW DO I GET RID OF THE LINE?
 ```{r}
+
+#year <- function(x) as.POSIXlt(x)$year + 1900
+# I do not know how the above code does this :(
 ggplot(emissions, aes(year, emissions, colour= country, group=country)) +  geom_line() +
-  geom_point(aes(colour=country))+ theme_bw() #colour colors by country, and group tells R to group the points by country so geom_line will draw lines connecting the data by country.
+  geom_point(aes(colour=country))+ theme_bw() 
  
 ```
-Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. Both countries have been decreasing their emissions since 1990, but  Denmark seems to have a  greater rate of decrease in emissions, especially since 2006, than the United States. Running a _______ statistical test will let us compare the rate of decrease in emissions of both these countries.
+Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. 
 
 ### Running the Test
 
@@ -82,45 +85,38 @@ Turning our data into a time series
 emissions_ts<-ts(emissions$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
 ```
 
-Lets do time series for the indiviual countries
 ```{r}
-emissions_Denmark<- emissions %>% filter(country=="Denmark")
-emissions_US<-emissions %>% filter(country=="United States")
-emissions_Denmark_ts<-ts(emissions_Denmark$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
-emissions_US_ts<-ts(emissions_US$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
+head(emissions_ts)
+plot(emissions_ts, xlab="year", ylab="emissions")
 ```
-
-Viewing the time series of each individual country to ensure its correct.
-```{r}
-both_ts<-cbind(emissions_Denmark_ts, emissions_US_ts)
-head(both_ts)
-plot(both_ts, xlab="year", ylab="emissions")
-```
-
-Here is our data smoothed over so we can see the trends without added noise. The bottom one I presume is denmark. We can see that it is decreasing more.
-
 Making a moving average:
 ```{r}
 Ma_emissions<- forecast::ma(emissions_ts, order=3, centre = TRUE)
-Ma_emissions_Denmark<- forecast:: ma(emissions_Denmark_ts, order=3, centre=TRUE)
-Ma_emissions_US<- forecast::ma(emissions_US_ts, order=3, centre=TRUE)
 ```
 
-Plotting both the moving average and the time series.
 ```{r}
 plot(emissions_ts)
 lines(Ma_emissions, col="maroon", lwd=3)
-
-plot(emissions_Denmark_ts)
-lines(Ma_emissions_Denmark, col="orange", lwd=3)
-
-plot(emissions_US_ts)
-lines(Ma_emissions_US, col="blue")
 ```
+Not sure if I am supposed to do this next part...
 
-The red line is the data but smoothed, so we can see the overall trend of the emissions data combined. the other two are them separated, notice how similar Denmark's is to the combined data. Interesting.
+```{r}
+seasonal_add<-emissions_ts - Ma_emissions
+plot(seasonal_add)
+```
+ya.. this looks weird.
 
-***PUT RUNNING THE TIME SERIES HERE***
+```{r}
+#fit_add<-decompose(emissions_ts, type='additive')
+#plot(fit_add)
+```
+Ya, so I cannot decompose my data. She also did not teach us how to run the test, which is annoying. 
+
+### Rate of Emissions
+
+To determine rate the emissions must be divided by the year. 
+
+???? HOW DO THAT WITH TIME SERIES???
 
 
 ## Perceptions of Climate Change
@@ -131,18 +127,17 @@ survey<- read.csv(here("Data for the Code", "Corrected_Data_sets", "final_ccos_U
 ```
 
 
-Though more people may have been interviewed in one country than the other, the survey data is in percent, as in the percentage out of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per country per survey question.
+Though more people may have been interviewed in one country than the other, the survey data is in percent, as in the percentage of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per country per survey question.
 
-Lets check with the 'beliefs question' which is the first question we will analyzed.
+Lets check with the 'beilefs question' which is the first we will anaylzed.
 
 ```{r}
-#Parsing out just the survey answers regarding climate change beliefs
+#Parcing out just the survey answers regarding climate change beliefs
 beliefs<- survey %>% filter(survey$question=="Ques__Climate_beliefs") 
 ```
 
 ```{r}
 total<- beliefs %>% group_by(Country) %>% summarise(total=sum(Number))
-total
 ```
 
 This means we can fairly compare Danes and American's perceptions of climate change. 
@@ -150,7 +145,7 @@ This means we can fairly compare Danes and American's perceptions of climate cha
 
 ### Beliefs of Climate Change
 
-Lets first see what Danes and Americans believe caused climate. The options to choose from were: caused mostly by humans, caused by natural change in the environment, caused by both, and climate change is not happening.  
+Lets first see what Danes and Americans believe caused climate. The options are the survey are: caused mostly by humans, caused by natural change in the environment, caused by both, and climate change is not happening.  
 
 ```{r}
 # Making the graph
@@ -159,32 +154,52 @@ ggplot(beliefs, aes(response,Number, fill=Country))+geom_bar(stat = 'identity', 
   theme_bw() +
   coord_flip() # switching x and y axis to read the suvey questions
 ```
-
-More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets look at a pie chart as well.
+More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
 
 ```{r}
-piecolor<- c("orange","maroon","darkgreen","lightblue", "gray70","purple")
-
-beliefs<- beliefs %>% arrange(desc(Number)) %>% mutate(Position=cumsum(Number/2)-0.5*Number)
-legend<- c("caused equally","caused mostly by humans","caused mostly by natural changes","climate change isin't happening","other","refused")
-ggplot(beliefs, aes(x="", Percent, y= Number, fill=response))+  
-  geom_bar(stat="identity", width=1, color="white")+
-  coord_polar("y", start=0) + 
-  facet_wrap(~Country)+
- #legend( 3, legend=legend)+
-  scale_fill_manual(values=piecolor )+
-   theme_void()+# remove background, grid, numeric labels
-  geom_label(aes (label = round(Number, digits = 1), x=1.7),color="white", size=4)  # add percentages
+ggplot(beliefs, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
 ```
 The pie chart clearly shows that most of the Danes surveyed believe climate change is human caused, whereas more Americans thought it was a mix of human and natural causes or that climate change is not happening.
 
 
+We have multiple categorical predictor variables with the response variable being ratio data that bounded between 0 and 100%, so we will run a generalized linear model.
 
-Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
+### Running the Statistical Test
 
-We have multiple categorical predictor variables with the response variable being ratio data that bounded between 0 and 100%, so we will run a _________
+The family is not binomial, poisson, or gamma, ugh what is it? It accepted gaussain but autoplot looked wrong.
 
-***INSERT ### Running the Statistical Test***
+Gaussian family : for continuous decimal data with normal distribution, like weight, length, et al. frequency. So given I have percentage data, which is similar, I believe I should use poisson. However, 
+
+
+```{r}
+beliefs<- beliefs %>% mutate(frequency=Number/100)
+belief_glm<-glm(frequency~response, data=beliefs, family= binomial) #Constructing the general linear model
+#The family (or ‘error’) part of a GLM is not too difficult to understand. This bit just determines what kind of distribution is used to describe the response variable. A general linear model always assumes normality— that’s pretty much its defining feature in fact—but with a generalized linear
+
+#changing the default link yoou doo family=poiossoono(link=log)) for log. Remember, this is the log link function for Poisson models. If you want to be explicit about the link function, or change the default, this
+ 
+```
+
+```{r}
+ggplot(beliefs, aes(frequency, group=Country, fill=Country, position='dodge'))+ geom_histogram()+theme_bw()
+```
+
+
+Test autoplot
+
+```{r}
+autoplot(belief_glm)
+```
+Something is still wrong
+
+```{r}
+anova(belief_glm)
+```
+???I believe I am not choosing the right family=.??? 
+???? Or I have really underdispersed data?
 
 ### Level of worriedness about Climate Changed
 In this survey question people were asked how worried they are about climate change. There are three options for 
@@ -209,8 +224,20 @@ We can see that most Danes are somewhat worried, with the smallest percentage be
 ### Lets do a statistical test to verify. 
 Again we will do a general linear model.
 
-***### INSERT STATISTICAL TEST***
+```{r}
+worry_glm<-glm(Number~response, data=worry, family= Gamma(link='inverse') ) #Constructing the 
+ 
+```
+Test autoplot
 
+```{r}
+autoplot(worry_glm)
+```
+again, very concerning
+
+```{r}
+anova(worry_glm)
+```
 ## Is Climate Change a Big Threat 
 
 In this survey question people were asked whether or not climate change is a big threat within the next 20 years. The options were very serious threat, somewhat serious, not a threat at all, or I do not know.  
@@ -228,17 +255,29 @@ More Americans than Danes think that climate change is a very serious threat, bu
 
 ```{r}
 ggplot(threat, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
-   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.5, nudge_y = 2 ) + # add percentages
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + # add percentages
   theme_void()+ # remove background, grid, numeric labels
 facet_wrap(~Country)
 ```
 We can see that most Danes, %53 think climate change is a somewhat serious threat, wherease most Americans, %40.6, think it is a very serioous threat. Only 17.5% of Danes think that it is not a threat at all, compared to the 22.3% of Americans that think that. Lets test with a statistical test.
 
 ### Lets do a statistical test to verify. 
+Again we will do a general linear model.
 
-***###INSERT STATISTICAL TEST ***
+```{r}
+threat_glm<-glm(Number~response, data=threat, family= Gamma(link='inverse') ) #Constructing the 
+ 
+```
+Test autoplot
 
+```{r}
+autoplot(threat_glm)
+```
+again, very concerning
 
+```{r}
+anova(threat_glm)
+```
 ## More or less Fossil Fuels
 
 Now that we know what Danes and Americans think about climate change and how worried they are, lets see how they are reacting. This next survey question asked people if their region should use more or less fossil fuels with the options being much more, somewhat more, same as today (same amount), somewhat less, or much less.
@@ -272,22 +311,41 @@ we will run another generalized linear model.
 
 ### Running the Statistical Test
 
-***### INSERT STATISTICAL TEST***
+```{r}
+fuels_glm<-glm(Number~response, data=fuels, family= Gamma(link='inverse') ) #Constructing the 
+```
+Test autoplot
 
+```{r}
+autoplot(fuels_glm)
+```
+Something is still wrong
 
+```{r}
+anova(fuels_glm)
+```
+???I believe I am not choosing the right family=.??? 
+???? Or I have really underdispersed data?
+
+### Viewing the Survey Data
+lets view all the survey data in the same graph with a likert graph. 
+I need my data in wide format based on response, so I need all four to have the same response. None of them have the same response, and even if I changed the responses they are not in the right order to do. It would be alot of work to do this, so I am going to keep the pie chart method.
+```{r}
+questions<- survey %>% filter(survey$question=="Ques__Climate_beliefs" | survey$question=="Ques__climate_worry" | survey$question=="Ques__threat_20_years" | survey$question=="Ques__Fossil_moreorless" )
+
+new_q<- c("very much","some", "nuetral", "other", "harms","refuse")
+questions_new<- questions %>% filter(survey$question=="Ques__Climate_beliefs") %>% mutate(response=
+
+#survey_wide <– quesitons, id_cols=
+```
+
+```{r}
+library(likert)
+plot(likert(questions), ordered = F, wrap= 60)
+```
 
 ## Survey data Impacting Emissions 
 
 ## Summary Discussion
 
-
-## Limitations
-The data used is from a survey conducted on Facebook, so all respondents are Facebook users. This adds a confounding variable, when utilizing this study. 
-
-## Challenges 
-
-Prior to this project how to conduct a time series analysis, work with survey data, or make pie charts was not discussed nor taught. External research and problem solving had to be conducted in order to achieve this data analysis. 
-
-When constructing graphs the pie charts proved to be particularly cumbersome as the percentages were not align on the pie chart in the correct spot, nor all be visible. Research into geom_label and geom_text yeilded a succesful method. 
-
-
+## Challenges and Limitations
