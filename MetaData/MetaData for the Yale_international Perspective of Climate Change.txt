@@ -4,7 +4,12 @@ Origins:
 
 This data was collected by the Gallup World Poll in 2007 to 2008 in 119 countries. It represents 90% of the world's adults in this survey. This data was accessed via a paper that used this data and provided open access to it. The paper was written by Yale professors and titled "Predictors of public climate change awareness and risk perception around the world." You can access it here: 
 
+
+What does it mean that it represents 90% of the world's adults? I find it hard to believe that 90% of adults around the world participated in the survey.
+
+
 https://www.nature.com/articles/nclimate2728#Sec5
+Can you also please provide a proper citation? If someone were reading this who didn't have access to nature, they would not be able to see it. So it is always a good idea to include the proper citation as well.
 
 About: 
 
@@ -26,6 +31,8 @@ CO2emi	Carbon dioxide emissions
 For the Awareness variables: we only use the follow two
 Aware	Percent of population who are aware of what climate change is (weighted)
 Unaware	Percent of population who are unaware of what climate change is (weighted)
+
+What is the weighting mechanism?
 
 For the risk perception variables: The person's opinion of how dangerous it is, we only used the following for this project:
  

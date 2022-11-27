@@ -79,13 +79,19 @@ In a perfect world I would rename all of the dates to 1990 and so forth, rather 
 
 When looking at the full data set, we can also see that there are two rows at the bottom that are unnecessary.They appear to be metadata. We need to remove these from the dataframe. 
 
-## Emitting the Last Two Rows
+## Omitting the Last Two Rows
 ```{r}
 emissions <- emissions %>% slice(-194,-195)
 # Gets rid of the last two rows.
 ```
 
 Lastly, we need to make all the date columns into numeric rather than factor data, so when we put it in long format R knows they are numbers. 
+
+If you dropped `stringsAsFactor = T` when you read in the data you can save yourself a big headache here. There are two issues:
+
+1. R won't allow column names that are numbers so it adds the X. This does not change the data type to factor- but it makes it difficult to use the numeric information in the dates.
+
+2. Because the folks who created the data used FALSE in some of the year columns, instead of NA (which R recognizes), R interprets those columns as character data (or, in this case, factor, because you imported with stringsAsFactors = T)
 
 ### Changing Factors to Numeric
 
@@ -116,6 +122,8 @@ emissionsfix[indx] <- lapply(emissionsfix[indx], function(x) as.numeric(as.chara
 
 emissions<- cbind(emissions1, emissionsfix)
 ```
+Well done! I'm not sure this was the easiest route, but you figured it out!
+
 NA's were introduced by coercion into the countries that have FALSE listed as their emissions, because their emissions could not be recorded.
 
 Now we need to chagne the data from wide to long format.
@@ -147,10 +155,23 @@ emissions_US_Denmark$year<- as.numeric(emissions_US_Denmark$year)
 emissions_US_Denmark[1:30,2]<-1990:2019
 emissions_US_Denmark[31:60,2]<- 1990:2019
 ```
+The trouble with your way is that it cannot be automated, and is thus more prone to user error. It would also be increasingly more difficult with larger and larger data sets.
+
+You could try this (my demo is with emissions_long)
+
+```{r}
+erika_demo<- emissions_long
+erika_demo$year<-str_replace(erika_demo$year, "X", "")
+erika_demo$year<-as.numeric(erika_demo$year)
+```
+
+
+
  str_replace
  str_detect
  str_split 
  Feel free showing me the other way
+ See above
  
 NA's were introduced by coercion if there was something other than a number entered in. 
 
@@ -170,10 +191,16 @@ ggplot(emissions_US_Denmark, aes(x=year, y=emissions, colour=country)) + geom_po
 ```
 Eventually I would like to graph this with a line of best fit. How would you do that? Is it geom_smooth(method=lm), because it is not working. 
 
+It works when I do it - not sure the issue. And I'm not sure you want method = "lm" because these are not linear plots.
+
 
 It looks like Denmark has significantly less emissions than the U.S. There are some odd spikes in Denmark's emissions, but nothing that seems to be an outlier. The data trends slowly downward which makes sense, given both countries are trying to reduce their emissions.
 
+I wonder if it would be interesting to find the population size of USA and Denmark in all of those years and then calculate emissions per capita - Denmark will always have lower emissions than the US because it is a smaller country.
 
+Another option, which I discussed with professor Lock in Stats, is to look at the RATE of emissions change from year to year since the rate of change is independent of population size.
+
+Think about how you would calculate the rate of change.
 Now time for a Boxplot
 
 Lets see with a boxplot how the data looks
@@ -322,9 +349,12 @@ ggplot(ccos_US_Denmark_happening, aes(x=response, y=Number, fill=Country)) + geo
 ```
 Both the U.S. and Denmark had a huge amount of people answer yes, so this is not an outlier, and thus our data is fine. Lets move on to our final data sheet, the Yale survey. 
 
+
 ```{r}
 write.csv(ccos_US_Denmark, here("Data for the Code", "Corrected_Data_sets", "final_ccos_US_Denmark.csv"), row.names = FALSE)
 ```
+
+How many of the Facebook questions are you going to examine?
 
 ## Yale Survey Data
 Bring in the data
@@ -346,6 +376,8 @@ glimpse(yale)
 ```
 We have factor data for everything including ones that should be numerical data. We will need to change that back. 
 
+You have character data you mean, not factor.
+
 What we need to fix:
 1. delete the first row
 2. fix column names
@@ -365,6 +397,14 @@ ccs_Yale_Corrected<- yale %>% slice(-1)
 #remove row one of yale and store it as a new data frame
 names(ccs_Yale_Corrected)<-c(as.vector(as.factor((yale[1,]))))
 #make the column names of the new data frame a vector of the character data in row one of yale
+```
+You made this more complicated than it needed to be, but it worked. Here's another, easier way.
+
+```{r}
+erika_demo2 <- yale
+goodNames<-slice(erika_demo2, 1) %>% unlist(use.names = FALSE)
+names(erika_demo2)<-goodNames
+erika_demo2<-erika_demo2[2:nrow(erika_demo2),]
 ```
 
 
