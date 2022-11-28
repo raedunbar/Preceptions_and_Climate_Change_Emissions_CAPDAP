@@ -2,24 +2,27 @@
 title: "Emissions and Perceptions of Climate Change"
 author: "Rae Dunbar"
 date: "11/13/2022"
-output:
-  pdf_document: default
-  html_document: default
+output: html_document
 ---
 
 ## Introduction
 
 In the great pursuit of mitigating climate change, countries have differed greatly in their strategies and successes. Denmark has one of the most ambitious mitigation plans in the world pledging to cut 70% of its emissions by 2030.^[Etsy, D. C., "Why Denmark Wants to Be a ‘Frontrunner’ in the Fight Against Climate Change." Yale School of the Environment.2021.] As other countries trail behind, illuminating how Denmark is successfully reducing its emissions is pertinent for other countries. Although reducing emissions involves extensive effort from multiple sectors, the citizens also greatly determine the success of mitigation plans.^[Weber, E. U., "What Shapes perceptions of climate change?," WIRES Climate Change.2010] What determines people's perceptions and willingness to decrease their own emissions, is therefore important for countries to understand. To delve into this question data from two global surveys on climate perceptions will be analyzed along with green house gas emissions and the reduction rate of countries. Special emphasis will be on comparing Denmark due to the countrie's success, and the United States, due to it's world’s leading production of oil and natural gas.^[Gross, S., "The United States can take climate change seriously while leading the world in oil and gas production." Policy 2022 Brookings. 2022.] 
 
+
+I might use active voice "I will analyze data" vs. "data will be analyzed" 
+
 This data analysis will consist of three sections: the greenhouse gas emissions of the U.S. and Denmark, the climate change perceptions of their citizens, and the correlation between emissions and climate change perceptions, using data from many countries.
 
-In the emissions section Denmark's the United State's per capita emissions and the rate of decrease will both be compared.We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]
+In the emissions section Denmark's and the United State's per capita emissions and the rate of decrease will both be compared.We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]
+
+Go ahead and use "I" rather than "We" because this is  your work.
 
 The second section will include an analysis of several questions regarding climate change for both the U.S. and Denmark. These will include what Americans and Danes believe caused climate change, how worried they are about it, how big of a threat they believe climate change is in the next 20 years, and if they believe fossil fuel usage should decrease, increase, or stay the same. We hypothesize Denmark will have a significantly higher percentage of people who believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] We further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not uniformly depicted in this manner in the U.S.^4^ Lastly, we hypothesize that more Danes will answer that fossil fuel usage should be reduced than Americans, due to the aforementioned reasons.^(1,3,4)^ 
 
 In the third section we will overlay the survey data with the emissions data to determine the percentage of causation. We predict that people’s perceptions of climate change impacts about 30% of greenhouse gas emissions of a country, given there are several other significantly related variables, such as population, income, and political structure.^[Wang, Q., Feng, G., Wang, H., Chang. C., " The influence of political ideology on greenhouse gas emissions" Global Environmental Change 74, no.1 (May 2022):102496. DOOI: https://doi.org/10.1016/j.gloenvcha.2022.102496.]  
 
-
+Good overall, but also include links to each dataset.
 
 ## Preparing R
 ```{r, message=FALSE}
@@ -55,6 +58,9 @@ emissions$year<-paste0("01-01-", emissions$year)
 ```
 
 Now tell R the year column are dates so we can better perform statistical analysis. 
+
+Below works fine, but just so you are aware, it is base R and not lubridate.
+
 ```{r}
 emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
 #format tells R the dates are just a four digit year, a two digit year is %y, origin informs R where it starts.
@@ -72,7 +78,16 @@ ggplot(emissions, aes(year, emissions, colour= country, group=country)) +  geom_
  
 ```
 
-Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. Both countries have been decreasing their emissions since 1990, but  Denmark seems to have a  greater rate of decrease in emissions, especially since 2006, than the United States. Running a _______ statistical test will let us compare the rate of decrease in emissions of both these countries.
+Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. Both countries have been decreasing their emissions since 1990, but  Denmark seems to have a  greater rate of decrease in emissions, especially since 2006, than the United States. 
+
+Running a _______ statistical test will let us compare the rate of decrease in emissions of both these countries.
+
+I talked to Robin Lock about this. We're going to do a paired t-test where each year has a pair of values (US, Denmark) and the values will be the RATE of change for that year, rather than the GHG emissions themselves.
+
+Here's some info: https://www.statology.org/paired-samples-t-test-r/
+
+
+We can also compare the moving averages and compare the rates, even forecasting to future dates (like what will emissions be in 2050 or 2100 based on the current time series). This comparision will be visual for the moving averages and just thoughtful for comparing the forecast numbers and will not involve a specific statistical test.
 
 #### Running the Test
 
@@ -81,6 +96,7 @@ First determine the minimum date
 min_date=min(emissions$year)
 max_date=max(emissions$year)
 ```
+I'm not sure you'll need the above code chunk
 
 Turning our data into a time series 
 
@@ -101,6 +117,22 @@ Viewing the time series of each individual country to ensure its correct.
 both_ts<-cbind(emissions_Denmark_ts, emissions_US_ts)
 head(both_ts) # ensuring it worked
 plot(both_ts, xlab="year", ylab="emissions")
+```
+
+If you wish to plot time series using ggplot, you can use autoplot(timeseriesname) and save it as an object. The result will be a ggplot object that you can manipulate. Example:
+
+```{r}
+demo_plot<-autoplot(emissions_US_ts)
+demo_plot+
+  labs(x = "Year", y = "Greenhouse gas emissions")+
+  theme_bw()
+```
+
+And if you want to plot two time series on the same graph using ggplot, you use cbind to bind your two time series objects into the same new data frame and then autoplot that data frame:
+
+```{r}
+both<-cbind(emissions_Denmark_ts, emissions_US_ts)
+autoplot(both)
 ```
 
 Here is our data smoothed over so we can see the trends without added noise. The bottom one I presume is denmark. We can see that it is decreasing more.
@@ -125,11 +157,17 @@ lines(Ma_emissions_Denmark, col="orange", lwd=3)
 plot(emissions_US_ts)
 lines(Ma_emissions_US, col="blue")
 ```
+Plotting both with autoplot/ggplot:
+
+```{r}
+USA<-cbind(emissions_US_ts, Ma_emissions_US)
+autoplot(USA)
+```
 
 The red line is the data but smoothed, so we can see the overall trend of the emissions data combined. the other two are them separated, notice how similar Denmark's is to the combined data. Interesting.
 
 ***PUT RUNNING THE TIME SERIES HERE***
-
+This will really be the paired t-test
 
 ### Perceptions of Climate Change
 
@@ -155,6 +193,8 @@ total
 
 This means we can fairly compare Danes and American's perceptions of climate change. 
 
+I talked with Prof Shuckers about these data. He thinks we should do the back-calculating to change percents to numbers and then do a chi-square to compare answers between Danes and Americans.  You will need the data on number of respondants for each question to do that.
+
 
 #### Beliefs of Climate Change
 
@@ -175,6 +215,8 @@ Figure 1. What Danes and Americans believe caused climate change. Responses are 
 
 More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets look at a pie chart as well.
 
+If you want to test these questions with a statistical test, we will need a combination of chi-square tests. Let's talk.
+
 ```{r}
 piecolor<- c("orange","maroon","darkgreen","lightblue", "gray70","purple")
 
@@ -193,6 +235,11 @@ ggplot(beliefs, aes(x="", Percent, y= Number, fill=response))+
 
 Figure 2. Pie chart of what Danes and Americans believe caused climate change. Responses are in percent of the total surveyed. 
 
+Here's an article that talks more about data viz for likert type data. It has good arguments for why to avoid pie charts, and has a building series of charts ending with the author's (and my) favorite. Just worth considering:
+
+https://nightingaledvs.com/visualizing-likert-scale-data-same-data-displayed-seven-different-ways/
+
+
 The pie chart shows that most of the Danes surveyed believe climate change is human caused, whereas more Americans thought it was a mix of human and natural causes or that climate change is not happening.
 
 
@@ -200,6 +247,8 @@ The pie chart shows that most of the Danes surveyed believe climate change is hu
 Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
 
 We have multiple categorical predictor variables with the response variable being ratio data that bounded between 0 and 100%, so we will run a _________
+
+Chi-square test after converting percents to numbers by multiplying the percents times the total number of repsondants to that question per country.
 
 ***INSERT ### Running the Statistical Test***
 
@@ -231,7 +280,7 @@ Figure 4. Pie chart of the Level of Concern over climate change of both Danes an
 We can see that most Danes are somewhat worried, with the smallest percentage being not worried at all. Most Americans are also somewhat worried, though the percentage is smaller compared too Denmark (51% to 35.6%). More Americans however are very worried, and more Americans are not at all worried than Danes. Interesting. A statistical test is needed to see if Americans are less worried than Danes.
 
 #### Lets do a statistical test to verify. 
-Again we will do a general linear model.
+Chi-square test. And think about a new data vis.
 
 ***### INSERT STATISTICAL TEST***
 
@@ -239,7 +288,7 @@ Again we will do a general linear model.
 
 In this survey question people were asked whether or not climate change is a big threat within the next 20 years. The options were very serious threat, somewhat serious, not a threat at all, or I do not know.  
 
-parcing the data
+parsing the data
 ```{r}
 threat<- survey %>% filter(survey$question=="Ques__threat_20_years") 
 ```
@@ -311,8 +360,6 @@ we will run another generalized linear model.
 
 ***### INSERT STATISTICAL TEST***
 
-
-
 ## Survey data Impacting Emissions 
 
 ## Summary Discussion
@@ -324,6 +371,10 @@ The data used is from a survey conducted on Facebook, so all respondents are Fac
 ## Challenges 
 
 Prior to this project how to conduct a time series analysis, work with survey data, or make pie charts was not discussed nor taught. External research and problem solving had to be conducted in order to achieve this data analysis. 
+
+What about challenges in terms of figuring out how to reshape/reformat your data? Anything worth mentioning there?
+
+This is very thorough and a solid first draft.
 
 When constructing graphs the pie charts proved to be particularly cumbersome as the percentages were not align on the pie chart in the correct spot, nor all be visible. Research into geom_label and geom_text yeilded a the most succesful outcome. However, the pie charts still need work and any feedback regarding how to would be greatly appreciated. 
 
