@@ -46,11 +46,11 @@ Lets first view the emissions of Denmark and the United States.
 
 Reading in the Data
 ```{r}
-emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_US_Denmark.csv"))
+emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", "emissions_corrected_US_Denmark.csv"), stringsAsFactors = TRUE)
 ```
 
 
-Lets turn the date column into date data using the lubridate package.  
+Lets turn the date column into date data using base R.  
 To do that we need to put in the day and the month using paste.
 
 ```{r}
@@ -59,7 +59,6 @@ emissions$year<-paste0("01-01-", emissions$year)
 
 Now tell R the year column are dates so we can better perform statistical analysis. 
 
-Below works fine, but just so you are aware, it is base R and not lubridate.
 
 ```{r}
 emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
@@ -85,6 +84,39 @@ Running a _______ statistical test will let us compare the rate of decrease in e
 I talked to Robin Lock about this. We're going to do a paired t-test where each year has a pair of values (US, Denmark) and the values will be the RATE of change for that year, rather than the GHG emissions themselves.
 
 Here's some info: https://www.statology.org/paired-samples-t-test-r/
+
+```{r}
+emissions$rate<-NA
+denmark_rate<- emissions %>% filter(country=="Denmark")
+den_rate<- diff(denmark_rate$emissions)
+denmark_rate$rate[2:30]<-den_rate
+denmark_rate<-denmark_rate[2:30,]
+
+emissions$rate<-NA
+usa_rate<- emissions %>% filter(country=="United States")
+us_rate<- diff(usa_rate$emissions)
+usa_rate$rate[2:30]<-us_rate
+usa_rate<-usa_rate[2:30,]
+
+emissions_rate<- rbind(usa_rate, denmark_rate)
+emissions_rate_2010<- emissions_rate %>% filter(emissions_rate$year>="2005-01-01")
+
+```
+
+```{r}
+ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +  geom_line() +
+  geom_point(aes(colour=country))+ theme_bw() #colour colors by country, and group tells R to group the points by country so geom_line will draw lines connecting the data by country.
+```
+
+
+```{r}
+t.test(rate~country, data=emissions_rate, paired=TRUE)
+#complete.cases means just use the ones without NAs
+```
+
+```{r}
+t.test(rate~country, data=emissions_rate_2010, paired=TRUE)
+```
 
 
 We can also compare the moving averages and compare the rates, even forecasting to future dates (like what will emissions be in 2050 or 2100 based on the current time series). This comparision will be visual for the moving averages and just thoughtful for comparing the forecast numbers and will not involve a specific statistical test.
@@ -193,7 +225,49 @@ total
 
 This means we can fairly compare Danes and American's perceptions of climate change. 
 
-I talked with Prof Shuckers about these data. He thinks we should do the back-calculating to change percents to numbers and then do a chi-square to compare answers between Danes and Americans.  You will need the data on number of respondants for each question to do that.
+I talked with Prof Shuckers about these data. He thinks we should do the back-calculating to change percents to numbers and then do a chi-square to compare answers between Danes and Americans. You will need the data on number of respondants for each question to do that.
+
+???______
+1101 people answered in Denmark
+3096 answered in United States
+
+```{r}
+beliefs <- beliefs %>% group_by(Country)
+
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096)
+beliefs<- cbind(beliefs, dumb_way)
+beliefs<-beliefs %>% rename(num_people=...5)
+
+beliefs<- beliefs %>% group_by(Country, response) %>%  mutate(total=(Number/100)*num_people)
+
+beliefs$total<- round(beliefs$total, digits=0)
+
+test<- beliefs %>% select(response, Country, total)
+```
+
+???? The chi-squared below did not work!!!
+Chi-squared
+```{r}
+beliefs_matrix<-xtabs(total~Country + response, data=test)
+beliefs_matrix
+beliefs_df<- as.data.frame(beliefs_matrix)
+beliefs_df<- beliefs_df %>% filter(Freq>0)
+beliefs_matrix_real<- xtabs(Freq~Country+response, data=beliefs_df)
+beliefs_matrix_real
+chisq.test(beliefs_matrix)
+
+
+```
+???___
+
+```{r}
+vector_Den<- c(585,57,419,19,16,1)
+vector_US<-c(1295,473,1073,86,161,7)
+matrix<- as.matrix(rbind(vector_Den, vector_US))
+chisq.test(matrix)
+
+```
+
 
 
 #### Beliefs of Climate Change
