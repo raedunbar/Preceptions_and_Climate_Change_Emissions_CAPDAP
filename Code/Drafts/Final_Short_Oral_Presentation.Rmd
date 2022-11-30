@@ -3,11 +3,11 @@ title: "Emissions and Perceptions of Climate Change"
 author: "Rae Dunbar"
 date: "11/13/2022"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
-## Introduction
+# Introduction
 
 > ***Comparative study of U.S. and Denmark***
 
@@ -46,7 +46,7 @@ output:
 *I hypothesize Denmark will have a significantly higher percentage of people who believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] I further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not uniformly depicted in this manner in the U.S.^4^ Lastly, we hypothesize that more Danes will answer that fossil fuel usage should be reduced than Americans, due to the aforementioned reasons.^(1,3,4)^* 
 
 
-## Preparing R
+# Preparing R
 ```{r, message=FALSE}
 rm(list=ls())
 library(tidyverse)
@@ -56,11 +56,11 @@ library(forecast)
 library(gridExtra)
 ```
 
-## Statistcal Analysis and Results
+# Statistcal Analysis and Results
 
 Statistical analysis will consist of the aforementioned three sections.
 
-### Climate Change Emissions of Countries
+## Climate Change Emissions of Countries
 
 Pulling in the corrected Emissions data. For the raw data see the raw data folder on github. Please also see the metadata txt files per each data set in the metadata folder.
 
@@ -91,7 +91,7 @@ emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
 
 Now when running statistical tests R will know the data are dates.
 
-#### Creating the figure
+### Creating the figure
 
 Lets see the emissions of Denmark and the United States from 1990 to 2019.
 ```{r}
@@ -110,7 +110,7 @@ The p-value is very small, much less than 0.05, so we can reject our Null hypoth
 
 
 
-#### What about the Rate of Decrease?
+### What about the Rate of Decrease?
 
 Calculating rate
 ```{r}
@@ -140,7 +140,7 @@ ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +
 
 ```
 
-#### Running the Test
+### Running the Test
 Lets run a paired t test
 
 ```{r, results='hold', echo=FALSE}
@@ -164,7 +164,7 @@ t.test(rate~country, data=emissions_rate_2010, paired=TRUE)
 P value of 0.083, so we must again accept our null hypothesis.
 
 
-### Perceptions of Climate Change
+## Perceptions of Climate Change
 
 Reading in the data:
 ```{r}
@@ -173,7 +173,7 @@ survey<- read.csv(here("Data for the Code", "Corrected_Data_sets",
 ```
 
 
-### More or less Fossil Fuels
+## More or less Fossil Fuels
 
 This survey question asked people if their region should use more or less fossil fuels with the options being much more, somewhat more, same as today (same amount), somewhat less, or much less.
 
@@ -212,7 +212,7 @@ The pie chart shows that most of the Danes surveyed, %53.6, believed much less f
 
 we will run another generalized linear model.
 
-#### Running the Statistical Test
+### Running the Statistical Test
 
 ```{r, echo=FALSE}
 dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096)
@@ -238,7 +238,7 @@ Once again, there is a significant difference in how Danes and Americans answere
 
 
 
-## Summary & Discussion
+# Summary & Discussion
 
 Key Findings 
 
@@ -253,10 +253,10 @@ Key Findings
 - Pretty close call regarding which country were more worried or viewed it as a bigger threat
 
 
-## Limitations
+# Limitations
 The data used is from a survey conducted on Facebook, so all respondents are Facebook users. This adds a confounding variable, when utilizing this study. 
 
-## Challenges 
+# Challenges 
 
 biggest challenge as you have probably guess, is were not gleaning much from the survey data. 
 
