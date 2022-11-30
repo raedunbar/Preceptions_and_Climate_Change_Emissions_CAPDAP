@@ -1,0 +1,486 @@
+---
+title: "Emissions and Perceptions of Climate Change"
+author: "Rae Dunbar"
+date: "11/13/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Introduction
+
+> ***Comparative study of U.S. and Denmark***
+
+>Denmark has one of the most ambitious mitigation plans in the world pledging to cut 70% of its emissions by 2030.^[Etsy, D. C., "Why Denmark Wants to Be a ‘Frontrunner’ in the Fight Against Climate Change." Yale School of the Environment.2021.] 
+
+
+### What Data To Use?
+
+>CAIT Data by (World Resource Institute) WRI from 1990-2019 including all emissions and per capita
+> Survey Data 2022 from Yale on Facebook, was in wide format but had more questions
+
+
+### Questions Asked:
+
+### Emissions
+
+#### 1. Does Denmark have less emissions per capita than the U.S.
+#### 2. which has a faster rate of decrease in per capita GHG emissions 
+
+### Survey Data
+
+#### 1. believe caused climate change 
+ 
+#### 2. how worried they are 
+ 
+#### 3. how big of a threat they believe it is in the next 20 years, and 
+ 
+### 4. If they believe fossil fuel usage should decrease, increase, or stay the same.
+
+
+
+
+*We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]*
+
+*I hypothesize Denmark will have a significantly higher percentage of people who believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] I further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not uniformly depicted in this manner in the U.S.^4^ Lastly, we hypothesize that more Danes will answer that fossil fuel usage should be reduced than Americans, due to the aforementioned reasons.^(1,3,4)^* 
+
+
+## Preparing R
+```{r, message=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(here)
+library(ggfortify)
+library(forecast)
+library(gridExtra)
+```
+
+## Statistcal Analysis and Results
+
+Statistical analysis will consist of the aforementioned three sections.
+
+### Climate Change Emissions of Countries
+
+Pulling in the corrected Emissions data. For the raw data see the raw data folder on github. Please also see the metadata txt files per each data set in the metadata folder.
+
+Lets first view the emissions of Denmark and the United States.
+
+Reading in the Data
+```{r}
+emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", 
+  "emissions_corrected_US_Denmark.csv"), stringsAsFactors = TRUE)
+```
+
+
+Lets turn the date column into date data using base R.  
+To do that we need to put in the day and the month using paste.
+
+```{r}
+emissions$year<-paste0("01-01-", emissions$year)
+```
+
+Now tell R the year column are dates so we can better perform statistical analysis. 
+
+```{r, echo=FALSE}
+emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
+#format tells R the dates are just a four digit year, a two digit year is %y, 
+#origin informs R where it starts. must do the - in the %d- because the dates 
+#are entered with a -. 
+```
+
+Now when running statistical tests R will know the data are dates.
+
+#### Creating the figure
+
+Lets see the emissions of Denmark and the United States from 1990 to 2019.
+```{r}
+ggplot(emissions, aes(year, emissions, colour= country, group=country)) +  
+  geom_line() +
+  geom_point(aes(colour=country))+ theme_bw() 
+#colour colors by country, and group tells R to group the points by country
+#so geom_line will draw lines connecting the data by country.
+ 
+```
+Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. Both countries have been decreasing their emissions since 1990, but  Denmark seems to have a  greater rate of decrease in emissions, especially since 2006, than the United States. A test almost seems silly, but lets run one to make sure.
+```{r}
+t.test(emissions~country, data=emissions, paired=TRUE)
+```
+The p-value is very small, much less than 0.05, so we can reject our Null hypothesis. Denmark does have signifacantly less GHG emissions per capita
+
+
+
+#### What about the Rate of Decrease?
+
+Calculating rate
+```{r}
+emissions$rate<-NA
+denmark_rate<- emissions %>% filter(country=="Denmark")
+den_rate<- diff(denmark_rate$emissions) # subtracts n by n-1 to get rate.
+denmark_rate$rate[2:30]<-den_rate
+denmark_rate<-denmark_rate[2:30,]
+
+emissions$rate<-NA
+usa_rate<- emissions %>% filter(country=="United States")
+us_rate<- diff(usa_rate$emissions)
+usa_rate$rate[2:30]<-us_rate
+usa_rate<-usa_rate[2:30,]
+
+emissions_rate<- rbind(usa_rate, denmark_rate)
+
+```
+
+Lets look at this smoothed over. 
+
+```{r}
+ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +  
+  geom_smooth() + theme_bw() #colour colors by country, and group tells R to 
+#group the points by country so geom_line will draw lines connecting the 
+#data by country.
+
+```
+
+#### Running the Test
+Lets run a paired t test
+
+```{r, results='hold', echo=FALSE}
+t.test(rate~country, data=emissions_rate, paired=TRUE) 
+#complete.cases means just use the ones without NAs
+```
+A p value of 0.7668, so we have to accept our null hypothesis.
+
+
+Lets determine if there is a difference in rate from when both country's emissions started significantly decreasing and the rate is consistenly negative 2010.
+```{r}
+emissions_rate_2010<- emissions_rate %>% 
+  filter(emissions_rate$year>="2010-01-01")
+
+```
+
+```{r, results='hold', echo=FALSE}
+t.test(rate~country, data=emissions_rate_2010, paired=TRUE)
+#complete.cases means just use the ones without NAs
+```
+P value of 0.083, so we must again accept our null hypothesis.
+
+
+### Perceptions of Climate Change
+
+Reading in the data:
+```{r}
+survey<- read.csv(here("Data for the Code", "Corrected_Data_sets", 
+                       "final_ccos_US_Denmark.csv"), stringsAsFactors=TRUE )
+```
+
+
+Though more people may have been interviewed in one country than the other, the survey data is in percent, as in the percentage out of the whole who chose that option. We can double check to ensure the recorded numbers equals 100 per country per survey question.
+
+Lets check with the 'beliefs question' which is the first question we will analyzed.
+
+```{r}
+#Parsing out just the survey answers regarding climate change beliefs
+beliefs<- survey %>% filter(survey$question=="Ques__Climate_beliefs") 
+```
+
+
+#### Beliefs of Climate Change
+
+Lets first see what Danes and Americans believe caused climate. The options to choose from were: caused mostly by humans, caused by natural change in the environment, caused by both, and climate change is not happening.  
+
+```{r, warning=FALSE, echo=FALSE}
+# Making the graph
+ggplot(beliefs, aes(response,Number, fill=Country))+
+  geom_bar(stat = 'identity', position = 'dodge') + 
+ labs(title="Cause of Climate Change", x="Response to Survey Question",
+      y="Percent") + # titling and renaming x and y axis labels
+  coord_flip()+
+  theme_bw() 
+  
+```
+
+Figure 1. What Danes and Americans believe caused climate change. Responses are in percent of the total surveyed. 
+
+More Americans believe that climate change is not happening or that it is caused by natural changes than Danes. More Danes believe it is caused by human activities. However, more Danes than Americans think it is cause equally by both. Lets look at a pie chart as well.
+
+
+```{r, warning=FALSE, results='hold'}
+piecolor<- c("orange","maroon","darkgreen","lightblue", "gray70","purple")
+
+beliefs<- beliefs %>% arrange(desc(Number)) %>% 
+  mutate(Position=cumsum(Number/2)-0.5*Number) # moving the percentage labels around
+legend<- c("caused equally","caused mostly by humans",
+           "caused mostly by natural changes","climate change isin't happening",
+           "other","refused") #see below
+ggplot(beliefs, aes(x="", Percent, y= Number, fill=response))+  
+  geom_bar(stat="identity", width=1, color="white")+
+  coord_polar("y", start=0) + 
+  facet_wrap(~Country)+
+ #legend( 3, legend=legend)+, attempt to make the legends smaller, 
+  #so the pie charts could be bigger and I could move the percentages.
+  scale_fill_manual(values=piecolor )+ # manually fill the color
+   theme_void()+# remove background, grid, numeric labels
+  geom_label(aes (label = round(Number, digits = 1), x=1.7),color="white", size=4) 
+# add percentages
+
+```
+
+Figure 2. Pie chart of what Danes and Americans believe caused climate change. Responses are in percent of the total surveyed. 
+
+
+
+The pie chart shows that most of the Danes surveyed believe climate change is human caused, whereas more Americans thought it was a mix of human and natural causes or that climate change is not happening.
+
+
+Lets run a statistical test to see if Danes believe climate change is human caused significantly more than Americans.
+
+We have multiple categorical predictor variables with the response variable being ratio data that bounded between 0 and 100%, so we will run a ***chi-squared test*** after converting percents to numbers by multiplying the percents times the total number of repsondants to that question per country.
+
+1101 people answered in Denmark
+3096 answered in United States
+
+
+### Running the Statistical Test
+```{r}
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096) 
+#1101 Danes answered the survey, 3096 Americans did.
+beliefs$num_people<- dumb_way #put that vector into here
+
+beliefs<- beliefs %>% group_by(Country, response) %>% 
+  mutate(total=(Number/100)*num_people) #calculating rate where Number=percentage
+
+beliefs$total<- round(beliefs$total, digits=0) #round to whole number
+
+beliefs_numPeople<- beliefs %>% select(response, Country, total)
+```
+
+Creating a matrix by hand
+```{r}
+vector_Den<- c(585,57,419,19,16,1)
+vector_US<-c(1295,473,1073,86,161,7)
+matrix<- as.matrix(rbind(vector_Den, vector_US))
+chisq.test(matrix)
+```
+There is a significant difference in how Danes and Americans answered this survey question.
+
+### Level of worriedness about Climate Changed
+
+In this survey question people were asked how worried they are about climate change. There are three options for 
+```{r, echo=FALSE}
+worry<- survey %>% filter(survey$question=="Ques__climate_worry") 
+```
+
+
+```{r, echo=FALSE}
+ggplot(worry, aes(response,Number, fill=Country))+
+  geom_bar(stat = 'identity', position = 'dodge') + 
+  labs(title="Level of Concern Over Climate Change", 
+       x="Response to Survey Question", y="Percent") + theme_bw() + coord_flip()
+```
+
+Figure 3. Bar graph of the Level of Concern over climate change of both Danes and Americans. Response is in percentage of the total surveyed.
+
+32% of Americans are very worried about climate change, wherease oonly 21% of Danes are. But 52% of Danes are somewhat worried at only 36% are. To better visualize this lets try another graph.   
+
+```{r, echo=FALSE}
+ggplot(worry, aes(x="", y= Number, fill=response))+  geom_bar(stat="identity",
+    width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) + 
+  # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+
+Figure 4. Pie chart of the Level of Concern over climate change of both Danes and Americans. Response is in percentage of the total surveyed.
+
+We can see that most Danes are somewhat worried, with the smallest percentage being not worried at all. Most Americans are also somewhat worried, though the percentage is smaller compared too Denmark (51% to 35.6%). More Americans however are very worried, and more Americans are not at all worried than Danes. Interesting. A statistical test is needed to see if Americans are less worried than Danes.
+
+#### Lets do a statistical test to verify. 
+
+```{r, echo=FALSE}
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096) 
+#1101 Danes answered the survey, 3096 Americans did.
+worry$num_people<- dumb_way #put that vector into here
+
+worry<- worry %>% group_by(Country, response) %>%  
+  mutate(total=(Number/100)*num_people) #calculating rate where Number=percentage
+
+worry$total<- round(worry$total, digits=0) #round to whole number
+
+worry_numPeople<- worry %>% select(response, Country, total)
+```
+
+
+
+Creating a matrix by hand
+```{r, echo=FALSE}
+w_Den<- c(228,561,261,49,1)
+w_US<-c(991,1102,502,498,3)
+w_matrix<- as.matrix(rbind(w_Den, w_US))
+chisq.test(w_matrix)
+```
+There is a significant difference in how Danes and Americans answered this survey question.
+
+### Is Climate Change a Big Threat 
+
+In this survey question people were asked whether or not climate change is a big threat within the next 20 years. The options were very serious threat, somewhat serious, not a threat at all, or I do not know.  
+
+
+```{r, echo=FALSE}
+threat<- survey %>% filter(survey$question=="Ques__threat_20_years") 
+```
+
+
+```{r, echo=FALSE}
+ggplot(threat, aes(response,Number, fill=Country))+
+  geom_bar(stat = 'identity', position = 'dodge') + 
+  labs(title="Perceieved Threat of Climate Change", 
+       x="Response to Survey Question", y="Percent") + theme_bw() + coord_flip()
+```
+
+Figure 5. Bar graph of the perceieved threat of climate change of Danes and Americans. Response is in percentage of the total surveyed.
+
+More Americans than Danes think that climate change is a very serious threat, but Danes think it is a somewhat serious threat than Americans. More Americans also think that climate change is not a threat at all than Danes. Lets view a pie chart.
+
+```{r, echo=FALSE}
+ggplot(threat, aes(x="", y= Number, fill=response))+  
+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.5, nudge_y=2) + 
+  # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+
+Figure 6. Pie char of the perceieved threat of climate change of Danes and Americans. Response is in percentage of the total surveyed.
+
+We can see that most Danes, %53 think climate change is a somewhat serious threat, wherease most Americans, %40.6, think it is a very serioous threat. Only 17.5% of Danes think that it is not a threat at all, compared to the 22.3% of Americans that think that. Lets test with a statistical test.
+
+#### Lets do a statistical test to verify. 
+
+```{r, echo=FALSE}
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096) 
+#1101 Danes answered the survey, 3096 Americans did.
+threat$num_people<- dumb_way #put that vector into here
+
+threat<- worry %>% group_by(Country, response) %>%  mutate(total=(Number/100)*num_people)
+#calculating rate where Number=percentage
+
+threat$total<- round(threat$total, digits=0) #round to whole number
+
+threat_numPeople<- threat %>% select(response, Country, total)
+```
+
+Creating a matrix by hand
+```{r, echo=FALSE}
+t_Den<- c(228,561,261,48,1)
+t_US<-c(991,1102,502,498,3)
+t_matrix<- as.matrix(rbind(t_Den, t_US))
+chisq.test(t_matrix)
+```
+Again, there is a significant difference in how Danes and Americans answered this survey question.
+
+
+
+### More or less Fossil Fuels
+
+Now that we know what Danes and Americans think about climate change and how worried they are, lets see how they are reacting. This next survey question asked people if their region should use more or less fossil fuels with the options being much more, somewhat more, same as today (same amount), somewhat less, or much less.
+
+
+
+Lets check with the 'beilefs question' which is the first we will anaylzed.
+
+```{r, echo=FALSE}
+#Parcing out just the survey answers regarding climate change beliefs
+fuels<- survey %>% filter(survey$question=="Ques__Fossil_moreorless") 
+```
+
+
+```{r, echo=FALSE, warning=FALSE}
+# Making the graph
+ggplot(fuels, aes(response,Number, fill=Country))+geom_bar(stat = 'identity',
+  position = 'dodge') + 
+  labs(title="Fossil Fuel Use", x="Response to Survey Question", y="Percent") + 
+  # renaming x and y axis labels
+  theme_bw() +
+  coord_flip() # switching x and y axis to read the suvey questions
+```
+
+Figure 7. The fossil fuel usage Danes and Americans think their area should use. Response is in percentage of the total surveyed.
+
+More Americans think there should be much more or or somewhat more fossil fuels used than Danes. More Danes thinks threre should be somewhat less or much less fossil fuels used. This appears to clearly show that Danes think fossil fuel usage should be decreased, where at Americans think that less. Lets see in pie char form.
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(fuels, aes(x="", y= Number, fill=response))+  
+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) +
+  # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+
+Figure 8. The fossil fuel usage Danes and Americans think their area should use. Response is in percentage of the total surveyed.
+
+The pie chart shows that most of the Danes surveyed, %53.6, believed much less fossil fuels should be used, with the second largest percentage of 25.7% believed somewhat less should be used. These percentages are larger than results in the United states, though the largest percentage of Americans also believed there should be much less fossil fuel usage at 40.5%, with the second most thinking somewhat less fossil fuel usage, 17.9%. More Americans believed there should be much more or somewhat more than Danes. Lets verify with a statistical test.
+
+we will run another generalized linear model.
+
+#### Running the Statistical Test
+
+```{r, echo=FALSE}
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096)
+#1101 Danes answered the survey, 3096 Americans did.
+fuels$num_people<- dumb_way #put that vector into here
+
+fuels<- fuels %>% group_by(Country, response) %>% 
+  mutate(total=(Number/100)*num_people) #calculating rate where Number=percentage
+
+fuels$total<- round(fuels$total, digits=0) #round to whole number
+
+fuels_numPeople<- fuels %>% select(response, Country, total)
+```
+
+Creating a matrix by hand
+```{r, echo=FALSE}
+t_Den<- c(24,50, 87, 293,590,54,13)
+t_US<-c(306,296,445,555,1253,201,39)
+t_matrix<- as.matrix(rbind(t_Den, t_US))
+chisq.test(t_matrix)
+```
+Once again, there is a significant difference in how Danes and Americans answered this survey question.
+
+
+
+## Summary & Discussion
+
+Key Findings 
+
+### Emissions
+- Denmark significantly less per capita emissions than U.S.
+- Rates of the two countries were not significant
+
+### Survey Questions
+- Americans and Danes answered significantly different from eachother in every survey question
+- Appears  more Danes think climate change is human caused than Americans
+- Appears more Danes want decrease in fossil fuels more than Americans
+- Pretty close call regarding which country were more worried or viewed it as a bigger threat
+
+
+## Limitations
+The data used is from a survey conducted on Facebook, so all respondents are Facebook users. This adds a confounding variable, when utilizing this study. 
+
+## Challenges 
+
+biggest challenge as you have probably guess, is were not gleaning much from the survey data. 
+
+want to try Diverging stacked bar chart instead
+
+
+
+I am going to try to force it into Likert data, graph diverging bars and do chi squared tests with the negative response grouped in one and the positive grouped in another.
+
+Prior to this project how to conduct a time series analysis, work with survey data, or make pie charts was not discussed nor taught. External research and problem solving had to be conducted in order to achieve this data analysis. 
+
+
+When constructing graphs the pie charts proved to be particularly cumbersome as the percentages were not align on the pie chart in the correct spot, nor all be visible. Research into geom_label and geom_text yeilded a the most succesful outcome. However, the pie charts still need work and any feedback regarding how to would be greatly appreciated. 
+
+Research into how to make a likert graph was also conducted. The responses to the four survey questions would have to be the same however, in order to produce a likert graph. I could change the answers to create a made up response scale of pro or anti climate action. Would that be professional or no? Let me know your thoughts so I can include it in the final. 
+
+

@@ -1,0 +1,276 @@
+---
+title: "Emissions and Perceptions of Climate Change"
+author: "Rae Dunbar"
+date: "11/13/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Introduction
+
+> ***Comparative study of U.S. and Denmark***
+
+>Denmark has one of the most ambitious mitigation plans in the world pledging to cut 70% of its emissions by 2030.^[Etsy, D. C., "Why Denmark Wants to Be a ‘Frontrunner’ in the Fight Against Climate Change." Yale School of the Environment.2021.] 
+
+
+### What Data To Use?
+
+>CAIT Data by (World Resource Institute) WRI from 1990-2019 including all emissions and per capita
+
+>Survey Data 2022 from Yale on Facebook, was in wide format but had more questions
+
+
+### Questions Asked:
+
+### Emissions
+
+#### 1. Does Denmark have less emissions per capita than the U.S.
+#### 2. which has a faster rate of decrease in per capita GHG emissions 
+
+### Survey Data
+
+#### 1. believe caused climate change 
+ 
+#### 2. how worried they are 
+ 
+#### 3. how big of a threat they believe it is in the next 20 years, and 
+ 
+### 4. If they believe fossil fuel usage should decrease, increase, or stay the same.
+
+
+
+
+*We hypothesize that Denmark will have less emissions and a faster emission reduction rate than the United States, because the U. S. had the highest cumulative greenhouse gas emissions from 850-2021 whereas Denmark has one of the most ambitious emission reduction plans in the world.^[Evans, S., "Analysis: Which countries are historically responsible for climate change?." Carbon Brief, 2021.]*
+
+*I hypothesize Denmark will have a significantly higher percentage of people who believe climate change is human caused than the U.S, because Denmark hosted COP15, which sparked national social media attention on climate change, exposing many Danes to the concept.^[Gunster, Shane. “Covering Copenhagen: Climate Change in BS Media.” Canadian Journal of Communication 36, no.3 (Nov 2011): 477-502. DOI: 10.22230/cjc.2011v36n3a2367] I further hypothesize that more Danes will be very worried about climate change and see it as an extreme threat than U. S. citizens, because climate change is uniformly depicted in Danish media as a problem, but it is not uniformly depicted in this manner in the U.S.^4^ Lastly, we hypothesize that more Danes will answer that fossil fuel usage should be reduced than Americans, due to the aforementioned reasons.^(1,3,4)^* 
+
+
+## Preparing R
+```{r, message=FALSE}
+rm(list=ls())
+library(tidyverse)
+library(here)
+library(ggfortify)
+library(forecast)
+library(gridExtra)
+```
+
+## Statistcal Analysis and Results
+
+Statistical analysis will consist of the aforementioned three sections.
+
+### Climate Change Emissions of Countries
+
+Pulling in the corrected Emissions data. For the raw data see the raw data folder on github. Please also see the metadata txt files per each data set in the metadata folder.
+
+Lets first view the emissions of Denmark and the United States.
+
+Reading in the Data
+```{r}
+emissions<-read.csv(here("Data for the Code", "Corrected_Data_sets", 
+  "emissions_corrected_US_Denmark.csv"), stringsAsFactors = TRUE)
+```
+
+
+Lets turn the date column into date data using base R.  
+To do that we need to put in the day and the month using paste.
+
+```{r, echo=FALSE}
+emissions$year<-paste0("01-01-", emissions$year)
+```
+
+Now tell R the year column are dates so we can better perform statistical analysis. 
+
+```{r, echo=FALSE}
+emissions$year<-as.Date(emissions$year, format="%d-%m-%Y")
+#format tells R the dates are just a four digit year, a two digit year is %y, 
+#origin informs R where it starts. must do the - in the %d- because the dates 
+#are entered with a -. 
+```
+
+Now when running statistical tests R will know the data are dates.
+
+#### Creating the figure
+
+Lets see the emissions of Denmark and the United States from 1990 to 2019.
+```{r}
+ggplot(emissions, aes(year, emissions, colour= country, group=country)) +  
+  geom_line() +
+  geom_point(aes(colour=country))+ theme_bw() 
+#colour colors by country, and group tells R to group the points by country
+#so geom_line will draw lines connecting the data by country.
+ 
+```
+Already it is apparent that Denmark produces less GHG emissions per capita each year than the United States. Both countries have been decreasing their emissions since 1990, but  Denmark seems to have a  greater rate of decrease in emissions, especially since 2006, than the United States. A test almost seems silly, but lets run one to make sure.
+```{r}
+t.test(emissions~country, data=emissions, paired=TRUE)
+```
+The p-value is very small, much less than 0.05, so we can reject our Null hypothesis. Denmark does have signifacantly less GHG emissions per capita
+
+
+
+#### What about the Rate of Decrease?
+
+Calculating rate
+```{r}
+emissions$rate<-NA
+denmark_rate<- emissions %>% filter(country=="Denmark")
+den_rate<- diff(denmark_rate$emissions) # subtracts n by n-1 to get rate.
+denmark_rate$rate[2:30]<-den_rate
+denmark_rate<-denmark_rate[2:30,]
+
+emissions$rate<-NA
+usa_rate<- emissions %>% filter(country=="United States")
+us_rate<- diff(usa_rate$emissions)
+usa_rate$rate[2:30]<-us_rate
+usa_rate<-usa_rate[2:30,]
+
+emissions_rate<- rbind(usa_rate, denmark_rate)
+
+```
+
+Lets look at this smoothed over. 
+
+```{r}
+ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +  
+  geom_smooth() + theme_bw() #colour colors by country, and group tells R to 
+#group the points by country so geom_line will draw lines connecting the 
+#data by country.
+
+```
+
+#### Running the Test
+Lets run a paired t test
+
+```{r, results='hold', echo=FALSE}
+t.test(rate~country, data=emissions_rate, paired=TRUE) 
+#complete.cases means just use the ones without NAs
+```
+A p value of 0.7668, so we have to accept our null hypothesis.
+
+
+Lets determine if there is a difference in rate from when both country's emissions started significantly decreasing and the rate is consistently negative 2010.
+```{r, echo=FALSE}
+emissions_rate_2010<- emissions_rate %>% 
+  filter(emissions_rate$year>="2010-01-01")
+
+```
+
+```{r, results='hold', echo=FALSE}
+t.test(rate~country, data=emissions_rate_2010, paired=TRUE)
+#complete.cases means just use the ones without NAs
+```
+P value of 0.083, so we must again accept our null hypothesis.
+
+
+### Perceptions of Climate Change
+
+Reading in the data:
+```{r}
+survey<- read.csv(here("Data for the Code", "Corrected_Data_sets", 
+                       "final_ccos_US_Denmark.csv"), stringsAsFactors=TRUE )
+```
+
+
+### More or less Fossil Fuels
+
+This survey question asked people if their region should use more or less fossil fuels with the options being much more, somewhat more, same as today (same amount), somewhat less, or much less.
+
+```{r,echo=FALSE}
+#Parcing out just the survey answers regarding climate change beliefs
+fuels<- survey %>% filter(survey$question=="Ques__Fossil_moreorless") 
+```
+
+
+```{r, warning=FALSE, echo=FALSE}
+# Making the graph
+ggplot(fuels, aes(response,Number, fill=Country))+geom_bar(stat = 'identity',
+  position = 'dodge') + 
+  labs(title="Fossil Fuel Use", x="Response to Survey Question", y="Percent") + 
+  # renaming x and y axis labels
+  theme_bw() +
+  coord_flip() # switching x and y axis to read the suvey questions
+```
+
+Figure 3. The fossil fuel usage Danes and Americans think their area should use. Response is in percentage of the total surveyed.
+
+More Americans think there should be much more or or somewhat more fossil fuels used than Danes. More Danes thinks threre should be somewhat less or much less fossil fuels used. This appears to clearly show that Danes think fossil fuel usage should be decreased, where at Americans think that less. Lets see in pie char form.
+
+```{r,warning=FALSE}
+ggplot(fuels, aes(x="", y= Number, fill=response))+  
+  geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
+   geom_label(aes(label = round(Number, digits = 1)), nudge_x = 0.4) +
+  # add percentages
+  theme_void()+ # remove background, grid, numeric labels
+facet_wrap(~Country)
+```
+
+Figure 8. The fossil fuel usage Danes and Americans think their area should use. Response is in percentage of the total surveyed.
+
+The pie chart shows that most of the Danes surveyed, %53.6, believed much less fossil fuels should be used, with the second largest percentage of 25.7% believed somewhat less should be used. These percentages are larger than results in the United states, though the largest percentage of Americans also believed there should be much less fossil fuel usage at 40.5%, with the second most thinking somewhat less fossil fuel usage, 17.9%. More Americans believed there should be much more or somewhat more than Danes. Lets verify with a statistical test.
+
+we will run another generalized linear model.
+
+#### Running the Statistical Test
+
+```{r, echo=FALSE}
+dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096)
+#1101 Danes answered the survey, 3096 Americans did.
+fuels$num_people<- dumb_way #put that vector into here
+
+fuels<- fuels %>% group_by(Country, response) %>% 
+  mutate(total=(Number/100)*num_people) #calculating rate where Number=percentage
+
+fuels$total<- round(fuels$total, digits=0) #round to whole number
+
+fuels_numPeople<- fuels %>% select(response, Country, total)
+```
+
+Creating a matrix by hand
+```{r, echo=FALSE}
+t_Den<- c(24,50, 87, 293,590,54,13)
+t_US<-c(306,296,445,555,1253,201,39)
+t_matrix<- as.matrix(rbind(t_Den, t_US))
+chisq.test(t_matrix)
+```
+Once again, there is a significant difference in how Danes and Americans answered this survey question.
+
+
+
+## Summary & Discussion
+
+Key Findings 
+
+### Emissions
+- Denmark significantly less per capita emissions than U.S.
+- Rates of the two countries were not significant
+
+### Survey Questions
+- Americans and Danes answered significantly different from eachother in every survey question
+- Appears  more Danes think climate change is human caused than Americans
+- Appears more Danes want decrease in fossil fuels more than Americans
+- Pretty close call regarding which country were more worried or viewed it as a bigger threat
+
+
+## Limitations
+The data used is from a survey conducted on Facebook, so all respondents are Facebook users. This adds a confounding variable, when utilizing this study. 
+
+## Challenges 
+
+biggest challenge as you have probably guess, is were not gleaning much from the survey data. 
+
+want to try ***Diverging stacked bar chart instead***
+
+
+
+I am going to try to force it into Likert data, graph diverging bars and do chi squared tests with the negative response grouped in one and the positive grouped in another.
+
+Prior to this project how to conduct a time series analysis, work with survey data, or make pie charts was not discussed nor taught. External research and problem solving had to be conducted in order to achieve this data analysis. 
+
+
+When constructing graphs the pie charts proved to be particularly cumbersome as the percentages were not align on the pie chart in the correct spot, nor all be visible. Research into geom_label and geom_text yeilded a the most succesful outcome. However, the pie charts still need work and any feedback regarding how to would be greatly appreciated. 
+
+Research into how to make a likert graph was also conducted. The responses to the four survey questions would have to be the same however, in order to produce a likert graph. I could change the answers to create a made up response scale of pro or anti climate action. Would that be professional or no? Let me know your thoughts so I can include it in the final. 
+
+
