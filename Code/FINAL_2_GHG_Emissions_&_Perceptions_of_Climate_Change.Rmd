@@ -107,44 +107,99 @@ emissions_rate_2010<- emissions_rate %>% filter(emissions_rate$year>="2005-01-01
 ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +  geom_line() +
   geom_point(aes(colour=country))+ theme_bw() #colour colors by country, and group tells R to group the points by country so geom_line will draw lines connecting the data by country.
 ```
-There is alot of noise, and no discernable trends, so lets look at it smoothed over: 
-
-
-```{r}
-ggplot(emissions_rate, aes(year, rate, colour= country, group=country)) +  
-  geom_smooth() + theme_bw() #colour colors by country, and group tells R to 
-#group the points by country so geom_line will draw lines connecting the 
-#data by country.
-
-```
-Denmark's rate is more variable over time, but it stays below 0, after 1995, wherease the US is not consistently below zero until 2000. It also goes above zero at 1990. Therefore, Denmark started decreasing its emissions five years prior to the U.S. and the U.S.'s emissions might be increasing again in 2019. Given Denmark has a lower rate from 2010-2019, it may have a significantly lower rate than the U.S. Lets run a statistical test to verify. 
 
 
 ```{r}
 t.test(rate~country, data=emissions_rate, paired=TRUE)
 #complete.cases means just use the ones without NAs
 ```
-Looking at the entire range from 1990-2019, there is no significant difference in rate between Denmark and the U.S. Lets look at 2010-2019 given the differences in the funcitons listed above.
 
-```{r, echo=FALSE}
-emissions_rate_2010<- emissions_rate %>% 
-  filter(emissions_rate$year>="2010-01-01")
-
-```
-
-```{r, results='hold', echo=FALSE}
+```{r}
 t.test(rate~country, data=emissions_rate_2010, paired=TRUE)
-#complete.cases means just use the ones without NAs
 ```
 
-The p value is smaller at 0.083, however it is still not signifciant. So, we must accept the Null hypothesis. There is no significant difference in rate between Denmark and the United States.
 
+We can also compare the moving averages and compare the rates, even forecasting to future dates (like what will emissions be in 2050 or 2100 based on the current time series). This comparision will be visual for the moving averages and just thoughtful for comparing the forecast numbers and will not involve a specific statistical test.
 
-#### Conclusion for Section One
+#### Running the Test
 
-The United States emits significantly more greenhouse gases per capita than Denmark, but there was not significant difference in how fast both countries decreased their emissions. 
+First determine the minimum date
+```{r}
+min_date=min(emissions$year)
+max_date=max(emissions$year)
+```
+I'm not sure you'll need the above code chunk
 
-Now lets look at some examples that may explain why Denmark emits less greenhouse gases per capita.
+Turning our data into a time series 
+
+```{r}
+emissions_ts<-ts(emissions$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
+```
+
+Lets do time series for the indiviual countries
+```{r}
+emissions_Denmark<- emissions %>% filter(country=="Denmark")
+emissions_US<-emissions %>% filter(country=="United States")
+emissions_Denmark_ts<-ts(emissions_Denmark$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
+emissions_US_ts<-ts(emissions_US$emissions, start=c(1990,01), end=c(2019,01), frequency=1)
+```
+
+Viewing the time series of each individual country to ensure its correct.
+```{r, results='hide'}
+both_ts<-cbind(emissions_Denmark_ts, emissions_US_ts)
+head(both_ts) # ensuring it worked
+plot(both_ts, xlab="year", ylab="emissions")
+```
+
+If you wish to plot time series using ggplot, you can use autoplot(timeseriesname) and save it as an object. The result will be a ggplot object that you can manipulate. Example:
+
+```{r}
+demo_plot<-autoplot(emissions_US_ts)
+demo_plot+
+  labs(x = "Year", y = "Greenhouse gas emissions")+
+  theme_bw()
+```
+
+And if you want to plot two time series on the same graph using ggplot, you use cbind to bind your two time series objects into the same new data frame and then autoplot that data frame:
+
+```{r}
+both<-cbind(emissions_Denmark_ts, emissions_US_ts)
+autoplot(both)
+```
+
+Here is our data smoothed over so we can see the trends without added noise. The bottom one I presume is denmark. We can see that it is decreasing more.
+
+Making a moving average:
+```{r}
+Ma_emissions<- forecast::ma(emissions_ts, order=3, centre = TRUE)
+Ma_emissions_Denmark<- forecast:: ma(emissions_Denmark_ts, order=3, centre=TRUE)
+Ma_emissions_US<- forecast::ma(emissions_US_ts, order=3, centre=TRUE)
+
+```
+
+Plotting both the moving average and the time series.
+
+```{r, collapse=TRUE}
+plot(emissions_ts)
+lines(Ma_emissions, col="maroon", lwd=3)
+
+plot(emissions_Denmark_ts)
+lines(Ma_emissions_Denmark, col="orange", lwd=3)
+
+plot(emissions_US_ts)
+lines(Ma_emissions_US, col="blue")
+```
+Plotting both with autoplot/ggplot:
+
+```{r}
+USA<-cbind(emissions_US_ts, Ma_emissions_US)
+autoplot(USA)
+```
+
+The red line is the data but smoothed, so we can see the overall trend of the emissions data combined. the other two are them separated, notice how similar Denmark's is to the combined data. Interesting.
+
+***PUT RUNNING THE TIME SERIES HERE***
+This will really be the paired t-test
 
 ### Perceptions of Climate Change
 
@@ -373,69 +428,13 @@ Figure 8. The fossil fuel usage Danes and Americans think their area should use.
 
 The pie chart shows that most of the Danes surveyed, %53.6, believed much less fossil fuels should be used, with the second largest percentage of 25.7% believed somewhat less should be used. These percentages are larger than results in the United states, though the largest percentage of Americans also believed there should be much less fossil fuel usage at 40.5%, with the second most thinking somewhat less fossil fuel usage, 17.9%. More Americans believed there should be much more or somewhat more than Danes. Lets verify with a statistical test.
 
-
-Making a Diverging Bar Graph
-```{r}
-fuels_diverging <- fuels %>% mutate(percent=if_else(response %in% c("Much less", "Somewhat less"), Number, -Number)) 
-#everything in there 
-```
-
-
-```{r}
-fuels_diverging<- fuels_diverging %>% mutate(percent=paste0(round(percent, digits=1), "%"))
-ggplot(fuels_diverging, aes(x=Country, y=Number, fill=response)) + 
-  geom_col()+ #also makes a bar graph
-  geom_text(aes(label=percent), position=position_stack(vjust = 0.5), color="white", fontface="bold")+ #stack stacks them, fontface bolds  the numbers in the bargraphs 
-  coord_flip()+
-  scale_x_discrete()+
-  scale_fill_viridis_d()+
-  labs(title="How much Fossil Fuels Should We Use", x=NULL, fill=NULL)+
- theme_minimal()+
-  theme(axis.text.x=element_blank(), axis.title.x=element_blank(),
-panel.grid=element_blank(),
-legend.position="top")
-```
-```{r, echo=FALSE}
-dumb_way<- c(1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096,1101,3096)
-#1101 Danes answered the survey, 3096 Americans did.
-fuels$num_people<- dumb_way #put that vector into here
-
-fuels<- fuels %>% group_by(Country, response) %>% 
-  mutate(total=(Number/100)*num_people) #calculating rate where Number=percentage
-
-fuels$total<- round(fuels$total, digits=0) #round to whole number
-
-fuels_numPeople<- fuels %>% select(response, Country, total)
-```
-
-
-```{r}
-
-fuels_numPeople<-fuels_numPeople %>% filter(response != "Don’t know") #excluding don't know
-
-fuels_numPeople$grouped_answer<- NA
-more<- which( fuels_numPeople$response== "Much less" |fuels_numPeople$response== "Somewhat less" )
-less<- which( fuels_numPeople$response== "Much more" |fuels_numPeople$response== "Somewhat more" | fuels_numPeople$response== "Refused" |fuels_numPeople$response== "Same amount as today")
-
-  fuels_numPeople$grouped_answer[more]<- "more"
-  fuels_numPeople$grouped_answer[less]<- "less"
-
-
-fuels_numPeople<- fuels_numPeople %>% group_by(Country, grouped_answer) %>% summarise(grouped_number=sum(total))
-
-```
+we will run another generalized linear model.
 
 #### Running the Statistical Test
 
-```{r}
-fuels.mat<-xtabs(grouped_number~Country, data=fuels_numPeople)
-fuels.mat
-chisq.test(fuels.mat)
-```
-The p value is 2.2e^-16, so we can reject the Null hypothesis. significantly more Americans think we should keep releasing the same amount of fossil fuels or more fossil fuels than Danes.  
+***### INSERT STATISTICAL TEST***
 
-
-
+## Survey data Impacting Emissions 
 
 ## Summary Discussion
 

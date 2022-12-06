@@ -210,11 +210,10 @@ ggplot(fuels, aes(x=Country, y=Number, fill=response)) +
   scale_x_discrete()+
   scale_fill_viridis_d()+
   labs(title="How much Fossil Fuels Should We Use", x=NULL, fill=NULL)
-  
-  
-  
+
   
 ```
+
 ```{r}
 fuels_diverging <- fuels %>% mutate(percent=if_else(response %in% c("Much less", "Somewhat less"), Number, -Number)) 
 #everything in there 
@@ -275,27 +274,6 @@ t_matrix<- as.matrix(rbind(t_Den, t_US))
 chisq.test(t_matrix)
 ```
 Once again, there is a significant difference in how Danes and Americans answered this survey question.
-
-```{r}
-ugh<- survey %>% filter()
-```
-
-```{r}
-fuels_numPeople<-fuels_numPeople %>% filter(response != "Don't know") #excluding don't know
-
-fuels_numPeople$grouped_answer<- NA
-more<- which( fuels_numPeople$response== "Much less" |fuels_numPeople$response== "Somewhat less" )
-less<- which( fuels_numPeople$response== "Much more" |fuels_numPeople$response== "Somewhat more" | fuels_numPeople$response== "Refused" |fuels_numPeople$response== "Same amount as today")
-
-  fuels_numPeople$grouped_answer[more]<- "more"
-  fuels_numPeople$grouped_answer[less]<- "less"
-
-
-fuels_numPeople<- fuels_numPeople %>% group_by(Country, grouped_answer) %>% summarise(grouped_number=sum(total))
-
-fuels_numPeople<- fuels_numPeople %>% filter(grouped_answer != is.na)
-```
-
 
 # Summary & Discussion
 
