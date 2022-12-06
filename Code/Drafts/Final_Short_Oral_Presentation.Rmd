@@ -3,8 +3,8 @@ title: "Emissions and Perceptions of Climate Change"
 author: "Rae Dunbar"
 date: "11/13/2022"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Introduction
@@ -12,14 +12,6 @@ output:
 > ***Comparative study of U.S. and Denmark***
 
 >Denmark has one of the most ambitious mitigation plans in the world pledging to cut 70% of its emissions by 2030.^[Etsy, D. C., "Why Denmark Wants to Be a ‘Frontrunner’ in the Fight Against Climate Change." Yale School of the Environment.2021.] 
-
-
-### What Data To Use?
-
->CAIT Data by (World Resource Institute) WRI from 1990-2019 including all emissions and per capita
-
->Survey Data 2022 from Yale on Facebook, was in wide format but had more questions
-
 
 ### Questions Asked:
 
@@ -37,6 +29,17 @@ output:
 #### 3. how big of a threat they believe it is in the next 20 years, and 
  
 ### 4. If they believe fossil fuel usage should decrease, increase, or stay the same.
+
+
+
+
+### What Data To Use?
+
+>CAIT Data by (World Resource Institute) WRI from 1990-2019 including all emissions and per capita
+
+>Survey Data 2022 from Yale on Facebook, was in wide format but had more questions
+
+
 
 
 
@@ -197,6 +200,43 @@ Figure 3. The fossil fuel usage Danes and Americans think their area should use.
 
 More Americans think there should be much more or or somewhat more fossil fuels used than Danes. More Danes thinks threre should be somewhat less or much less fossil fuels used. This appears to clearly show that Danes think fossil fuel usage should be decreased, where at Americans think that less. Lets see in pie char form.
 
+```{r}
+library(scales)
+fuels<- fuels %>% mutate(percent=paste0(round(Number, digits=1), "%"))
+ggplot(fuels, aes(x=Country, y=Number, fill=response)) + 
+  geom_col()+ #also makes a bar graph
+  geom_text(aes(label=percent), position=position_stack(vjust = 0.5), color="white", fontface="bold")+ #stack stacks them, fontface bolds  the numbers in the bargraphs 
+  coord_flip()+
+  scale_x_discrete()+
+  scale_fill_viridis_d()+
+  labs(title="How much Fossil Fuels Should We Use", x=NULL, fill=NULL)
+  
+  
+  
+  
+```
+```{r}
+fuels_diverging <- fuels %>% mutate(percent=if_else(response %in% c("Much less", "Somewhat less"), Number, -Number)) 
+#everything in there 
+```
+
+```{r}
+fuels_diverging<- fuels_diverging %>% mutate(percent=paste0(round(percent, digits=1), "%"))
+ggplot(fuels_diverging, aes(x=Country, y=Number, fill=response)) + 
+  geom_col()+ #also makes a bar graph
+  geom_text(aes(label=percent), position=position_stack(vjust = 0.5), color="white", fontface="bold")+ #stack stacks them, fontface bolds  the numbers in the bargraphs 
+  coord_flip()+
+  scale_x_discrete()+
+  scale_fill_viridis_d()+
+  labs(title="How much Fossil Fuels Should We Use", x=NULL, fill=NULL)+
+ theme_minimal()+
+  theme(axis.text.x=element_blank(), axis.title.x=element_blank(),
+panel.grid=element_blank(),
+legend.position="top")
+```
+
+
+
 ```{r,warning=FALSE}
 ggplot(fuels, aes(x="", y= Number, fill=response))+  
   geom_bar(stat="identity", width=1)+ coord_polar("y", start=0) + 
@@ -236,6 +276,25 @@ chisq.test(t_matrix)
 ```
 Once again, there is a significant difference in how Danes and Americans answered this survey question.
 
+```{r}
+ugh<- survey %>% filter()
+```
+
+```{r}
+fuels_numPeople<-fuels_numPeople %>% filter(response != "Don't know") #excluding don't know
+
+fuels_numPeople$grouped_answer<- NA
+more<- which( fuels_numPeople$response== "Much less" |fuels_numPeople$response== "Somewhat less" )
+less<- which( fuels_numPeople$response== "Much more" |fuels_numPeople$response== "Somewhat more" | fuels_numPeople$response== "Refused" |fuels_numPeople$response== "Same amount as today")
+
+  fuels_numPeople$grouped_answer[more]<- "more"
+  fuels_numPeople$grouped_answer[less]<- "less"
+
+
+fuels_numPeople<- fuels_numPeople %>% group_by(Country, grouped_answer) %>% summarise(grouped_number=sum(total))
+
+fuels_numPeople<- fuels_numPeople %>% filter(grouped_answer != is.na)
+```
 
 
 # Summary & Discussion
