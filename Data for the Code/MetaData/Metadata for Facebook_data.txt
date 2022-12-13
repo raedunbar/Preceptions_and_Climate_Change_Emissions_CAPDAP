@@ -1,13 +1,17 @@
-Origins:
+This is Metadata for the data in the Faebook_data folder.
 
 This data was found on Meta, an online data repository. It can be accessed at this link: 
 
-https://data.humdata.org/dataset/climate-change-opinion-survey
+<https://data.humdata.org/dataset/climate-change-opinion-survey>.
+
+More information regarding the data can be found at this link:
+
+<https://dataforgood.facebook.com/dfg/tools/climate-change-opinion-survey#accessdata>.
 
 
 About:
 
-This is survey data on people's perceptions of climate change collected on Facebook between March 25 2022 and April 14 2022. It was updated June 28 2022. 
+This is survey data on people's perceptions of climate change collected on Facebook between March 25 2022 and April 14 2022. It was updated June 28 2022. People were asked to take part in sthe survey, but the page the poll was posted is no longer available, since the survey period ended. To get a more accurate representation of the population, weights were assigned to respondants to correct biases. For more informaitn, such as specifics regarding how weighted bias was determined you can contact dataforgood@fb.com 
 
 Columns: 
 
@@ -15,4 +19,21 @@ This data was initially in one excel with several different sheets of data in wi
 Column 1: are the answers to the survey
 Columns to follow: the countries surveyed and the percent that selected that answer. 
 
-The question they are answering is fairly straight forward based on the sheet name. climate_happening for instance is asking if climate change is happening, with the possible answers being yes, no, dont know, and refused. 
+The question they are answering is fairly straight forward based on the sheet name. climate_happening for instance is asking if climate change is happening, with the possible answers being yes, no, dont know, and refused.
+
+Here are the following quesitons anaylzed in this report and what they mean:
+
+climate_beliefs: what do you believe causes climate change? Options are, Caused mostly by human activities, caused mostly by natural changes in the environment, caused about equally by human activities and natural changes,other,none of the above because climate change isn’t happening, and refused.
+
+climate_worry: How worried are you about climae change? The options were very worried, somewhat worried, not very worried, not at all worried, and refused
+
+threat_20_years: How serious of a threat is climate change in the next 20 years? The options include very serious threat,somewhat serious threat, not a threat at all, don't know, and refused
+
+fossil_more_less: How much fossil fuels should your country use in relation to what you are using now? The answers included much more, somewhat more, same amount as today, somewhat less, much less, don’t know, and refused.
+
+Citation:
+
+"Climate Change Opinion Survey." (2022). *HDX.* https://data.humdata.org/dataset/climate-change
+  -opinion-survey#.
+
+
