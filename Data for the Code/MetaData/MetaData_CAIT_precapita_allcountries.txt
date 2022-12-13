@@ -1,8 +1,7 @@
 This is Metadata for the CAIT_precapita_allcountries.csv file.
 
 Origins: 
-This data came from climate watch, an online data repository that you can access here: 
-
+This data came from climate watch, an online data repository that you can access here:
 <https://www.climatewatchdata.org/ghg-emissions?end_year=2019&start_year=1990>.
 
 
