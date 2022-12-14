@@ -456,3 +456,31 @@ When constructing graphs the pie charts proved to be particularly cumbersome as 
 Research into how to make a likert graph was also conducted. The responses to the four survey questions would have to be the same however, in order to produce a likert graph. I could change the answers to create a made up response scale of pro or anti climate action. Would that be professional or no? Let me know your thoughts so I can include it in the final. 
 
 
+
+## DIVERGING BAR GRAPH SAVING THIS
+
+```{r}
+beliefs_diverging <- beliefs %>% mutate(percent=if_else(response %in% c("Caused mostly by human activities"), Number, -Number)) 
+#all the percentages in the response column that did not answer "caused mostly by human activities"   will have a - put in front. 
+```
+
+
+```{r}
+# This will make our labels are positive numbers.
+
+
+beliefs_diverging<- beliefs_diverging %>% mutate(percent=paste0(round(percent, digits=1), "%"))
+ggplot(beliefs_diverging, aes(x=Country, y=Number, fill=response)) + 
+  geom_col()+ #also makes a bar graph
+  geom_text(aes(label=percent), position=position_stack(vjust = 0.5), color="white", fontface="bold")+ #stack stacks them, fontface bolds  the numbers in the bargraphs 
+  coord_flip()+
+  scale_x_discrete()+
+  scale_fill_viridis_d()+
+  labs(title="What do you Think Caused Climate Change", x=NULL, fill=NULL)+
+ theme_minimal()+
+  theme(axis.text.x=element_blank(), axis.title.x=element_blank(),
+panel.grid=element_blank(),
+legend.position="top")
+
+```
+
