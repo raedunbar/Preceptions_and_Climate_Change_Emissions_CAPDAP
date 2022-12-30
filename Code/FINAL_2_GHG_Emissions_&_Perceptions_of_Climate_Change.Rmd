@@ -394,7 +394,7 @@ legend.position="top")
 
 Figure 6. Diverging Bar Graph the Level of Concern over climate change of both Danes and Americans. Response is in percentage of the total surveyed.
 
-We can see that most Danes are somewhat worried, with the smallest percentage being not worried at all. Most Americans are also somewhat worried, though the percentage is smaller compared too Denmark (51% to 35.6%). More Americans however are very worried, and more Americans are not at all worried than Danes. Based on the diverging bar graph, there is a slight difference between countries, suggesting Danes are more worried than Americans. A statistical test is needed to see if this is a significant difference. 
+We can see that most Danes are somewhat worried, with the smallest percentage being not worried at all. Most Americans are also somewhat worried, though the percentage is smaller compared to Denmark (51% to 35.6%). More Americans however are very worried, and more Americans are not at all worried than Danes. Based on the diverging bar graph, there is a slight difference between countries, suggesting Danes are more worried than Americans. A statistical test is needed to see if this is a significant difference. 
 
 
 ### Lets do a statistical test to verify. 
@@ -596,7 +596,7 @@ threat2.mat<-xtabs(grouped_number~Country+grouped_answer, data=threat2_numPeople
 threat2.mat
 chisq.test(threat2.mat)
 ```
-Ignoring the Don't knows yields a p value of 0.005, so I can reject the Null hypothesis. Significantly more Danes think that within the next 20 years climate change is a serious threat.
+Removing the 'Don't know'responses  yields a p value of 0.005, so I can reject the Null hypothesis. Significantly more Danes think that within the next 20 years climate change is a serious threat. See the discussion for more information.
 
 
 ## More or less Fossil Fuels
@@ -731,9 +731,10 @@ The p-value is 2.2*10^-16, much less than 0.05, meaning we can reject the null h
 
 ## Summary Discussion
 
-Denmark emits significantly less per capita greenhouse emissions than the United states. My results also showed that significantly more Danes believed climate change was human caused, were more worried aobut climate change, and think their country should decrease fossil fuel usage than Americans did. Overall, Danes' answers to the survey questions were significantly more planet friendly than Americans. Danish citizen's perceptions of climate change could be way Denmark emmits so much less greenhouse gas emissions per person than the United States.
+Denmark emits significantly less per capita greenhouse emissions than the United states. My results also showed that significantly more Danes believed climate change was human caused, were more worried abut climate change, and think their country should decrease fossil fuel usage than Americans did. Overall, Danes' answers to the survey questions were significantly more planet friendly than Americans. Danish citizen's perceptions of climate change could be why Denmark emits significantly less greenhouse gas emissions per person than the United States.
 
-It was difficult to asses the to what degree in the next 20 years is climate change a threat question, due to the "don't know" option. With it, there was no significant difference in responses between the countries. If I do not include it Denmark thought climate change was a bigger threat than the United States. On one hand people who answered do not know probably don't partake in climate change related activities such as voting for policies, making their decisions neutral. On the other hand, it could mean the person would lean against climate policies, not really considering climate change a pertinent issue to them personally. It is difficult to determine how someone who answered don't know would react, so not including it seems reasonable. Furthermore, given Denmark answered significantly more favorably in the three other questions, a significant p value when removing the "don't know" responses is not surprising. However, it is interesting that more Danes answered did not know to this question than Americans. 
+It was difficult to asses the 'to what degree in the next 20 years is climate change a threat question', due to the "don't know" option. With it, there was no significant difference in responses between the countries. If I do not include it Denmark thought climate change was a bigger threat than the United States. On one hand people who answered do not know probably don't partake in climate change related activities such as voting for policies, making their decisions neutral. On the other hand, it could mean the person would lean against climate policies, not really considering climate change a pertinent issue to them personally. It is difficult to determine how someone who answered don't know would react, so not including it seems reasonable. Furthermore, given Denmark answered significantly more favorably in the three other questions, a significant p value when removing the "don't know" responses is not surprising. However, it is interesting that more Danes answered did not know to this question than Americans. 
+
 
 ## Limitations
 
